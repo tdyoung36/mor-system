@@ -1,4 +1,3 @@
-[MOR_Full_System (14).html](https://github.com/user-attachments/files/28233796/MOR_Full_System.14.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
 <meta name="apple-mobile-web-app-title" content="MOR System">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#060d1a">
-<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIk1PUiBMb2dpc3RpY3MgT3BlcmF0aW9ucyIsICJzaG9ydF9uYW1lIjogIk1PUiBTeXN0ZW0iLCAiZGVzY3JpcHRpb24iOiAiTU9SIExvZ2lzdGljcyBFbnZpcm9ubWVudGFsIFNlcnZpY2VzIExMQyBcdTIwMTQgRnVsbCBPcGVyYXRpb25zIFN5c3RlbSIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMDYwZDFhIiwgInRoZW1lX2NvbG9yIjogIiMyMmQzZWUiLCAib3JpZW50YXRpb24iOiAiYW55IiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbCw8c3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDE5MiAxOTInPjxyZWN0IHdpZHRoPScxOTInIGhlaWdodD0nMTkyJyByeD0nMjQnIGZpbGw9JyUyMzA2MGQxYScvPjx0ZXh0IHg9JzUwJTI1JyB5PSc1NSUyNScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgdGV4dC1hbmNob3I9J21pZGRsZScgZm9udC1zaXplPScxMjAnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC13ZWlnaHQ9JzkwMCcgZmlsbD0nJTIzMjJkM2VlJz5NPC90ZXh0Pjwvc3ZnPiIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJz48cmVjdCB3aWR0aD0nNTEyJyBoZWlnaHQ9JzUxMicgcng9JzY0JyBmaWxsPSclMjMwNjBkMWEnLz48dGV4dCB4PSc1MCUyNScgeT0nNTUlMjUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZvbnQtc2l6ZT0nMzIwJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtd2VpZ2h0PSc5MDAnIGZpbGw9JyUyMzIyZDNlZSc+TTwvdGV4dD48L3N2Zz4iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV0sICJjYXRlZ29yaWVzIjogWyJidXNpbmVzcyIsICJwcm9kdWN0aXZpdHkiXSwgInNob3J0Y3V0cyI6IFt7Im5hbWUiOiAiV29yayBPcmRlcnMiLCAidXJsIjogIi4iLCAiZGVzY3JpcHRpb24iOiAiT3BlbiB3b3JrIG9yZGVycyJ9LCB7Im5hbWUiOiAiRmxlZXQiLCAidXJsIjogIi4iLCAiZGVzY3JpcHRpb24iOiAiRmxlZXQgbWFuYWdlbWVudCJ9LCB7Im5hbWUiOiAiU2FmZXR5IiwgInVybCI6ICIuIiwgImRlc2NyaXB0aW9uIjogIlNhZmV0eSBsb2cifV19">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIk1PUiBMb2dpc3RpY3MgT3BlcmF0aW9ucyIsICJzaG9ydF9uYW1lIjogIk1PUiBTeXN0ZW0iLCAiZGVzY3JpcHRpb24iOiAiTU9SIExvZ2lzdGljcyBFbnZpcm9ubWVudGFsIFNlcnZpY2VzIExMQyBcdTIwMTQgRnVsbCBPcGVyYXRpb25zIFN5c3RlbSIsICJzdGFydF91cmwiOiAiaHR0cHM6Ly90ZHlvdW5nMzYuZ2l0aHViLmlvL21vci1zeXN0ZW0vIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwNjBkMWEiLCAidGhlbWVfY29sb3IiOiAiIzIyZDNlZSIsICJvcmllbnRhdGlvbiI6ICJhbnkiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sLDxzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMTkyIDE5Mic+PHJlY3Qgd2lkdGg9JzE5MicgaGVpZ2h0PScxOTInIHJ4PScyNCcgZmlsbD0nJTIzMDYwZDFhJy8+PHRleHQgeD0nNTAlMjUnIHk9JzU1JTI1JyBkb21pbmFudC1iYXNlbGluZT0nbWlkZGxlJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LXNpemU9JzEyMCcgZm9udC1mYW1pbHk9J0FyaWFsJyBmb250LXdlaWdodD0nOTAwJyBmaWxsPSclMjMyMmQzZWUnPk08L3RleHQ+PC9zdmc+IiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn0sIHsic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbCw8c3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDUxMiA1MTInPjxyZWN0IHdpZHRoPSc1MTInIGhlaWdodD0nNTEyJyByeD0nNjQnIGZpbGw9JyUyMzA2MGQxYScvPjx0ZXh0IHg9JzUwJTI1JyB5PSc1NSUyNScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgdGV4dC1hbmNob3I9J21pZGRsZScgZm9udC1zaXplPSczMjAnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC13ZWlnaHQ9JzkwMCcgZmlsbD0nJTIzMjJkM2VlJz5NPC90ZXh0Pjwvc3ZnPiIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XSwgImNhdGVnb3JpZXMiOiBbImJ1c2luZXNzIiwgInByb2R1Y3Rpdml0eSJdLCAic2hvcnRjdXRzIjogW3sibmFtZSI6ICJXb3JrIE9yZGVycyIsICJ1cmwiOiAiLiIsICJkZXNjcmlwdGlvbiI6ICJPcGVuIHdvcmsgb3JkZXJzIn0sIHsibmFtZSI6ICJGbGVldCIsICJ1cmwiOiAiLiIsICJkZXNjcmlwdGlvbiI6ICJGbGVldCBtYW5hZ2VtZW50In0sIHsibmFtZSI6ICJTYWZldHkiLCAidXJsIjogIi4iLCAiZGVzY3JpcHRpb24iOiAiU2FmZXR5IGxvZyJ9XSwgInNjb3BlIjogImh0dHBzOi8vdGR5b3VuZzM2LmdpdGh1Yi5pby9tb3Itc3lzdGVtLyIsICJpZCI6ICJodHRwczovL3RkeW91bmczNi5naXRodWIuaW8vbW9yLXN5c3RlbS8ifQ==">
 <title>MOR Logistics — Full Operations System</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -757,9 +756,45 @@ textarea{resize:vertical;min-height:54px}
   body { padding-top: env(safe-area-inset-top); }
 }
 </style>
+
+<style>
+.wo-mtab {
+  padding: 7px 16px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: var(--g4);
+  font-family: var(--font);
+  transition: color .15s, border-color .15s;
+}
+.wo-mtab.active {
+  color: var(--c);
+  border-bottom-color: var(--c);
+}
+.wo-mtab:hover { color: var(--g7); }
+</style>
+
+<style>
+.prod-tab {
+  padding: 7px 16px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: var(--g4);
+  font-family: var(--font);
+  transition: color .15s, border-color .15s;
+}
+.prod-tab.active { color: var(--c); border-bottom-color: var(--c); }
+.prod-tab:hover { color: var(--g7); }
+</style>
 </head>
 <body>
-
 <!-- Mobile menu button -->
 <button id="mobile-menu-btn" onclick="toggleMobileSidebar()" aria-label="Menu">☰</button>
 <div id="mobile-overlay" onclick="closeMobileSidebar()"></div>
@@ -860,8 +895,7 @@ function showiOSInstallHint() {
 // ── SERVICE WORKER — enables offline use ───────────────────────────────────
 if ('serviceWorker' in navigator) {
   var swCode = [
-    'var CACHE = "mor-v1";',
-    'var URLS = [location.href];',
+    'var CACHE = "mor-v2";',
     'self.addEventListener("install", function(e) {',
     '  e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(URLS); }));',
     '  self.skipWaiting();',
@@ -1169,58 +1203,202 @@ document.addEventListener('click', function(e) {
 <!-- ═══════ DISPATCH ═══════ -->
 <div id="panel-dispatch" class="panel">
   <div class="g2" style="margin-bottom:12px">
+
+    <!-- Schedule form -->
     <div class="card card-sm">
-      <div class="ct">Schedule work order <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('dispatch-alert')">📤 Spaces</button></div>
-      <div class="fg"><span class="flbl">Work order</span><select id="disp-wo-sel"></select></div>
+      <div class="ct">Schedule work order
+        <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('dispatch-alert')">📤 Spaces</button>
+      </div>
+
+      <!-- Project selector with + Add new -->
+      <div class="fg" style="margin-bottom:8px">
+        <span class="flbl">Project</span>
+        <div style="display:flex;gap:5px;align-items:center">
+          <select id="disp-proj-sel" class="isel" style="flex:1" onchange="handleDispProjSel(this)">
+            <option value="">— All projects / select —</option>
+          </select>
+          <button class="btn btn-xs btn-c" onclick="openAddDispProject()" title="Add new project">+</button>
+        </div>
+        <!-- Inline add project form (hidden) -->
+        <div id="disp-add-proj-form" style="display:none;margin-top:6px;background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:8px">
+          <div style="font-size:10px;font-weight:700;color:var(--g5);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">New project</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px">
+            <input id="disp-new-proj-num" placeholder="Project # (e.g. PROJ-2026-004)" style="font-size:11px">
+            <input id="disp-new-proj-name" placeholder="Project name / description" style="font-size:11px">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:6px">
+            <input id="disp-new-proj-contract" placeholder="Contract # (e.g. SWBNO #30264)" style="font-size:11px">
+            <input id="disp-new-proj-client" placeholder="Client / owner" style="font-size:11px">
+            <input id="disp-new-proj-pm" placeholder="Project manager" style="font-size:11px">
+          </div>
+          <div style="display:flex;gap:5px">
+            <button class="btn btn-xs btn-c" onclick="saveDispProject()">Save project</button>
+            <button class="btn btn-xs" onclick="cancelDispProject()">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work order — filtered by selected project -->
+      <div class="fg"><span class="flbl">Work order</span>
+        <select id="disp-wo-sel" onchange="fillDispatchFromWO()"></select>
+      </div>
+
       <div class="fgrid fg2">
-        <div class="fg"><span class="flbl">Crew</span><input type="text" id="disp-crew" placeholder="Crew name / ID"></div>
-        <div class="fg"><span class="flbl">Truck</span><input type="text" id="disp-truck" placeholder="Unit ID"></div>
+        <div class="fg"><span class="flbl">Foreman / Crew lead</span>
+          <div style="display:flex;gap:4px">
+            <input type="text" id="disp-foreman" placeholder="Name" style="flex:1">
+            <button class="btn btn-xs" onclick="empPickForField(this,function(n){document.getElementById('disp-foreman').value=n})">👤</button>
+          </div>
+        </div>
         <div class="fg"><span class="flbl">Date</span><input type="date" id="disp-date"></div>
         <div class="fg"><span class="flbl">Start time</span><input type="text" id="disp-time" placeholder="07:00 AM"></div>
         <div class="fg"><span class="flbl">Est. hours</span><input type="number" id="disp-hrs" placeholder="8"></div>
-        <div class="fg"><span class="flbl">Foreman</span><input type="text" id="disp-foreman" placeholder="Name"></div>
       </div>
-      <div class="fg"><span class="flbl">Special instructions</span><textarea id="disp-notes" placeholder="Access, traffic control, SWBNO contact on site…"></textarea></div>
-      <button class="btn btn-c" style="margin-top:6px" onclick="scheduleWO()">Assign &amp; Schedule</button>
+
+      <!-- Multi-truck selector -->
+      <div class="fg" style="margin-top:8px">
+        <span class="flbl">Trucks assigned</span>
+        <div id="disp-truck-list" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px;min-height:28px"></div>
+        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          <select id="disp-truck-add" class="isel" style="flex:1;min-width:160px">
+            <option value="">— Select truck to add —</option>
+          </select>
+          <button class="btn btn-xs btn-c" onclick="addDispatchTruck()">+ Add</button>
+          <input type="text" id="disp-truck-custom" placeholder="Or type unit #" style="flex:1;min-width:80px;font-size:11px">
+          <button class="btn btn-xs" onclick="addDispatchTruckCustom()">Add</button>
+        </div>
+      </div>
+
+      <div class="fg" style="margin-top:8px">
+        <span class="flbl">Special instructions</span>
+        <textarea id="disp-notes" placeholder="Access, traffic control, SWBNO contact on site…"></textarea>
+      </div>
+      <button class="btn btn-c" style="margin-top:8px" onclick="scheduleWO()">Assign &amp; Schedule</button>
     </div>
-    <div class="card card-sm">
-      <div class="ct">Pre-dispatch checklist</div>
-      <div class="policy-block"><div class="ptitle">Required before crew departs</div>
-        ▸ WO # confirmed with field supervisor<br>▸ Truck pre-trip inspection complete<br>▸ PPE loaded — hard hat, vest, gloves, eye protection<br>▸ Traffic control equipment if required<br>▸ Confined space kit if entry required<br>▸ Disposal site confirmed, ticket book loaded<br>▸ SWBNO WO number on all paperwork<br>▸ Emergency contact on crew sheet</div>
+
+    <!-- Pre-dispatch checklist + Project list -->
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card card-sm">
+        <div class="ct">Pre-dispatch checklist</div>
+        <div class="policy-block"><div class="ptitle">Required before crew departs</div>
+          ▸ WO # confirmed with field supervisor<br>
+          ▸ Truck pre-trip inspection complete<br>
+          ▸ PPE loaded — hard hat, vest, gloves, eye protection<br>
+          ▸ Traffic control equipment if required<br>
+          ▸ Confined space kit if entry required<br>
+          ▸ Disposal site confirmed, ticket book loaded<br>
+          ▸ SWBNO WO number on all paperwork<br>
+          ▸ Emergency contact on crew sheet
+        </div>
+      </div>
+
+      <!-- Projects card -->
+      <div class="card card-sm">
+        <div class="ct" style="display:flex;align-items:center;justify-content:space-between">
+          <span>Projects</span>
+          <button class="btn btn-xs btn-c" onclick="openAddDispProject()">+ Add project</button>
+        </div>
+        <div id="disp-projects-list" style="font-size:11px"></div>
+      </div>
     </div>
   </div>
+
   <div class="shd" style="font-size:11px">Dispatch board</div>
-  <div class="tw"><table><thead><tr><th>WO #</th><th>Type</th><th>Location</th><th>Crew</th><th>Truck</th><th>Foreman</th><th>Date</th><th>Time</th><th>Status</th><th>Priority</th></tr></thead><tbody id="dispatch-tbody"></tbody></table></div>
+  <div class="tw">
+    <table><thead><tr>
+      <th>WO #</th><th>Project</th><th>Type</th><th>Address</th>
+      <th>Crew lead</th><th>Trucks</th><th>Date</th><th>Time</th><th>Status</th>
+    </tr></thead><tbody id="dispatch-tbody"></tbody></table>
+  </div>
 </div>
 
 <!-- ═══════ PRODUCTION ═══════ -->
+<!-- ═══════ PRODUCTION ═══════ -->
 <div id="panel-production" class="panel">
+  <!-- Metrics -->
   <div class="g4" style="margin-bottom:12px">
     <div class="mc"><div class="mc-bar" style="background:var(--bmd)"></div><div class="ml">Total LF Cleaned</div><div class="mv" id="prod-lf">0</div><div class="ms">All pipe work</div></div>
     <div class="mc"><div class="mc-bar" style="background:var(--gmd)"></div><div class="ml">Debris Tickets</div><div class="mv" id="prod-deb">0</div><div class="ms">Total issued</div></div>
     <div class="mc"><div class="mc-bar" style="background:var(--amd)"></div><div class="ml">Avg LF/Day</div><div class="mv" id="prod-avg">0</div><div class="ms">Production rate</div></div>
     <div class="mc"><div class="mc-bar" style="background:var(--pmd)"></div><div class="ml">Contract %</div><div class="mv" id="prod-pct">0%</div><div class="ms">Est. completion</div></div>
   </div>
+
+  <!-- Main layout -->
   <div class="g2">
+
+    <!-- LEFT: Log entry form -->
     <div class="card">
-      <div class="ct">Log production entry <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('daily-report')">📤 Spaces</button></div>
+      <div class="ct">Log production entry
+        <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('daily-report')">📤 Spaces</button>
+      </div>
       <div class="fgrid fg2">
-        <div class="fg"><span class="flbl">Work order</span><select id="prod-wo-sel"></select></div>
+        <div class="fg"><span class="flbl">Work order</span><select id="prod-wo-sel" onchange="syncProdPipes()"></select></div>
         <div class="fg"><span class="flbl">Date</span><input type="date" id="prod-date"></div>
-        <div class="fg"><span class="flbl">Pipe size (in)</span><input type="text" id="prod-pipe" placeholder="e.g. 18"></div>
+        <div class="fg"><span class="flbl">Pipe ID / Segment</span>
+          <div style="display:flex;gap:5px">
+            <select id="prod-pipe-sel" class="isel" style="flex:1" onchange="handleProdPipeSel(this)">
+              <option value="">— Select or type —</option>
+            </select>
+            <input type="text" id="prod-pipe" placeholder="e.g. PIPE-001" style="flex:1;display:none">
+          </div>
+        </div>
+        <div class="fg"><span class="flbl">Pipe size (in)</span><input type="text" id="prod-pipe-size" placeholder="e.g. 18"></div>
         <div class="fg"><span class="flbl">LF cleaned</span><input type="number" id="prod-lf-inp" placeholder="0"></div>
         <div class="fg"><span class="flbl">Debris tickets</span><input type="number" id="prod-deb-inp" placeholder="0"></div>
         <div class="fg"><span class="flbl">Crew hours</span><input type="number" id="prod-hrs" placeholder="0"></div>
         <div class="fg"><span class="flbl">CCTV runs</span><input type="number" id="prod-cctv" placeholder="0"></div>
-        <div class="fg"><span class="flbl">Segments</span><input type="number" id="prod-segs" placeholder="0"></div>
       </div>
-      <div class="fg"><span class="flbl">Notes</span><textarea id="prod-notes" placeholder="Production notes, delays…"></textarea></div>
-      <button class="btn btn-c" style="margin-top:6px" onclick="addProd()">Log production</button>
-      <button class="btn btn-g" style="margin-top:6px;margin-left:6px" onclick="openModal('create-invoice')">💰 Create invoice</button>
+      <div class="fg" style="margin-top:6px"><span class="flbl">Notes</span><textarea id="prod-notes" placeholder="Production notes, delays…" rows="2"></textarea></div>
+
+      <!-- PHOTO UPLOAD FIELDS directly on the log form -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;padding-top:10px;border-top:1px solid var(--g1)">
+
+        <!-- Beginning / Before photos -->
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">🔴 Beginning pipe photos</div>
+          <div id="prod-before-thumbs" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;min-height:20px"></div>
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;background:var(--g0);border:2px dashed var(--g2);border-radius:8px;padding:8px 10px;font-size:11px;color:var(--g4)">
+            <span style="font-size:18px">📷</span>
+            <span>Add before photos</span>
+            <input type="file" id="prod-before-upload" accept="image/*" multiple style="display:none" onchange="handleProdPhotoUpload('before',this)">
+          </label>
+        </div>
+
+        <!-- Finished / After photos -->
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">🟢 Finished pipe photos</div>
+          <div id="prod-after-thumbs" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;min-height:20px"></div>
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;background:var(--g0);border:2px dashed var(--g2);border-radius:8px;padding:8px 10px;font-size:11px;color:var(--g4)">
+            <span style="font-size:18px">📷</span>
+            <span>Add finished photos</span>
+            <input type="file" id="prod-after-upload" accept="image/*" multiple style="display:none" onchange="handleProdPhotoUpload('after',this)">
+          </label>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+        <button class="btn btn-c" onclick="addProd()">Log production</button>
+        <button class="btn btn-g" onclick="openModal('create-invoice')">💰 Create invoice</button>
+      </div>
     </div>
-    <div class="card">
-      <div class="ct">Production log</div>
-      <div class="tw"><table><thead><tr><th>Date</th><th>WO #</th><th>Pipe</th><th>LF</th><th>Debris</th><th>Hrs</th><th>CCTV</th></tr></thead><tbody id="prod-tbody"></tbody></table></div>
+
+    <!-- RIGHT: Log table + Pipe photos tab -->
+    <div class="card" style="display:flex;flex-direction:column">
+      <div style="display:flex;gap:0;border-bottom:1px solid var(--g1);margin-bottom:12px">
+        <button class="prod-tab active" data-ptab="log" onclick="switchProdTab('log')">Production log</button>
+        <button class="prod-tab" data-ptab="photos" onclick="switchProdTab('photos')">📷 All pipe photos</button>
+      </div>
+
+      <div id="prod-tab-log" style="flex:1">
+        <div class="tw">
+          <table><thead><tr><th>Date</th><th>WO</th><th>Pipe ID</th><th>Size</th><th>LF</th><th>Debris</th><th>Hrs</th><th>📷</th><th></th></tr></thead>
+          <tbody id="prod-tbody"></tbody></table>
+        </div>
+      </div>
+
+      <div id="prod-tab-photos" style="display:none;flex:1">
+        <div id="prod-photo-panel"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -1375,6 +1553,28 @@ document.addEventListener('click', function(e) {
 </div>
 
 <!-- ═══════ CHANGE ORDERS ═══════ -->
+  <!-- Monthly Work Orders Summary -->
+  <div class="card" style="margin-top:16px">
+    <div class="ct" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <span>📅 Monthly Work Orders</span>
+      <select id="billing-month-sel" class="isel" onchange="renderBillingMonthly()" style="min-width:160px"></select>
+      <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('billing-ready')" style="margin-left:auto">📤 Spaces</button>
+      <button class="btn btn-sm" onclick="exportBillingMonthlyCSV()">⬇ Export CSV</button>
+    </div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin:10px 0;padding:10px;background:var(--g0);border-radius:8px;border:1px solid var(--g1)">
+      <div><div style="font-size:10px;color:var(--g4);text-transform:uppercase;letter-spacing:.5px">Total billable</div><div id="billing-monthly-total" style="font-size:18px;font-weight:800;color:var(--green)">$0.00</div></div>
+      <div style="flex:1;font-size:11px;color:var(--g5);display:flex;align-items:center" id="billing-monthly-count"></div>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr>
+          <th>WO #</th><th>Type</th><th>Address</th><th>Crew lead</th><th>Trucks</th><th>Date</th><th>Status</th><th>Billable</th>
+        </tr></thead>
+        <tbody id="billing-monthly-body"></tbody>
+      </table>
+    </div>
+  </div>
+
 <div id="panel-changeorder" class="panel">
   <div class="g2" style="margin-bottom:12px">
     <div class="card card-sm">
@@ -3004,34 +3204,108 @@ document.addEventListener('click', function(e) {
 
 <!-- MODALS -->
 <div class="mbg" id="modal-wo">
-  <div class="mbox">
+  <div class="mbox" style="max-width:680px">
     <div class="mh"><h3>New work order — intake</h3><button class="btn btn-sm" onclick="closeModal('wo')">✕</button></div>
     <div class="mb">
-      <div class="fgrid fg2">
-        <div class="fg"><span class="flbl">WO #</span><input type="text" id="np-id" placeholder="WO-30264-005"></div>
-        <div class="fg"><span class="flbl">Contract</span><select id="np-contract"><option>SWBNO #30264</option><option>SWBNO #30244</option><option>Emergency Response</option><option>Industrial Maintenance</option></select></div>
-        <div class="fg"><span class="flbl">Work type</span><select id="np-type"><option>Sewer Main Cleaning</option><option>Storm Drain Cleaning</option><option>Catch Basin Cleaning</option><option>Wet Well / Lift Station Cleaning</option><option>CCTV Inspection Support</option><option>Vacuum Truck Services</option><option>Emergency Response</option></select></div>
-        <div class="fg"><span class="flbl">Priority</span><select id="np-pri"><option>Routine</option><option>Urgent</option><option>Emergency</option></select></div>
-        <div class="fg"><span class="flbl">Location</span><input type="text" id="np-loc" placeholder="Street or site address"></div>
-        <div class="fg"><span class="flbl">Asset / Pipe / Basin ID</span><input type="text" id="np-asset" placeholder="PIPE-001 or CB-001"></div>
-        <div class="fg"><span class="flbl">Project Manager</span><input type="text" id="np-pm" placeholder="PM name"></div>
-        <div class="fg"><span class="flbl">Field Supervisor</span><input type="text" id="np-sup" placeholder="Supervisor name"></div>
-        <div class="fg"><span class="flbl">Pipe size (in)</span><input type="text" id="np-pipe" placeholder="e.g. 16"></div>
-        <div class="fg"><span class="flbl">Disposal ticket #</span><input type="text" id="np-ticket"></div>
-        <div class="fg"><span class="flbl">Start date</span><input type="date" id="np-start"></div>
-        <div class="fg"><span class="flbl">Due date</span><input type="date" id="np-due"></div>
-        <div class="fg"><span class="flbl">CCTV required</span><select id="np-cctv"><option>No</option><option>Yes</option></select></div>
-        <div class="fg"><span class="flbl">Traffic control</span><select id="np-traffic"><option>No</option><option>Yes</option></select></div>
-        <div class="fg"><span class="flbl">Pricing type</span><select id="np-pricing" onchange="document.getElementById('np-unit').value=this.value"><option value="2">15" &amp; under — $2.00/LF</option><option value="2.5">16"–24" — $2.50/LF</option><option value="3">25"+ — $3.00/LF</option><option value="475">Debris ticket — $475</option><option value="450">Hydrovac — $450/hr</option><option value="300">Standby — $300/hr</option></select></div>
-        <div class="fg"><span class="flbl">Quantity</span><input type="number" id="np-qty" placeholder="0"></div>
-        <div class="fg"><span class="flbl">Unit price ($)</span><input type="number" id="np-unit" value="2"></div>
-        <div class="fg" style="grid-column:1/-1"><span class="flbl">Notes</span><textarea id="np-notes" placeholder="Site notes, access info, special requirements…"></textarea></div>
+      <!-- Tab bar -->
+      <div style="display:flex;gap:0;border-bottom:1px solid var(--g1);margin-bottom:14px" id="wo-modal-tabs">
+        <button class="wo-mtab active" data-tab="general" onclick="switchWOModalTab('general')">General</button>
+        <button class="wo-mtab" data-tab="location" onclick="switchWOModalTab('location')">Location</button>
+        <button class="wo-mtab" data-tab="scope" onclick="switchWOModalTab('scope')">Scope</button>
+      </div>
+
+      <!-- GENERAL TAB -->
+      <div id="wo-tab-general" class="wo-mtab-pane">
+        <div class="fgrid fg2">
+          <div class="fg"><span class="flbl">WO #</span><input type="text" id="np-id" placeholder="WO-30264-005"></div>
+          <div class="fg"><span class="flbl">Project number</span>
+            <div style="display:flex;gap:5px;align-items:center">
+              <select id="np-projnum-sel" class="isel" style="flex:1" onchange="handleProjNumSel(this)">
+                <option value="">— Select project —</option>
+              </select>
+              <input type="text" id="np-projnum" placeholder="or type new #" style="flex:1;display:none">
+            </div>
+          </div>
+          <div class="fg"><span class="flbl">Contract</span><select id="np-contract"><option>SWBNO #30264</option><option>SWBNO #30244</option><option>Emergency Response</option><option>Industrial Maintenance</option></select></div>
+          <div class="fg"><span class="flbl">Work type</span><select id="np-type"><option>Sewer Main Cleaning</option><option>Storm Drain Cleaning</option><option>Catch Basin Cleaning</option><option>Wet Well / Lift Station Cleaning</option><option>CCTV Inspection Support</option><option>Vacuum Truck Services</option><option>Emergency Response</option></select></div>
+          <div class="fg"><span class="flbl">Priority</span><select id="np-pri"><option>Routine</option><option>Urgent</option><option>Emergency</option></select></div>
+          <div class="fg"><span class="flbl">Start date</span><input type="date" id="np-start"></div>
+          <div class="fg"><span class="flbl">Due date</span><input type="date" id="np-due"></div>
+          <div class="fg"><span class="flbl">Project Manager</span><input type="text" id="np-pm" placeholder="PM name"></div>
+          <div class="fg"><span class="flbl">Field Supervisor</span><input type="text" id="np-sup" placeholder="Supervisor name"></div>
+          <div class="fg" style="grid-column:1/-1"><span class="flbl">Notes</span><textarea id="np-notes" placeholder="Site notes, access info, special requirements…"></textarea></div>
+        </div>
+      </div>
+
+      <!-- LOCATION TAB -->
+      <div id="wo-tab-location" class="wo-mtab-pane" style="display:none">
+        <div class="fgrid fg2">
+          <div class="fg" style="grid-column:1/-1"><span class="flbl">Street address</span><input type="text" id="np-address" placeholder="1234 Canal St, New Orleans, LA 70112"></div>
+          <div class="fg"><span class="flbl">Location / Site name</span><input type="text" id="np-loc" placeholder="Street or site name"></div>
+          <div class="fg"><span class="flbl">Asset / Pipe / Basin ID</span><input type="text" id="np-asset" placeholder="PIPE-001 or CB-001"></div>
+          <div class="fg"><span class="flbl">Pipe size (in)</span><input type="text" id="np-pipe" placeholder="e.g. 16"></div>
+          <div class="fg"><span class="flbl">CCTV required</span><select id="np-cctv"><option>No</option><option>Yes</option></select></div>
+          <div class="fg"><span class="flbl">Traffic control</span><select id="np-traffic"><option>No</option><option>Yes</option></select></div>
+          <div class="fg"><span class="flbl">Disposal ticket #</span><input type="text" id="np-ticket"></div>
+          <div class="fg" style="grid-column:1/-1"><span class="flbl">Access / special instructions</span><textarea id="np-access" placeholder="Gate codes, contact on site, hazards…" rows="2"></textarea></div>
+        </div>
+      </div>
+
+      <!-- SCOPE TAB -->
+      <div id="wo-tab-scope" class="wo-mtab-pane" style="display:none">
+        <div class="fgrid fg2">
+          <div class="fg"><span class="flbl">Pricing type</span><select id="np-pricing" onchange="document.getElementById('np-unit').value=this.value"><option value="2">15&quot; &amp; under — $2.00/LF</option><option value="2.5">16&quot;–24&quot; — $2.50/LF</option><option value="3">25&quot;+ — $3.00/LF</option><option value="475">Debris ticket — $475</option><option value="450">Hydrovac — $450/hr</option><option value="300">Standby — $300/hr</option></select></div>
+          <div class="fg"><span class="flbl">Quantity</span><input type="number" id="np-qty" placeholder="0"></div>
+          <div class="fg"><span class="flbl">Unit price ($)</span><input type="number" id="np-unit" value="2"></div>
+        </div>
       </div>
     </div>
     <div class="mf">
       <button class="btn" onclick="closeModal('wo')">Cancel</button>
       <button class="btn btn-spaces" onclick="addWOandNotify()">Create + notify Spaces</button>
       <button class="btn btn-c" onclick="addWO()">Create work order</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<!-- ═══════ SUBMIT TO CLIENT MODAL ═══════ -->
+<div class="mbg" id="modal-client-submit">
+  <div class="mbox" style="max-width:560px">
+    <div class="mh">
+      <h3>📨 Submit paperwork to client</h3>
+      <button class="btn btn-sm" onclick="closeModal('client-submit')">✕</button>
+    </div>
+    <div class="mb">
+      <div style="background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:10px 14px;margin-bottom:14px">
+        <div style="font-size:10px;color:var(--g4);margin-bottom:2px">Work order</div>
+        <div id="cs-wo-display" style="font-size:14px;font-weight:700;color:var(--g8)">—</div>
+      </div>
+      <div class="fgrid fg2">
+        <div class="fg"><span class="flbl">Client / recipient name</span><input type="text" id="cs-client-name" placeholder="SWBNO Project Manager"></div>
+        <div class="fg"><span class="flbl">Client email address</span><input type="email" id="cs-client-email" placeholder="client@swbno.org"></div>
+        <div class="fg"><span class="flbl">Sender name</span><input type="text" id="cs-sender-name" placeholder="Your name"></div>
+        <div class="fg"><span class="flbl">Sender email</span><input type="email" id="cs-sender-email" placeholder="tameka@morlogistics.com"></div>
+      </div>
+      <div class="fg" style="margin-top:8px"><span class="flbl">Subject line</span><input type="text" id="cs-subject" placeholder="Work Order Completion — WO-30264-001"></div>
+      <div class="fg" style="margin-top:8px"><span class="flbl">Message</span><textarea id="cs-message" rows="5" placeholder="Loading message…"></textarea></div>
+      <div style="margin-top:10px">
+        <div style="font-size:10px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Include in submission</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <label style="display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer"><input type="checkbox" id="cs-inc-workers" checked> Worker list</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer"><input type="checkbox" id="cs-inc-trucks" checked> Trucks assigned</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer"><input type="checkbox" id="cs-inc-photos"> Before/after photo count</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer"><input type="checkbox" id="cs-inc-docs"> Document list</label>
+          <label style="display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer"><input type="checkbox" id="cs-inc-notes" checked> Site notes</label>
+        </div>
+      </div>
+    </div>
+    <div class="mf">
+      <button class="btn" onclick="closeModal('client-submit')">Cancel</button>
+      <button class="btn btn-sm" onclick="copyClientSubmit()">📋 Copy message</button>
+      <button class="btn btn-c" onclick="openClientEmail()">📧 Open in email client</button>
     </div>
   </div>
 </div>
@@ -3073,6 +3347,15 @@ document.addEventListener('click', function(e) {
 </div>
 
 <script>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3189,23 +3472,651 @@ function renderAlerts(){
 }
 
 // ── DASHBOARD ──
-function renderDash(){renderMetrics();renderAlerts();document.getElementById('dash-recent').innerHTML=WO.slice(0,5).map(function(o){return '<div class="woc"><div class="woh"><div><div class="woid">'+o.id+' — '+o.type+'</div><div class="wosub">'+o.contract+' · '+o.location+'</div></div><div style="display:flex;gap:4px">'+ps(o.priority)+ps(o.status)+'</div></div><div class="wom">'+ps(backupOK(o)?'Backup Ready':'Needs Backup')+'<b style="font-size:10px;color:var(--g7)">'+money(o.qty*o.unit)+'</b></div><div class="prog"><div class="progf" style="width:'+pct(o.status)+'%"></div></div></div>';}).join('');}
+function renderDash(){renderMetrics();renderAlerts();document.getElementById('dash-recent').innerHTML=WO.slice(0,5).map(function(o){return '<div class="woc"><div class="woh"><div><div class="woid">'+o.id+' — '+o.type+'</div><div class="wosub">'+o.contract+' · '+o.location+'</div></div><div style="display:flex;gap:4px">'+ps(o.priority)+ps(o.status)+'</div></div><div class="wom">'+ps(backupOK(o)?'Backup Ready':'Needs Backup')+pct(o.status)+'%"></div></div></div>';}).join('');}
 
 // ── WORK ORDERS ──
-function renderWOs(){
-  var q=(document.getElementById('wo-search').value||'').toLowerCase();
-  var fs=document.getElementById('wo-fs').value,fc=document.getElementById('wo-fc').value;
-  var list=WO.filter(function(o){if(q&&(o.id+o.type+o.location+o.asset+o.notes).toLowerCase().indexOf(q)<0)return false;if(fs&&o.status!==fs)return false;if(fc&&o.contract!==fc)return false;return true;});
-  var el=document.getElementById('wo-list');
-  if(!list.length){el.innerHTML='<div style="text-align:center;padding:28px;color:var(--g4)">No work orders match.</div>';return;}
-  el.innerHTML=list.map(function(o){var i=WO.indexOf(o);return '<div class="woc"><div class="woh"><div><div class="woid">'+o.id+' — '+o.type+'</div><div class="wosub">'+o.contract+' · '+o.location+' · '+o.asset+'</div></div><div style="display:flex;gap:4px;flex-wrap:wrap">'+ps(o.priority)+ps(o.status)+ps(backupOK(o)?'Backup Ready':'Needs Backup')+'</div></div>'+(o.notes?'<div style="font-size:10px;color:var(--g5);margin-bottom:7px;padding:6px;background:var(--g0);border-radius:7px">'+o.notes+'</div>':'')+'<div class="wof"><div><div class="wfl">PM</div><div class="wfv">'+(o.pm||'—')+'</div></div><div><div class="wfl">Pipe</div><div class="wfv">'+(o.pipe||'—')+'"</div></div><div><div class="wfl">CCTV</div><div class="wfv">'+(o.cctv||'No')+'</div></div><div><div class="wfl">Traffic</div><div class="wfv">'+(o.traffic||'No')+'</div></div><div><div class="wfl">Due</div><div class="wfv">'+(o.due||'—')+'</div></div><div><div class="wfl">Billable</div><div class="wfv"><b>'+money(o.qty*o.unit)+'</b></div></div></div><div class="woa">'+sel(o.status,['Intake Received','Dispatch Needed','Scheduled','In Progress','QC Review','Ready for Billing','Complete'],"updateWO("+i+",'status',this.value)")+iinp(o.crew||'','Crew',"updateWO("+i+",'crew',this.value)")+iinp(o.truck||'','Truck',"updateWO("+i+",'truck',this.value)")+sel(o.invoice,['Not Ready','Pending','Submitted','Paid'],"updateWO("+i+",'invoice',this.value)")+'<button class="btn btn-r btn-xs" onclick="deleteWO('+i+')">Delete</button><button class="btn btn-xs btn-spaces" onclick="sendToSpaces(\'work-complete\')">📤</button></div></div>';}).join('');}
+function renderWOs() {
+  var q  = (document.getElementById('wo-search').value||'').toLowerCase();
+  var fs = document.getElementById('wo-fs').value;
+  var fc = document.getElementById('wo-fc').value;
+  var list = WO.filter(function(o) {
+    if (q && (o.id+o.type+(o.location||'')+(o.address||'')+(o.asset||'')+(o.notes||'')+(o.projnum||'')).toLowerCase().indexOf(q) < 0) return false;
+    if (fs && o.status !== fs) return false;
+    if (fc && o.contract !== fc) return false;
+    return true;
+  });
+  var el = document.getElementById('wo-list');
+  if (!list.length) {
+    el.innerHTML = '<div style="text-align:center;padding:28px;color:var(--g4)">No work orders match.</div>';
+    return;
+  }
+
+  el.innerHTML = '';
+
+  list.forEach(function(o) {
+    var i = WO.indexOf(o);
+    var card = document.createElement('div');
+    card.className = 'woc';
+
+    // ── HEADER ──────────────────────────────────────────────────────────
+    var hdr = document.createElement('div');
+    hdr.className = 'woh';
+    hdr.innerHTML =
+      '<div>' +
+        '<div class="woid">' + o.id + (o.projnum ? ' <span style="font-size:9px;color:var(--g4);font-weight:400">· ' + o.projnum + '</span>' : '') + ' — ' + o.type + '</div>' +
+        '<div class="wosub">' + o.contract + ' · ' + (o.address || o.location || '—') + (o.asset ? ' · ' + o.asset : '') + '</div>' +
+      '</div>' +
+      '<div style="display:flex;gap:4px;flex-wrap:wrap">' + ps(o.priority) + ps(o.status) + ps(backupOK(o) ? 'Backup Ready' : 'Needs Backup') + '</div>';
+    card.appendChild(hdr);
+
+    // ── NOTES ────────────────────────────────────────────────────────────
+    if (o.notes) {
+      var nd = document.createElement('div');
+      nd.style.cssText = 'font-size:10px;color:var(--g5);margin-bottom:7px;padding:6px;background:var(--g0);border-radius:7px';
+      nd.textContent = o.notes;
+      card.appendChild(nd);
+    }
+
+    // ── FIELDS ROW ───────────────────────────────────────────────────────
+    var fields = document.createElement('div');
+    fields.className = 'wof';
+    [
+      ['PM',      o.pm      || '—'],
+      ['Pipe',    o.pipe    || '—'],
+      ['CCTV',    o.cctv    || 'No'],
+      ['Traffic', o.traffic || 'No'],
+      ['Due',     o.due     || '—'],
+      ['Invoice', o.invoice || 'Not Ready']
+    ].forEach(function(f) {
+      var d = document.createElement('div');
+      d.innerHTML = '<div class="wfl">' + f[0] + '</div><div class="wfv">' + f[1] + '</div>';
+      fields.appendChild(d);
+    });
+    card.appendChild(fields);
+
+    // ── TAB BAR: Actions | Workers | Photos & Docs ────────────────────────
+    var tabBar = document.createElement('div');
+    tabBar.style.cssText = 'display:flex;gap:0;border-bottom:1px solid var(--g1);margin:8px 0 0';
+    var tabContent = document.createElement('div');
+    var tabs = ['Actions', 'Workers', 'Photos & Docs'];
+    var activeTab = o._woTab || 'Actions';
+
+    function renderWOTab(tab) {
+      o._woTab = tab;
+      tabBar.innerHTML = '';
+      tabs.forEach(function(t) {
+        var tb = document.createElement('button');
+        tb.textContent = t;
+        tb.style.cssText = 'padding:6px 13px;border:none;background:transparent;font-size:11px;font-weight:600;cursor:pointer;border-bottom:2px solid ' + (t === tab ? 'var(--c)' : 'transparent') + ';color:' + (t === tab ? 'var(--c)' : 'var(--g4)') + ';font-family:var(--font)';
+        (function(tn) { tb.onclick = function() { renderWOTab(tn); }; })(t);
+        tabBar.appendChild(tb);
+      });
+      tabContent.innerHTML = '';
+
+      // ════════════════════════════════════════════════════════════════════
+      if (tab === 'Actions') {
+
+        var actWrap = document.createElement('div');
+        actWrap.style.cssText = 'padding:10px 0;display:flex;flex-direction:column;gap:10px';
+
+        // Status row
+        var statusRow = document.createElement('div');
+        statusRow.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:8px';
+
+        var statusLbl = document.createElement('div');
+        statusLbl.innerHTML = '<div style="font-size:10px;color:var(--g4);margin-bottom:3px">Status</div>';
+        var statusSel = document.createElement('select');
+        statusSel.className = 'isel';
+        ['Intake Received','Dispatch Needed','Scheduled','In Progress','QC Review','Ready for Billing','Complete'].forEach(function(s) {
+          var opt = document.createElement('option'); opt.value = s; opt.textContent = s;
+          if (s === o.status) opt.selected = true;
+          statusSel.appendChild(opt);
+        });
+        (function(idx) { statusSel.onchange = function() { updateWO(idx, 'status', this.value); }; })(i);
+        statusLbl.appendChild(statusSel);
+
+        var invLbl = document.createElement('div');
+        invLbl.innerHTML = '<div style="font-size:10px;color:var(--g4);margin-bottom:3px">Invoice status</div>';
+        var invSel = document.createElement('select');
+        invSel.className = 'isel';
+        ['Not Ready','Pending','Submitted','Paid'].forEach(function(s) {
+          var opt = document.createElement('option'); opt.value = s; opt.textContent = s;
+          if (s === o.invoice) opt.selected = true;
+          invSel.appendChild(opt);
+        });
+        (function(idx) { invSel.onchange = function() { updateWO(idx, 'invoice', this.value); }; })(i);
+        invLbl.appendChild(invSel);
+
+        statusRow.appendChild(statusLbl);
+        statusRow.appendChild(invLbl);
+        actWrap.appendChild(statusRow);
+
+        // ── CREW dropdown (from team roster) ────────────────────────────
+        var crewBlock = document.createElement('div');
+        crewBlock.innerHTML = '<div style="font-size:10px;color:var(--g4);margin-bottom:4px">Crew lead</div>';
+        var crewRow = document.createElement('div');
+        crewRow.style.cssText = 'display:flex;gap:6px;align-items:center';
+        var crewSel = document.createElement('select');
+        crewSel.className = 'isel';
+        crewSel.style.flex = '1';
+        var crewOptBlank = document.createElement('option'); crewOptBlank.value = ''; crewOptBlank.textContent = '— Select crew lead —'; crewSel.appendChild(crewOptBlank);
+        (window.TEAM_MEMBERS || window.TEAM || []).forEach(function(m) {
+          var name = (m.first||'') + ' ' + (m.last||'');
+          var opt = document.createElement('option'); opt.value = name; opt.textContent = name + (m.role ? ' · ' + m.role : '');
+          if (name.trim() === (o.crew||'').trim()) opt.selected = true;
+          crewSel.appendChild(opt);
+        });
+        // Also allow custom text entry
+        var crewCustom = document.createElement('option');
+        crewCustom.value = '__custom__'; crewCustom.textContent = '+ Type custom name';
+        crewSel.appendChild(crewCustom);
+        var crewInp = document.createElement('input');
+        crewInp.placeholder = 'Crew lead name'; crewInp.value = o.crew || '';
+        crewInp.style.cssText = 'flex:1;display:none;font-size:12px';
+        (function(idx, inp, sel) {
+          sel.onchange = function() {
+            if (this.value === '__custom__') {
+              inp.style.display = ''; sel.style.display = 'none'; inp.focus();
+            } else {
+              updateWO(idx, 'crew', this.value); inp.value = this.value;
+            }
+          };
+          inp.onchange = function() { updateWO(idx, 'crew', this.value); };
+        })(i, crewInp, crewSel);
+        var crewPickBtn = document.createElement('button');
+        crewPickBtn.className = 'btn btn-xs'; crewPickBtn.textContent = '👤';
+        crewPickBtn.title = 'Pick from team';
+        (function(idx, inp, sel) {
+          crewPickBtn.onclick = function() {
+            empPickForField(crewPickBtn, function(name) {
+              inp.value = name; inp.style.display = ''; sel.style.display = 'none';
+              updateWO(idx, 'crew', name);
+            });
+          };
+        })(i, crewInp, crewSel);
+        crewRow.appendChild(crewSel); crewRow.appendChild(crewInp); crewRow.appendChild(crewPickBtn);
+        crewBlock.appendChild(crewRow);
+        actWrap.appendChild(crewBlock);
+
+        // ── TRUCKS multi-select (from fleet) ─────────────────────────────
+        var truckBlock = document.createElement('div');
+        truckBlock.innerHTML = '<div style="font-size:10px;color:var(--g4);margin-bottom:4px">Trucks assigned</div>';
+
+        var truckPills = document.createElement('div');
+        truckPills.style.cssText = 'display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;min-height:24px';
+        var woTrucks = o.trucks ? o.trucks.slice() : (o.truck ? [o.truck] : []);
+
+        function renderWOTruckPills() {
+          truckPills.innerHTML = '';
+          if (!woTrucks.length) {
+            truckPills.innerHTML = '<span style="font-size:11px;color:var(--g4)">No trucks assigned</span>';
+            return;
+          }
+          woTrucks.forEach(function(t, ti) {
+            var pill = document.createElement('span');
+            pill.style.cssText = 'display:inline-flex;align-items:center;gap:3px;background:var(--blt);color:var(--blue);padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600';
+            pill.innerHTML = '🚛 ' + t;
+            var x = document.createElement('button');
+            x.textContent = '✕'; x.style.cssText = 'background:none;border:none;color:var(--blue);cursor:pointer;font-size:10px;padding:0 0 0 3px;line-height:1';
+            (function(tIdx) {
+              x.onclick = function() {
+                woTrucks.splice(tIdx, 1);
+                WO[i].trucks = woTrucks.slice();
+                WO[i].truck  = woTrucks.join(', ');
+                saveWOs(); renderWOTruckPills();
+              };
+            })(ti);
+            pill.appendChild(x); truckPills.appendChild(pill);
+          });
+        }
+        renderWOTruckPills();
+        truckBlock.appendChild(truckPills);
+
+        var truckAddRow = document.createElement('div');
+        truckAddRow.style.cssText = 'display:flex;gap:5px;flex-wrap:wrap';
+
+        var truckDD = document.createElement('select');
+        truckDD.className = 'isel'; truckDD.style.flex = '1';
+        var ddBlank = document.createElement('option'); ddBlank.value = ''; ddBlank.textContent = '— Select truck —'; truckDD.appendChild(ddBlank);
+        (window.FLEET||[]).forEach(function(f) {
+          var opt = document.createElement('option'); opt.value = f.truck;
+          opt.textContent = f.truck + (f.assigned ? ' · ' + f.assigned : '') + ' [' + (f.status||'') + ']';
+          truckDD.appendChild(opt);
+        });
+        var truckCustom = document.createElement('option'); truckCustom.value = '__custom__'; truckCustom.textContent = '+ Type unit #'; truckDD.appendChild(truckCustom);
+
+        var truckInpCustom = document.createElement('input');
+        truckInpCustom.placeholder = 'Unit #'; truckInpCustom.style.cssText = 'flex:1;display:none;font-size:12px';
+
+        var addTruckBtn = document.createElement('button');
+        addTruckBtn.className = 'btn btn-xs btn-c'; addTruckBtn.textContent = '+ Add';
+        (function(dd, inpC) {
+          dd.onchange = function() {
+            if (this.value === '__custom__') { inpC.style.display = ''; inpC.focus(); }
+          };
+          addTruckBtn.onclick = function() {
+            var val = dd.value === '__custom__' ? inpC.value.trim() : dd.value;
+            if (!val) return;
+            if (woTrucks.indexOf(val) < 0) {
+              woTrucks.push(val);
+              WO[i].trucks = woTrucks.slice();
+              WO[i].truck  = woTrucks.join(', ');
+              saveWOs(); renderWOTruckPills();
+            }
+            dd.value = ''; inpC.value = ''; inpC.style.display = 'none';
+          };
+        })(truckDD, truckInpCustom);
+
+        truckAddRow.appendChild(truckDD); truckAddRow.appendChild(truckInpCustom); truckAddRow.appendChild(addTruckBtn);
+        truckBlock.appendChild(truckAddRow);
+        actWrap.appendChild(truckBlock);
+
+        // ── Action buttons ──────────────────────────────────────────────
+        var btnRow = document.createElement('div');
+        btnRow.style.cssText = 'display:flex;gap:6px;flex-wrap:wrap;padding-top:4px;border-top:1px solid var(--g1)';
+        var delBtn = document.createElement('button');
+        delBtn.className = 'btn btn-r btn-xs'; delBtn.textContent = '🗑 Delete WO';
+        (function(idx) { delBtn.onclick = function() { if (confirm('Delete this work order?')) deleteWO(idx); }; })(i);
+        var spacesBtn = document.createElement('button');
+        spacesBtn.className = 'btn btn-xs btn-spaces'; spacesBtn.textContent = '📤 Spaces';
+        spacesBtn.onclick = function() { sendToSpaces('work-complete'); };
+        // Submit to client button — only show when WO is Ready for Billing or Complete
+        var clientBtn = document.createElement('button');
+        clientBtn.className = 'btn btn-xs btn-c';
+        clientBtn.textContent = '📨 Submit to client';
+        clientBtn.style.display = (o.status === 'Ready for Billing' || o.status === 'Complete') ? '' : 'none';
+        (function(woObj) { clientBtn.onclick = function() { openClientSubmit(woObj); }; })(o);
+        btnRow.appendChild(clientBtn); btnRow.appendChild(spacesBtn); btnRow.appendChild(delBtn);
+        actWrap.appendChild(btnRow);
+
+        tabContent.appendChild(actWrap);
+
+      // ════════════════════════════════════════════════════════════════════
+      } else if (tab === 'Workers') {
+
+        var wDiv = document.createElement('div');
+        wDiv.style.cssText = 'padding:10px 0';
+        var workers = o.workers || [];
+
+        // Worker list
+        var wList = document.createElement('div');
+        wList.style.cssText = 'margin-bottom:10px';
+
+        function renderWorkerList() {
+          wList.innerHTML = '';
+          if (!workers.length) {
+            wList.innerHTML = '<div style="font-size:11px;color:var(--g4);padding:8px;background:var(--g0);border-radius:8px;border:1px dashed var(--g2)">No workers assigned — add below or pick from team roster.</div>';
+          } else {
+            workers.forEach(function(w, wi) {
+              var row = document.createElement('div');
+              row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:7px;background:var(--g0);border-radius:8px;margin-bottom:5px;border:1px solid var(--g1)';
+              row.innerHTML = '<span style="font-size:18px">👷</span>' +
+                '<div style="flex:1">' +
+                  '<div style="font-size:12px;font-weight:600;color:var(--g8)">' + w.name + '</div>' +
+                  '<div style="font-size:10px;color:var(--g4)">' + (w.role||'') + (w.hours ? ' &nbsp;·&nbsp; ' + w.hours + ' hrs' : '') + '</div>' +
+                '</div>';
+              var rb = document.createElement('button');
+              rb.className = 'btn btn-xs btn-r'; rb.textContent = '✕';
+              (function(wIdx, woIdx) {
+                rb.onclick = function() { WO[woIdx].workers.splice(wIdx,1); workers.splice(wIdx,1); saveWOs(); renderWorkerList(); };
+              })(wi, i);
+              row.appendChild(rb); wList.appendChild(row);
+            });
+          }
+        }
+        renderWorkerList();
+        wDiv.appendChild(wList);
+
+        // Add worker row
+        var addWrkLabel = document.createElement('div');
+        addWrkLabel.style.cssText = 'font-size:10px;color:var(--g4);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px';
+        addWrkLabel.textContent = 'Add worker';
+        var addRow = document.createElement('div');
+        addRow.style.cssText = 'display:grid;grid-template-columns:1fr 1fr 60px auto;gap:6px;align-items:end;margin-bottom:6px';
+
+        // Worker name dropdown (from team) + pick
+        var workerDD = document.createElement('select');
+        workerDD.className = 'isel';
+        var wBlank = document.createElement('option'); wBlank.value = ''; wBlank.textContent = '— Select —'; workerDD.appendChild(wBlank);
+        (window.TEAM_MEMBERS || window.TEAM || []).forEach(function(m) {
+          var name = (m.first||'') + ' ' + (m.last||'');
+          var opt = document.createElement('option'); opt.value = name + '|' + (m.role||''); opt.textContent = name + (m.role ? ' · ' + m.role : '');
+          workerDD.appendChild(opt);
+        });
+        var wCustomOpt = document.createElement('option'); wCustomOpt.value = '__custom__'; wCustomOpt.textContent = '+ Custom name'; workerDD.appendChild(wCustomOpt);
+
+        var workerNameInp = document.createElement('input');
+        workerNameInp.placeholder = 'Name'; workerNameInp.style.cssText = 'font-size:12px;display:none';
+        var workerRoleInp = document.createElement('input');
+        workerRoleInp.placeholder = 'Role'; workerRoleInp.style.cssText = 'font-size:12px';
+        var workerHrsInp  = document.createElement('input');
+        workerHrsInp.placeholder = 'Hrs'; workerHrsInp.type = 'number'; workerHrsInp.style.cssText = 'font-size:12px';
+
+        workerDD.onchange = function() {
+          if (this.value === '__custom__') {
+            workerNameInp.style.display = ''; workerDD.style.display = 'none'; workerNameInp.focus();
+          } else if (this.value) {
+            var parts = this.value.split('|');
+            workerNameInp.value = parts[0]; workerRoleInp.value = parts[1]||'';
+          }
+        };
+
+        var pickWrkBtn = document.createElement('button');
+        pickWrkBtn.className = 'btn btn-xs'; pickWrkBtn.textContent = '👤';
+        pickWrkBtn.onclick = function() {
+          empPickForField(pickWrkBtn, function(name, role) {
+            workerNameInp.value = name; workerNameInp.style.display = '';
+            workerDD.style.display = 'none';
+            if (role) workerRoleInp.value = role;
+          });
+        };
+
+        addRow.appendChild(workerDD); addRow.appendChild(workerNameInp);
+        addRow.appendChild(workerRoleInp); addRow.appendChild(workerHrsInp);
+
+        var addBtnRow = document.createElement('div');
+        addBtnRow.style.cssText = 'display:flex;gap:6px;align-items:center;margin-bottom:10px';
+        addBtnRow.appendChild(pickWrkBtn);
+        var addWrkBtn = document.createElement('button');
+        addWrkBtn.className = 'btn btn-xs btn-c'; addWrkBtn.textContent = '+ Add worker';
+        (function(woIdx) {
+          addWrkBtn.onclick = function() {
+            var name = (workerNameInp.style.display !== 'none' ? workerNameInp.value : (workerDD.value !== '__custom__' && workerDD.value ? workerDD.value.split('|')[0] : '')).trim();
+            if (!name) { showToast('Enter worker name','red'); return; }
+            if (!WO[woIdx].workers) WO[woIdx].workers = [];
+            var newW = { name:name, role:workerRoleInp.value.trim(), hours:workerHrsInp.value };
+            WO[woIdx].workers.push(newW); workers.push(newW);
+            saveWOs(); renderWorkerList();
+            workerDD.value = ''; workerNameInp.value = ''; workerNameInp.style.display = 'none';
+            workerDD.style.display = ''; workerRoleInp.value = ''; workerHrsInp.value = '';
+            showToast('Worker added');
+          };
+        })(i);
+        addBtnRow.appendChild(addWrkBtn);
+
+        wDiv.appendChild(addWrkLabel); wDiv.appendChild(addRow); wDiv.appendChild(addBtnRow);
+
+        // Completed by / sign-off
+        var signoff = document.createElement('div');
+        signoff.style.cssText = 'padding:8px;background:var(--g0);border-radius:8px;border:1px solid var(--g1)';
+        signoff.innerHTML = '<div style="font-size:10px;font-weight:700;color:var(--g5);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">✓ Completed by / sign-off</div>';
+        var soRow = document.createElement('div');
+        soRow.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:6px';
+
+        var supInp = document.createElement('input');
+        supInp.placeholder = 'Supervisor name'; supInp.value = o.completedBy || ''; supInp.style.fontSize = '12px';
+        (function(woIdx) { supInp.onchange = function() { WO[woIdx].completedBy = this.value; saveWOs(); }; })(i);
+        var supPickBtn = document.createElement('button');
+        supPickBtn.className = 'btn btn-xs'; supPickBtn.textContent = '👤';
+        (function(inp) { supPickBtn.onclick = function() { empPickForField(supPickBtn, function(n){ inp.value=n; }); }; })(supInp);
+        var supRow = document.createElement('div');
+        supRow.style.cssText = 'display:flex;gap:4px;align-items:center;grid-column:1/-1';
+        supRow.appendChild(supInp); supRow.appendChild(supPickBtn);
+
+        var compDate = document.createElement('input');
+        compDate.type = 'date'; compDate.value = o.completedDate||''; compDate.style.fontSize='12px';
+        (function(woIdx) { compDate.onchange = function() { WO[woIdx].completedDate = this.value; saveWOs(); }; })(i);
+        var compDateLbl = document.createElement('div');
+        compDateLbl.innerHTML = '<div style="font-size:10px;color:var(--g4);margin-bottom:2px">Completion date</div>';
+        compDateLbl.appendChild(compDate);
+
+        soRow.appendChild(supRow); soRow.appendChild(compDateLbl);
+        signoff.appendChild(soRow);
+        wDiv.appendChild(signoff);
+        tabContent.appendChild(wDiv);
+
+      // ════════════════════════════════════════════════════════════════════
+      } else if (tab === 'Photos & Docs') {
+
+        var pdDiv = document.createElement('div');
+        pdDiv.style.cssText = 'padding:10px 0';
+
+        var pipes = o.pipePhotoSections || [];
+
+        // ── PIPE SECTION HEADER ──────────────────────────────────────────
+        var pipeHdr = document.createElement('div');
+        pipeHdr.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap';
+        pipeHdr.innerHTML = '<span style="font-size:11px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px">📍 Pipe / Section photos</span>';
+
+        var pipeSel = document.createElement('select');
+        pipeSel.className = 'isel';
+        pipeSel.style.cssText = 'flex:1;min-width:140px';
+
+        var addPipeBtn = document.createElement('button');
+        addPipeBtn.className = 'btn btn-xs btn-c';
+        addPipeBtn.textContent = '+ Add pipe / section';
+
+        pipeHdr.appendChild(pipeSel);
+        pipeHdr.appendChild(addPipeBtn);
+        pdDiv.appendChild(pipeHdr);
+
+        // ── ADD PIPE FORM ───────────────────────────────────────────────
+        var addPipeForm = document.createElement('div');
+        addPipeForm.style.cssText = 'display:none;background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:10px;margin-bottom:10px';
+        addPipeForm.innerHTML =
+          '<div style="font-size:11px;font-weight:600;color:var(--g6);margin-bottom:7px">New pipe / section</div>' +
+          '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:7px">' +
+            '<div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Pipe / Basin ID</div>' +
+              '<input class="apf-id" placeholder="e.g. PIPE-001" style="width:100%;font-size:12px"></div>' +
+            '<div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Size (in)</div>' +
+              '<input class="apf-size" placeholder="e.g. 16" style="width:100%;font-size:12px"></div>' +
+            '<div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Location / Sta.</div>' +
+              '<input class="apf-loc" placeholder="e.g. Sta 0+00" style="width:100%;font-size:12px"></div>' +
+          '</div>' +
+          '<div style="display:flex;gap:6px">' +
+            '<button class="apf-confirm btn btn-xs btn-c">Add section</button>' +
+            '<button class="apf-cancel btn btn-xs">Cancel</button>' +
+          '</div>';
+        pdDiv.appendChild(addPipeForm);
+
+        var pipePhotoArea = document.createElement('div');
+        pdDiv.appendChild(pipePhotoArea);
+
+        // ── DOC SECTION ─────────────────────────────────────────────────
+        var docSec = document.createElement('div');
+        docSec.style.cssText = 'margin-top:12px;padding-top:12px;border-top:1px solid var(--g1)';
+        docSec.innerHTML = '<div style="font-size:11px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px">📄 Field Reports & Documents</div>';
+        var docList = document.createElement('div');
+        docSec.appendChild(docList);
+
+        function renderDocList() {
+          docList.innerHTML = '';
+          var docArr = o.docs || [];
+          if (!docArr.length) {
+            var emptyMsg = document.createElement('div');
+            emptyMsg.style.cssText = 'font-size:11px;color:var(--g4);padding:8px;background:var(--g0);border-radius:8px;border:1px dashed var(--g2);margin-bottom:8px';
+            emptyMsg.textContent = 'No documents uploaded yet.';
+            docList.appendChild(emptyMsg);
+          } else {
+            docArr.forEach(function(doc, di) {
+              var row = document.createElement('div');
+              row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:7px;background:var(--g0);border-radius:8px;margin-bottom:5px;border:1px solid var(--g1)';
+              var icon = doc.type && doc.type.indexOf('pdf')>=0 ? '📕' : doc.type && doc.type.indexOf('image')>=0 ? '🖼' : (doc.name||'').endsWith('.docx') ? '📘' : (doc.name||'').endsWith('.xlsx') ? '📗' : '📄';
+              row.innerHTML = '<span style="font-size:20px">'+icon+'</span><div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:600;color:var(--g8);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+doc.name+'</div><div style="font-size:10px;color:var(--g4)">'+(doc.size?Math.round(doc.size/1024)+' KB':'')+(doc.uploadDate?' · '+doc.uploadDate:'')+'</div></div>';
+              var dlBtn = document.createElement('button'); dlBtn.className='btn btn-xs'; dlBtn.textContent='⬇';
+              dlBtn.onclick=function(){var a=document.createElement('a');a.href=doc.data;a.download=doc.name;a.click();};
+              var delDocBtn = document.createElement('button'); delDocBtn.className='btn btn-xs btn-r'; delDocBtn.textContent='✕';
+              (function(dIdx,woIdx){ delDocBtn.onclick=function(){ WO[woIdx].docs.splice(dIdx,1); saveWOs(); renderDocList(); }; })(di,i);
+              row.appendChild(dlBtn); row.appendChild(delDocBtn); docList.appendChild(row);
+            });
+          }
+          var docFileInp = document.createElement('input');
+          docFileInp.type='file'; docFileInp.accept='.pdf,.doc,.docx,.xls,.xlsx,.csv,.txt,.jpg,.jpeg,.png,.heic'; docFileInp.multiple=true; docFileInp.style.display='none';
+          var docUploadBtn = document.createElement('button'); docUploadBtn.className='btn btn-sm'; docUploadBtn.innerHTML='📎 Upload document / field report';
+          docUploadBtn.onclick=function(){docFileInp.click();};
+          (function(woIdx){
+            docFileInp.onchange=function(){
+              var files=Array.from(this.files); if(!files.length) return; var left=files.length;
+              if(!WO[woIdx].docs) WO[woIdx].docs=[];
+              files.forEach(function(f){
+                var rd=new FileReader(); rd.onload=function(e){ WO[woIdx].docs.push({name:f.name,type:f.type,size:f.size,data:e.target.result,uploadDate:new Date().toLocaleDateString()}); left--; if(left===0){saveWOs();renderDocList();showToast(files.length+' file'+(files.length>1?'s':'')+' uploaded');} };
+                rd.readAsDataURL(f);
+              });
+            };
+          })(i);
+          docList.appendChild(docUploadBtn); docList.appendChild(docFileInp);
+          var docNote=document.createElement('div'); docNote.style.cssText='font-size:10px;color:var(--g4);margin-top:4px'; docNote.textContent='PDF, Word, Excel, CSV, images — saved inside the app'; docList.appendChild(docNote);
+        }
+        renderDocList();
+        pdDiv.appendChild(docSec);
+
+        // ── PIPE SECTION FUNCTIONS ──────────────────────────────────────
+        function populatePipeSel() {
+          pipeSel.innerHTML = '';
+          if (!pipes.length) {
+            var opt0 = document.createElement('option'); opt0.value=''; opt0.textContent='— No sections yet, click + Add →'; pipeSel.appendChild(opt0);
+          } else {
+            var allOpt = document.createElement('option'); allOpt.value='__all__'; allOpt.textContent='📋 All sections overview'; pipeSel.appendChild(allOpt);
+            pipes.forEach(function(p, pi) {
+              var opt = document.createElement('option'); opt.value=String(pi);
+              opt.textContent=(p.id||'Section '+(pi+1))+(p.size?' ('+p.size+'")':'')+(p.location?' · '+p.location:'')+' · 📷'+((p.before||[]).length)+'B/'+(((p.after||[]).length))+'A';
+              pipeSel.appendChild(opt);
+            });
+          }
+        }
+
+        function renderPipePhotos(pipeVal) {
+          pipePhotoArea.innerHTML = '';
+          if (pipeVal === '__all__' || pipeVal === '') {
+            if (!pipes.length) {
+              var emptyP = document.createElement('div');
+              emptyP.style.cssText='text-align:center;padding:20px;color:var(--g4);font-size:12px;border:1px dashed var(--g2);border-radius:8px';
+              emptyP.innerHTML='No pipe sections yet. Click <b>+ Add pipe / section</b> to start.';
+              pipePhotoArea.appendChild(emptyP);
+              return;
+            }
+            // All sections overview — thumbnails
+            pipes.forEach(function(p, pi) {
+              var card2 = document.createElement('div');
+              card2.style.cssText='margin-bottom:12px;background:var(--g0);border:1px solid var(--g1);border-radius:10px;overflow:hidden';
+              var ch = document.createElement('div');
+              ch.style.cssText='padding:8px 12px;background:var(--g7);display:flex;align-items:center;justify-content:space-between';
+              ch.innerHTML='<span style="font-size:12px;font-weight:700;color:#f1f5f9">'+(p.id||'Section '+(pi+1))+(p.size?' <span style="color:var(--g3);font-size:10px;font-weight:400">'+p.size+'"</span>':'')+(p.location?' <span style="color:var(--g3);font-size:10px;font-weight:400">· '+p.location+'</span>':'')+'</span><div style="display:flex;gap:10px;font-size:10px;color:var(--g3)"><span>🔴 '+((p.before||[]).length)+'</span><span>🟢 '+((p.after||[]).length)+'</span></div>';
+              var openBtn = document.createElement('button'); openBtn.className='btn btn-xs'; openBtn.textContent='Open';
+              (function(pIdx){ openBtn.onclick=function(){ pipeSel.value=String(pIdx); renderPipePhotos(pIdx); }; })(pi);
+              ch.appendChild(openBtn); card2.appendChild(ch);
+              var thumbs = document.createElement('div'); thumbs.style.cssText='padding:8px;display:flex;flex-wrap:wrap;gap:5px';
+              var allPh=(p.before||[]).concat(p.after||[]);
+              allPh.slice(0,6).forEach(function(src){ var img=document.createElement('img'); img.src=src; img.style.cssText='width:50px;height:50px;object-fit:cover;border-radius:6px;cursor:pointer'; img.onclick=function(){window.open(src,'_blank');}; thumbs.appendChild(img); });
+              if(allPh.length>6){ var more=document.createElement('div'); more.style.cssText='width:50px;height:50px;border-radius:6px;background:var(--g1);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--g5);cursor:pointer'; more.textContent='+'+(allPh.length-6); (function(pIdx){more.onclick=function(){pipeSel.value=String(pIdx);renderPipePhotos(pIdx);};})(pi); thumbs.appendChild(more); }
+              card2.appendChild(thumbs); pipePhotoArea.appendChild(card2);
+            });
+            return;
+          }
+          // Single section
+          var pi = parseInt(pipeVal); var p = pipes[pi]; if(!p) return;
+          var sHdr = document.createElement('div');
+          sHdr.style.cssText='display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:8px 10px;background:var(--g7);border-radius:8px';
+          sHdr.innerHTML='<div style="flex:1"><div style="font-size:13px;font-weight:700;color:#f1f5f9">'+(p.id||'Section '+(pi+1))+'</div><div style="font-size:10px;color:var(--g3)">'+(p.size?p.size+'" pipe':'')+( p.location?' · '+p.location:'')+'</div></div>';
+          var delSec=document.createElement('button'); delSec.className='btn btn-xs btn-r'; delSec.textContent='Delete section';
+          (function(pIdx,woIdx){ delSec.onclick=function(){ if(confirm('Delete this pipe section and all photos?')){ WO[woIdx].pipePhotoSections.splice(pIdx,1); pipes.splice(pIdx,1); saveWOs(); populatePipeSel(); pipeSel.value='__all__'; renderPipePhotos('__all__'); } }; })(pi,i);
+          sHdr.appendChild(delSec); pipePhotoArea.appendChild(sHdr);
+
+          function buildPipePh(label, key, icon) {
+            var sec=document.createElement('div'); sec.style.cssText='margin-bottom:14px';
+            var secHd=document.createElement('div'); secHd.style.cssText='font-size:11px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;display:flex;align-items:center;gap:6px';
+            secHd.textContent=icon+' '+label;
+            var cnt=document.createElement('span'); cnt.style.cssText='background:var(--g1);color:var(--g5);padding:1px 6px;border-radius:20px;font-size:10px;font-weight:600'; cnt.textContent=((p[key]||[]).length)+' photos'; secHd.appendChild(cnt); sec.appendChild(secHd);
+            var grid=document.createElement('div'); grid.style.cssText='display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:6px';
+            function rebuildPh() {
+              grid.innerHTML='';
+              (p[key]||[]).forEach(function(src,pi2){
+                var wrap=document.createElement('div'); wrap.style.cssText='position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:var(--g1)';
+                var img=document.createElement('img'); img.src=src; img.style.cssText='width:100%;height:100%;object-fit:cover;cursor:pointer'; img.onclick=function(){window.open(src,'_blank');};
+                var dx=document.createElement('button'); dx.textContent='✕'; dx.style.cssText='position:absolute;top:3px;right:3px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:20px;height:20px;font-size:10px;cursor:pointer;line-height:1;padding:0';
+                (function(phIdx,pKey,pIdx2,woIdx){ dx.onclick=function(e){ e.stopPropagation(); WO[woIdx].pipePhotoSections[pIdx2][pKey].splice(phIdx,1); p[pKey]=WO[woIdx].pipePhotoSections[pIdx2][pKey]; saveWOs(); rebuildPh(); cnt.textContent=(p[pKey]||[]).length+' photos'; populatePipeSel(); }; })(pi2,key,pi,i);
+                wrap.appendChild(img); wrap.appendChild(dx); grid.appendChild(wrap);
+              });
+              var upTile=document.createElement('div'); upTile.style.cssText='aspect-ratio:1;border-radius:8px;border:2px dashed var(--g2);display:flex;align-items:center;justify-content:center;cursor:pointer;background:var(--g0);flex-direction:column;gap:3px;min-height:70px';
+              upTile.innerHTML='<span style="font-size:22px">📷</span><span style="font-size:9px;color:var(--g4)">Add photos</span>';
+              var fi=document.createElement('input'); fi.type='file'; fi.accept='image/*'; fi.multiple=true; fi.style.display='none';
+              upTile.onclick=function(){fi.click();};
+              (function(pKey,pIdx2,woIdx){ fi.onchange=function(){ var files=Array.from(this.files); if(!files.length) return; var left=files.length; if(!WO[woIdx].pipePhotoSections[pIdx2][pKey]) WO[woIdx].pipePhotoSections[pIdx2][pKey]=[]; files.forEach(function(f){ var rd=new FileReader(); rd.onload=function(e){ WO[woIdx].pipePhotoSections[pIdx2][pKey].push(e.target.result); p[pKey]=WO[woIdx].pipePhotoSections[pIdx2][pKey]; left--; if(left===0){saveWOs();rebuildPh();cnt.textContent=(p[pKey]||[]).length+' photos';populatePipeSel();showToast(files.length+' photo'+(files.length>1?'s':'')+' added');} }; rd.readAsDataURL(f); }); }; })(key,pi,i);
+              grid.appendChild(upTile); grid.appendChild(fi);
+            }
+            rebuildPh(); sec.appendChild(grid); return sec;
+          }
+          pipePhotoArea.appendChild(buildPipePh('Before work','before','🔴'));
+          pipePhotoArea.appendChild(buildPipePh('After work / Completed','after','🟢'));
+        }
+
+        // Wire up controls
+        addPipeBtn.onclick=function(){ addPipeForm.style.display=addPipeForm.style.display==='none'?'block':'none'; };
+        var confirmBtn=addPipeForm.querySelector('.apf-confirm');
+        var cancelBtn=addPipeForm.querySelector('.apf-cancel');
+        if(confirmBtn){ confirmBtn.onclick=function(){
+          var pId=(addPipeForm.querySelector('.apf-id')||{}).value||('Section '+(pipes.length+1));
+          var pSz=(addPipeForm.querySelector('.apf-size')||{}).value||'';
+          var pLoc=(addPipeForm.querySelector('.apf-loc')||{}).value||'';
+          if(!WO[i].pipePhotoSections) WO[i].pipePhotoSections=[];
+          WO[i].pipePhotoSections.push({id:pId,size:pSz,location:pLoc,before:[],after:[]});
+          pipes=WO[i].pipePhotoSections; saveWOs(); populatePipeSel();
+          pipeSel.value=String(pipes.length-1); renderPipePhotos(pipes.length-1);
+          addPipeForm.style.display='none';
+          addPipeForm.querySelectorAll('input').forEach(function(el){el.value='';});
+          showToast('Section added: '+pId);
+        }; }
+        if(cancelBtn){ cancelBtn.onclick=function(){ addPipeForm.style.display='none'; }; }
+        pipeSel.onchange=function(){ renderPipePhotos(this.value); };
+
+        populatePipeSel();
+        renderPipePhotos(pipes.length ? '__all__' : '');
+        tabContent.appendChild(pdDiv);
+      }} // end renderWOTab
+
+    renderWOTab(activeTab);
+    card.appendChild(tabBar);
+    card.appendChild(tabContent);
+    el.appendChild(card);
+  }); // end forEach
+}
 
 // ── DISPATCH ──
 function renderDispatch(){popWOSel('disp-wo-sel');document.getElementById('dispatch-tbody').innerHTML=WO.map(function(o,i){return '<tr><td><b>'+o.id+'</b></td><td style="font-size:10px">'+o.type+'</td><td style="font-size:10px">'+o.location+'</td><td>'+iinp(o.crew||'','Crew',"updateWO("+i+",'crew',this.value)")+'</td><td>'+iinp(o.truck||'','Truck',"updateWO("+i+",'truck',this.value)")+'</td><td>'+iinp(o.foreman||'','Foreman',"updateWO("+i+",'foreman',this.value)")+'</td><td><input type="date" class="iinp" value="'+(o.schedDate||'')+'" onchange="updateWO('+i+',\'schedDate\',this.value)"></td><td>'+iinp(o.schedTime||'','Time',"updateWO("+i+",'schedTime',this.value)",'70px')+'</td><td>'+ps(o.status)+'</td><td>'+ps(o.priority)+'</td></tr>';}).join('');}
 function scheduleWO(){var idx=document.getElementById('disp-wo-sel').selectedIndex;if(idx<0)return;WO[idx].crew=document.getElementById('disp-crew').value||WO[idx].crew;WO[idx].truck=document.getElementById('disp-truck').value||WO[idx].truck;WO[idx].schedDate=document.getElementById('disp-date').value;WO[idx].schedTime=document.getElementById('disp-time').value;WO[idx].schedHrs=document.getElementById('disp-hrs').value;WO[idx].foreman=document.getElementById('disp-foreman').value||WO[idx].foreman;if(WO[idx].status==='Intake Received'||WO[idx].status==='Dispatch Needed')WO[idx].status='Scheduled';scheduleSave();renderDispatch();showToast('✓ Dispatched — sending to Spaces…');setTimeout(function(){sendToSpaces('dispatch-alert');},500);}
 
 // ── PRODUCTION ──
-function renderProduction(){popWOSel('prod-wo-sel');var totalLF=PROD.reduce(function(s,p){return s+Number(p.lf||0);},0),totalDeb=PROD.reduce(function(s,p){return s+Number(p.deb||0);},0);document.getElementById('prod-lf').textContent=totalLF.toLocaleString();document.getElementById('prod-deb').textContent=totalDeb;document.getElementById('prod-avg').textContent=PROD.length?Math.round(totalLF/PROD.length).toLocaleString():'0';document.getElementById('prod-pct').textContent=Math.min(100,Math.round(totalLF/5000*100))+'%';document.getElementById('prod-tbody').innerHTML=PROD.map(function(p){return '<tr><td>'+p.date+'</td><td><b>'+p.woId+'</b></td><td>'+p.pipe+'"</td><td><b>'+Number(p.lf||0).toLocaleString()+'</b></td><td>'+p.deb+'</td><td>'+p.hrs+'</td><td>'+p.cctv+'</td></tr>';}).join('');}
+function renderProduction() {
+  popWOSel('prod-wo-sel');
+  var totalLF  = PROD.reduce(function(s,p){return s+Number(p.lf||0);},0);
+  var totalDeb = PROD.reduce(function(s,p){return s+Number(p.deb||0);},0);
+  document.getElementById('prod-lf').textContent  = totalLF.toLocaleString();
+  document.getElementById('prod-deb').textContent = totalDeb;
+  document.getElementById('prod-avg').textContent = PROD.length ? Math.round(totalLF/PROD.length).toLocaleString() : '0';
+  document.getElementById('prod-pct').textContent = Math.min(100,Math.round(totalLF/5000*100))+'%';
+
+  var tbody = document.getElementById('prod-tbody');
+  if (tbody) {
+    if (!PROD.length) {
+      tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:16px;color:var(--g4)">No production entries yet.</td></tr>';
+    } else {
+      tbody.innerHTML = '';
+      PROD.forEach(function(p, pi) {
+        var tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td>' + (p.date||'—') + '</td>' +
+          '<td><b>' + (p.woId||'—') + '</b></td>' +
+          '<td>' + (p.pipe||'—') + '"</td>' +
+          '<td>' + (p.lf||0) + '</td>' +
+          '<td>' + (p.deb||0) + '</td>' +
+          '<td>' + (p.hrs||0) + '</td>' +
+          '<td>' + (p.cctv||0) + '</td>';
+        var tdDel = document.createElement('td');
+        var delBtn = document.createElement('button');
+        delBtn.className = 'btn btn-xs btn-r'; delBtn.textContent = '✕';
+        (function(idx){ delBtn.onclick = function(){ PROD.splice(idx,1); scheduleSave(); renderProduction(); }; })(pi);
+        tdDel.appendChild(delBtn); tr.appendChild(tdDel);
+        tbody.appendChild(tr);
+      });
+    }
+  }
+
+  // Render pipe photos panel if visible
+  var photosActive = document.querySelector('.prod-tab[data-ptab="photos"]');
+  if (photosActive && photosActive.classList.contains('active')) {
+    renderProdPipePhotos();
+  }
+}
 function addProd(){var wo=document.getElementById('prod-wo-sel').value;if(!wo){alert('Select a work order.');return;}PROD.unshift({woId:wo,date:document.getElementById('prod-date').value||new Date().toISOString().slice(0,10),pipe:document.getElementById('prod-pipe').value,lf:document.getElementById('prod-lf-inp').value,deb:document.getElementById('prod-deb-inp').value,hrs:document.getElementById('prod-hrs').value,cctv:document.getElementById('prod-cctv').value,notes:document.getElementById('prod-notes').value});scheduleSave();renderProduction();['prod-date','prod-pipe','prod-lf-inp','prod-deb-inp','prod-hrs','prod-cctv','prod-notes'].forEach(function(f){document.getElementById(f).value='';});}
 
 // ── SAFETY ──
@@ -3453,6 +4364,1025 @@ initAll();
 setInterval(function(){renderMetrics();renderAlerts();updateBadges();},60000);
 
 
+
+
+window.saveWOs = function() {
+  localStorage.setItem('mor_uni_wos', JSON.stringify(WO));
+};
+
+
+// ── WO MODAL TABS ──────────────────────────────────────────────────────────
+window.switchWOModalTab = function(tab) {
+  document.querySelectorAll('.wo-mtab-pane').forEach(function(p){ p.style.display='none'; });
+  document.querySelectorAll('.wo-mtab').forEach(function(b){ b.classList.remove('active'); });
+  var pane = document.getElementById('wo-tab-' + tab);
+  if (pane) pane.style.display = 'block';
+  document.querySelectorAll('.wo-mtab').forEach(function(b){ if (b.getAttribute('data-tab') === tab) b.classList.add('active'); });
+};
+
+// ── DISPATCH: Multi-truck selector ─────────────────────────────────────────
+var _dispatchTrucks = [];
+
+window.populateDispatchTruckDD = function() {
+  var sel = document.getElementById('disp-truck-add');
+  if (!sel) return;
+  sel.innerHTML = '<option value="">— Select truck to add —</option>';
+  (window.FLEET||[]).forEach(function(t) {
+    var opt = document.createElement('option');
+    opt.value = t.truck;
+    opt.textContent = t.truck + (t.assigned ? ' · ' + t.assigned : '') + ' [' + (t.status||'') + ']';
+    sel.appendChild(opt);
+  });
+};
+
+window.addDispatchTruck = function() {
+  var sel = document.getElementById('disp-truck-add');
+  if (!sel || !sel.value) return;
+  var truck = sel.value;
+  if (_dispatchTrucks.indexOf(truck) < 0) {
+    _dispatchTrucks.push(truck);
+    renderDispatchTrucks();
+  }
+  sel.value = '';
+};
+
+window.addDispatchTruckCustom = function() {
+  var inp = document.getElementById('disp-truck-custom');
+  if (!inp || !inp.value.trim()) return;
+  var truck = inp.value.trim();
+  if (_dispatchTrucks.indexOf(truck) < 0) {
+    _dispatchTrucks.push(truck);
+    renderDispatchTrucks();
+  }
+  inp.value = '';
+};
+
+window.renderDispatchTrucks = function() {
+  var list = document.getElementById('disp-truck-list');
+  if (!list) return;
+  list.innerHTML = '';
+  if (!_dispatchTrucks.length) {
+    list.innerHTML = '<span style="font-size:11px;color:var(--g4)">No trucks added yet</span>';
+    return;
+  }
+  _dispatchTrucks.forEach(function(truck, idx) {
+    var pill = document.createElement('span');
+    pill.style.cssText = 'display:inline-flex;align-items:center;gap:4px;background:var(--blt);color:var(--blue);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:600';
+    pill.innerHTML = '🚛 ' + truck;
+    var x = document.createElement('button');
+    x.textContent = '✕';
+    x.style.cssText = 'background:none;border:none;color:var(--blue);cursor:pointer;font-size:10px;padding:0;margin-left:2px;line-height:1';
+    (function(i) { x.onclick = function() { _dispatchTrucks.splice(i,1); renderDispatchTrucks(); }; })(idx);
+    pill.appendChild(x);
+    list.appendChild(pill);
+  });
+};
+
+window.fillDispatchFromWO = function() {
+  var sel = document.getElementById('disp-wo-sel');
+  if (!sel) return;
+  var wo = WO[sel.selectedIndex];
+  if (!wo) return;
+  // Pre-fill foreman and date from WO
+  var foremEl = document.getElementById('disp-foreman');
+  if (foremEl && wo.foreman) foremEl.value = wo.foreman;
+  var dateEl = document.getElementById('disp-date');
+  if (dateEl && wo.schedDate) dateEl.value = wo.schedDate;
+  // Pre-fill trucks from WO's assigned trucks
+  if (wo.trucks && wo.trucks.length) {
+    _dispatchTrucks = wo.trucks.slice();
+    renderDispatchTrucks();
+  }
+};
+
+// Override scheduleWO to save multiple trucks
+var _origScheduleWO = window.scheduleWO;
+window.scheduleWO = function() {
+  var sel = document.getElementById('disp-wo-sel');
+  if (!sel) return;
+  var idx = sel.selectedIndex;
+  if (idx < 0 || !WO[idx]) return;
+  WO[idx].crew    = document.getElementById('disp-foreman').value || WO[idx].crew;
+  WO[idx].truck   = _dispatchTrucks.join(', ') || WO[idx].truck;
+  WO[idx].trucks  = _dispatchTrucks.slice();
+  WO[idx].schedDate = document.getElementById('disp-date').value;
+  WO[idx].schedTime = document.getElementById('disp-time').value;
+  WO[idx].schedHrs  = document.getElementById('disp-hrs').value;
+  WO[idx].foreman   = document.getElementById('disp-foreman').value || WO[idx].foreman;
+  WO[idx].dispNotes = document.getElementById('disp-notes').value;
+  if (WO[idx].status === 'Intake Received' || WO[idx].status === 'Dispatch Needed') WO[idx].status = 'Scheduled';
+  saveWOs();
+  scheduleSave();
+  renderDispatch();
+  _dispatchTrucks = [];
+  renderDispatchTrucks();
+  showToast('Dispatched — notifying Spaces…');
+  setTimeout(function(){ sendToSpaces('dispatch-alert'); }, 500);
+};
+
+// Override renderDispatch to show trucks and address
+var _origRenderDispatch = window.renderDispatch;
+window.renderDispatch = function() {
+  populateDispatchTruckDD();
+  renderDispatchTrucks();
+  var tbody = document.getElementById('dispatch-tbody');
+  if (!tbody) return;
+  var dispatched = WO.filter(function(o){ return o.schedDate || o.status === 'Scheduled' || o.status === 'In Progress'; });
+  if (!dispatched.length) {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--g4);padding:20px">No dispatched work orders</td></tr>';
+    return;
+  }
+  tbody.innerHTML = '';
+  dispatched.forEach(function(o) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td><b>' + o.id + '</b></td>' +
+      '<td>' + o.type + '</td>' +
+      '<td style="font-size:10px">' + (o.address || o.location || '—') + '</td>' +
+      '<td>' + (o.foreman || o.crew || '—') + '</td>' +
+      '<td style="font-size:10px">' + ((o.trucks && o.trucks.length) ? o.trucks.join(', ') : (o.truck||'—')) + '</td>' +
+      '<td>' + (o.schedDate||'—') + '</td>' +
+      '<td>' + (o.schedTime||'—') + '</td>' +
+      '<td>' + (o.status||'—') + '</td>';
+    tbody.appendChild(tr);
+  });
+};
+
+// ── addWO — save address + project number ──────────────────────────────────
+var _origAddWO = window.addWO;
+window.addWO = function() {
+  var sel = document.getElementById('np-projnum-sel');
+  var inp = document.getElementById('np-projnum');
+  var projnum = '';
+  if (sel && sel.value && sel.value !== '__new__') {
+    projnum = sel.value;
+  } else if (inp && inp.value.trim()) {
+    projnum = inp.value.trim();
+    // Save new project number to PROJECTS list
+    if (projnum && window.PROJECTS && window.PROJECTS.indexOf(projnum) < 0) {
+      window.PROJECTS.push(projnum);
+      saveProjects();
+    }
+  }
+  var address = (document.getElementById('np-address')||{}).value || '';
+  var access  = (document.getElementById('np-access')||{}).value  || '';
+  if (typeof _origAddWO === 'function') _origAddWO();
+  if (WO.length) {
+    var last = WO[0];
+    last.projnum = projnum;
+    last.address = address;
+    last.access  = access;
+    saveWOs();
+  }
+};
+
+// ── BILLING: Monthly WO summary ────────────────────────────────────────────
+window.renderBillingMonthly = function() {
+  var el = document.getElementById('billing-monthly-body');
+  if (!el) return;
+
+  var monthSel = document.getElementById('billing-month-sel');
+  var selectedMonth = monthSel ? monthSel.value : new Date().toISOString().slice(0,7);
+
+  // Filter WOs by scheduled date or completion date in selected month
+  var monthly = WO.filter(function(o) {
+    var d = o.completedDate || o.schedDate || o.due || '';
+    return d.slice(0,7) === selectedMonth;
+  });
+
+  if (!monthly.length) {
+    el.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:20px;color:var(--g4)">No work orders found for ' + selectedMonth + '</td></tr>';
+    updateBillingMonthlyTotals([], selectedMonth);
+    return;
+  }
+
+  el.innerHTML = '';
+  monthly.forEach(function(o) {
+    var tr = document.createElement('tr');
+    var billAmt = (Number(o.qty)||0) * (Number(o.unit)||0);
+    tr.innerHTML =
+      '<td><b>' + o.id + '</b>' + (o.projnum ? '<br><span style="font-size:9px;color:var(--g4)">' + o.projnum + '</span>' : '') + '</td>' +
+      '<td>' + o.type + '</td>' +
+      '<td style="font-size:10px">' + (o.address || o.location || '—') + '</td>' +
+      '<td>' + (o.foreman || o.crew || '—') + '</td>' +
+      '<td style="font-size:10px">' + ((o.trucks && o.trucks.length) ? o.trucks.join(', ') : (o.truck||'—')) + '</td>' +
+      '<td>' + (o.completedDate || o.schedDate || '—') + '</td>' +
+      '<td><span class="pill ' + (o.status==='Complete'?'pg':o.status==='Ready for Billing'?'pc':'pgy') + '">' + (o.status||'—') + '</span></td>' +
+      '<td>' + (billAmt ? money(billAmt) : '—') + '</td>';
+    el.appendChild(tr);
+  });
+
+  updateBillingMonthlyTotals(monthly, selectedMonth);
+};
+
+window.updateBillingMonthlyTotals = function(monthly, month) {
+  var totalEl = document.getElementById('billing-monthly-total');
+  var countEl = document.getElementById('billing-monthly-count');
+  var total = monthly.reduce(function(s, o){ return s + (Number(o.qty)||0)*(Number(o.unit)||0); }, 0);
+  var completed = monthly.filter(function(o){ return o.status === 'Complete'; }).length;
+  var readyBill = monthly.filter(function(o){ return o.status === 'Ready for Billing'; }).length;
+  if (totalEl) totalEl.textContent = money(total);
+  if (countEl) countEl.innerHTML =
+    monthly.length + ' work orders &nbsp;·&nbsp; ' +
+    completed + ' completed &nbsp;·&nbsp; ' +
+    readyBill + ' ready to bill';
+};
+
+// Populate month selector with last 12 months
+window.populateBillingMonthSel = function() {
+  var sel = document.getElementById('billing-month-sel');
+  if (!sel) return;
+  sel.innerHTML = '';
+  var d = new Date();
+  for (var i = 0; i < 12; i++) {
+    var opt = document.createElement('option');
+    var y = d.getFullYear();
+    var m = String(d.getMonth()+1).padStart(2,'0');
+    var val = y + '-' + m;
+    opt.value = val;
+    opt.textContent = d.toLocaleString('default',{month:'long',year:'numeric'});
+    if (i === 0) opt.selected = true;
+    sel.appendChild(opt);
+    d.setMonth(d.getMonth()-1);
+  }
+  renderBillingMonthly();
+};
+
+
+
+
+
+
+// ── PROJECT NUMBER MANAGEMENT ──────────────────────────────────────────────
+window.PROJECTS = JSON.parse(localStorage.getItem('mor_projects')||'null') || [
+  'PROJ-30264-2026', 'PROJ-30244-2026', 'SWBNO-EMERG-2026'
+];
+
+window.saveProjects = function() {
+  localStorage.setItem('mor_projects', JSON.stringify(window.PROJECTS));
+};
+
+window.populateProjNumSel = function() {
+  var sel = document.getElementById('np-projnum-sel');
+  if (!sel) return;
+  sel.innerHTML = '<option value="">— Select project —</option>';
+  (window.PROJECTS || []).forEach(function(p) {
+    var opt = document.createElement('option'); opt.value = p; opt.textContent = p; sel.appendChild(opt);
+  });
+  var addOpt = document.createElement('option'); addOpt.value = '__new__'; addOpt.textContent = '+ Add new project number'; sel.appendChild(addOpt);
+};
+
+window.handleProjNumSel = function(sel) {
+  var inp = document.getElementById('np-projnum');
+  if (!inp) return;
+  if (sel.value === '__new__') {
+    inp.style.display = ''; sel.style.display = 'none'; inp.focus();
+    inp.onblur = function() {
+      if (!inp.value.trim()) { inp.style.display = 'none'; sel.style.display = ''; sel.value = ''; }
+    };
+  } else {
+    inp.style.display = 'none'; sel.style.display = '';
+  }
+};
+
+// Populate project dropdown when WO modal opens
+var _origOpenModal = window.openModal;
+window.openModal = function(type) {
+  if (typeof _origOpenModal === 'function') _origOpenModal(type);
+  if (type === 'wo') {
+    setTimeout(function() {
+      populateProjNumSel();
+      switchWOModalTab('general');
+    }, 50);
+  }
+};
+
+// ── CLIENT SUBMIT ──────────────────────────────────────────────────────────
+window._clientSubmitWO = null;
+
+window.openClientSubmit = function(woObj) {
+  window._clientSubmitWO = woObj;
+  var woDisp = document.getElementById('cs-wo-display');
+  if (woDisp) woDisp.textContent = (woObj.id || '—') + ' — ' + (woObj.type || '');
+
+  // Pre-fill subject
+  var subj = document.getElementById('cs-subject');
+  if (subj) subj.value = 'Work Order Completion — ' + (woObj.id||'') + ' | ' + (woObj.contract||'') + ' | ' + (woObj.type||'');
+
+  // Build default message
+  buildClientMessage(woObj);
+
+  // Open modal
+  if (typeof openModal === 'function') openModal('client-submit');
+};
+
+window.buildClientMessage = function(o) {
+  var msg = document.getElementById('cs-message');
+  if (!msg) return;
+  var incWorkers = (document.getElementById('cs-inc-workers')||{}).checked;
+  var incTrucks  = (document.getElementById('cs-inc-trucks')||{}).checked;
+  var incPhotos  = (document.getElementById('cs-inc-photos')||{}).checked;
+  var incDocs    = (document.getElementById('cs-inc-docs')||{}).checked;
+  var incNotes   = (document.getElementById('cs-inc-notes')||{}).checked;
+  var clientName = (document.getElementById('cs-client-name')||{}).value || 'Project Manager';
+
+  var lines = [
+    'Dear ' + clientName + ',',
+    '',
+    'Please find below the completed work order summary for your records.',
+    '',
+    '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+    'WORK ORDER: ' + (o.id||'—'),
+    (o.projnum ? 'PROJECT #: ' + o.projnum : ''),
+    'CONTRACT: ' + (o.contract||'—'),
+    'TYPE: ' + (o.type||'—'),
+    'ADDRESS: ' + (o.address || o.location || '—'),
+    'DATE COMPLETED: ' + (o.completedDate || o.schedDate || new Date().toLocaleDateString()),
+    '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+    ''
+  ].filter(Boolean);
+
+  if (incWorkers && o.workers && o.workers.length) {
+    lines.push('CREW:');
+    o.workers.forEach(function(w) {
+      lines.push('  • ' + w.name + (w.role ? ' — ' + w.role : '') + (w.hours ? ' (' + w.hours + ' hrs)' : ''));
+    });
+    if (o.completedBy) lines.push('  Supervisor sign-off: ' + o.completedBy);
+    lines.push('');
+  }
+
+  if (incTrucks) {
+    var trucks = (o.trucks && o.trucks.length) ? o.trucks.join(', ') : (o.truck || '—');
+    lines.push('EQUIPMENT: ' + trucks);
+    lines.push('');
+  }
+
+  if (incPhotos && o.pipePhotoSections && o.pipePhotoSections.length) {
+    lines.push('PHOTO DOCUMENTATION:');
+    o.pipePhotoSections.forEach(function(p) {
+      lines.push('  • ' + (p.id||'Section') + (p.size?' ('+p.size+'")':'') + ': ' + (p.before||[]).length + ' before, ' + (p.after||[]).length + ' after photos');
+    });
+    lines.push('');
+  }
+
+  if (incDocs && o.docs && o.docs.length) {
+    lines.push('DOCUMENTS ATTACHED:');
+    o.docs.forEach(function(d) { lines.push('  • ' + d.name); });
+    lines.push('');
+  }
+
+  if (incNotes && o.notes) {
+    lines.push('SITE NOTES:');
+    lines.push(o.notes);
+    lines.push('');
+  }
+
+  lines.push('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+  lines.push('MOR Logistics Environmental Services LLC');
+  lines.push('DBE Certified | Houma, Louisiana');
+  lines.push('');
+  lines.push('This work order has been completed and submitted for your records.');
+  lines.push('Please contact us with any questions or concerns.');
+
+  msg.value = lines.join('\n');
+};
+
+// Rebuild message when checkboxes change
+['cs-inc-workers','cs-inc-trucks','cs-inc-photos','cs-inc-docs','cs-inc-notes'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (el) el.onchange = function() { if (window._clientSubmitWO) buildClientMessage(window._clientSubmitWO); };
+});
+
+window.openClientEmail = function() {
+  var o = window._clientSubmitWO;
+  if (!o) return;
+  var to      = (document.getElementById('cs-client-email')||{}).value || '';
+  var subject = (document.getElementById('cs-subject')||{}).value || '';
+  var body    = (document.getElementById('cs-message')||{}).value || '';
+  var mailto  = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.open(mailto);
+  // Log in communications
+  if (window.COMMS !== undefined) {
+    COMMS.unshift({ time: new Date().toLocaleString(), wo: o.id, ch: 'Email', contact: to, dir: 'Outgoing', subj: subject, note: 'Client work order submission' });
+    scheduleSave();
+  }
+  closeModal('client-submit');
+  showToast('Email client opened — review and send');
+};
+
+window.copyClientSubmit = function() {
+  var subject = (document.getElementById('cs-subject')||{}).value || '';
+  var body    = (document.getElementById('cs-message')||{}).value || '';
+  var full    = 'Subject: ' + subject + '\n\n' + body;
+  try { navigator.clipboard.writeText(full).then(function(){ showToast('Message copied — paste into email'); }); }
+  catch(e) { alert(full); }
+};
+
+
+
+// ── PRODUCTION: Tab switcher ───────────────────────────────────────────────
+window.switchProdTab = function(tab) {
+  document.querySelectorAll('.prod-tab').forEach(function(b){ b.classList.remove('active'); b.style.borderBottomColor='transparent'; b.style.color='var(--g4)'; });
+  document.querySelectorAll('.prod-tab').forEach(function(b){ if(b.getAttribute('data-ptab')===tab){ b.classList.add('active'); b.style.borderBottomColor='var(--c)'; b.style.color='var(--c)'; } });
+  var logPane    = document.getElementById('prod-tab-log');
+  var photosPane = document.getElementById('prod-tab-photos');
+  if (logPane)    logPane.style.display    = tab === 'log'    ? '' : 'none';
+  if (photosPane) photosPane.style.display = tab === 'photos' ? '' : 'none';
+  if (tab === 'photos') renderProdPipePhotos();
+};
+
+// ── Sync pipe sections from selected WO ────────────────────────────────────
+window.syncProdPipes = function() {
+  var woId = document.getElementById('prod-wo-sel').value;
+  var wo   = (window.WO || []).find(function(o){ return o.id === woId; });
+  if (wo && wo.pipe) {
+    document.getElementById('prod-pipe').value = wo.pipe;
+  }
+};
+
+// ── PRODUCTION PIPE PHOTOS ─────────────────────────────────────────────────
+// Stored in localStorage key 'mor_prod_photos' as { [woId]: { pipes: [...] } }
+window.PROD_PHOTOS = JSON.parse(localStorage.getItem('mor_prod_photos')||'null') || {};
+
+window.saveProdPhotos = function() {
+  localStorage.setItem('mor_prod_photos', JSON.stringify(window.PROD_PHOTOS));
+};
+
+window.renderProdPipePhotos = function() {
+  var panel = document.getElementById('prod-photo-panel');
+  if (!panel) return;
+  panel.innerHTML = '';
+
+  // WO selector for photos
+  var hdr = document.createElement('div');
+  hdr.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap';
+
+  var woLbl = document.createElement('div');
+  woLbl.style.cssText = 'font-size:11px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px';
+  woLbl.textContent = '📋 Select work order';
+  hdr.appendChild(woLbl);
+
+  var woSel = document.createElement('select');
+  woSel.className = 'isel'; woSel.style.flex = '1';
+  var allWOOpt = document.createElement('option'); allWOOpt.value = ''; allWOOpt.textContent = '— Select work order —'; woSel.appendChild(allWOOpt);
+  (window.WO || []).forEach(function(o) {
+    var opt = document.createElement('option'); opt.value = o.id;
+    var pipeCount = window.PROD_PHOTOS[o.id] ? (window.PROD_PHOTOS[o.id].pipes||[]).length : 0;
+    opt.textContent = o.id + ' — ' + o.type + (pipeCount ? ' (' + pipeCount + ' sections)' : '');
+    woSel.appendChild(opt);
+  });
+  hdr.appendChild(woSel);
+  panel.appendChild(hdr);
+
+  var pipeArea = document.createElement('div');
+  panel.appendChild(pipeArea);
+
+  function renderPipeArea(woId) {
+    pipeArea.innerHTML = '';
+    if (!woId) {
+      pipeArea.innerHTML = '<div style="text-align:center;padding:20px;color:var(--g4);font-size:12px;border:1px dashed var(--g2);border-radius:8px">Select a work order above to manage its pipe photos.</div>';
+      return;
+    }
+
+    if (!window.PROD_PHOTOS[woId]) window.PROD_PHOTOS[woId] = { pipes: [] };
+    var pipes = window.PROD_PHOTOS[woId].pipes;
+
+    // Pull pipe sections from the WO's pipePhotoSections if available
+    var wo = (window.WO||[]).find(function(o){ return o.id===woId; });
+    if (wo && wo.pipePhotoSections && wo.pipePhotoSections.length && !pipes.length) {
+      wo.pipePhotoSections.forEach(function(ps) {
+        pipes.push({ id: ps.id, size: ps.size||'', location: ps.location||'', before:[], after:[] });
+      });
+      saveProdPhotos();
+    }
+
+    // ── Header with + Add pipe and dropdown ──
+    var secHdr = document.createElement('div');
+    secHdr.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap';
+
+    var pipeSel = document.createElement('select');
+    pipeSel.className = 'isel'; pipeSel.style.flex = '1';
+
+    var addPipeBtn = document.createElement('button');
+    addPipeBtn.className = 'btn btn-xs btn-c'; addPipeBtn.textContent = '+ Add pipe / section';
+    secHdr.appendChild(pipeSel); secHdr.appendChild(addPipeBtn);
+    pipeArea.appendChild(secHdr);
+
+    // Add pipe form
+    var addForm = document.createElement('div');
+    addForm.style.cssText = 'display:none;background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:10px;margin-bottom:10px';
+    addForm.innerHTML =
+      '<div style="font-size:11px;font-weight:600;color:var(--g6);margin-bottom:7px">New pipe / section</div>' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:7px">' +
+        '<div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Pipe / Basin ID</div><input class="ppf-id" placeholder="PIPE-001" style="width:100%;font-size:12px"></div>' +
+        '<div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Size (in)</div><input class="ppf-size" placeholder="16" style="width:100%;font-size:12px"></div>' +
+        '<div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Location / Sta.</div><input class="ppf-loc" placeholder="Sta 0+00" style="width:100%;font-size:12px"></div>' +
+      '</div>' +
+      '<div style="display:flex;gap:6px">' +
+        '<button class="ppf-confirm btn btn-xs btn-c">Add section</button>' +
+        '<button class="ppf-cancel btn btn-xs">Cancel</button>' +
+      '</div>';
+    pipeArea.appendChild(addForm);
+
+    var photoArea = document.createElement('div');
+    pipeArea.appendChild(photoArea);
+
+    function populatePipeSel() {
+      pipeSel.innerHTML = '';
+      if (!pipes.length) {
+        var opt0 = document.createElement('option'); opt0.value=''; opt0.textContent='— No sections yet —'; pipeSel.appendChild(opt0);
+      } else {
+        var allOpt = document.createElement('option'); allOpt.value='__all__'; allOpt.textContent='📋 All sections overview'; pipeSel.appendChild(allOpt);
+        pipes.forEach(function(p, pi) {
+          var opt = document.createElement('option'); opt.value=String(pi);
+          opt.textContent=(p.id||'Section '+(pi+1))+(p.size?' ('+p.size+'")':'')+(p.location?' · '+p.location:'')+' · 📷'+((p.before||[]).length)+'B/'+((p.after||[]).length)+'A';
+          pipeSel.appendChild(opt);
+        });
+      }
+    }
+
+    function renderPhotoView(pipeVal) {
+      photoArea.innerHTML = '';
+
+      if (!pipeVal || pipeVal === '') {
+        photoArea.innerHTML = '<div style="text-align:center;padding:20px;color:var(--g4);font-size:12px;border:1px dashed var(--g2);border-radius:8px">No pipe sections yet. Click <b>+ Add pipe / section</b> to start.</div>';
+        return;
+      }
+
+      if (pipeVal === '__all__') {
+        if (!pipes.length) { renderPhotoView(''); return; }
+        pipes.forEach(function(p, pi) {
+          var card2 = document.createElement('div');
+          card2.style.cssText = 'margin-bottom:12px;background:var(--g0);border:1px solid var(--g1);border-radius:10px;overflow:hidden';
+          var ch2 = document.createElement('div');
+          ch2.style.cssText = 'padding:8px 12px;background:var(--g7);display:flex;align-items:center;justify-content:space-between';
+          ch2.innerHTML = '<span style="font-size:12px;font-weight:700;color:#f1f5f9">'+(p.id||'Section '+(pi+1))+(p.size?' <span style="color:var(--g3);font-size:10px;font-weight:400">'+p.size+'"</span>':'')+(p.location?' <span style="color:var(--g3);font-size:10px;font-weight:400">· '+p.location+'</span>':'')+' </span><div style="display:flex;gap:10px;font-size:10px;color:var(--g3)"><span>🔴 '+((p.before||[]).length)+'</span><span>🟢 '+((p.after||[]).length)+'</span></div>';
+          var openBtn2 = document.createElement('button'); openBtn2.className='btn btn-xs'; openBtn2.textContent='Open';
+          (function(pIdx){ openBtn2.onclick=function(){ pipeSel.value=String(pIdx); renderPhotoView(pIdx); }; })(pi);
+          ch2.appendChild(openBtn2); card2.appendChild(ch2);
+          var thumbs2 = document.createElement('div'); thumbs2.style.cssText='padding:8px;display:flex;flex-wrap:wrap;gap:5px';
+          var allPh=(p.before||[]).concat(p.after||[]);
+          allPh.slice(0,6).forEach(function(src){ var img=document.createElement('img'); img.src=src; img.style.cssText='width:50px;height:50px;object-fit:cover;border-radius:6px;cursor:pointer'; img.onclick=function(){window.open(src,'_blank');}; thumbs2.appendChild(img); });
+          if(allPh.length>6){ var more2=document.createElement('div'); more2.style.cssText='width:50px;height:50px;border-radius:6px;background:var(--g1);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--g5);cursor:pointer'; more2.textContent='+'+(allPh.length-6); (function(pIdx){more2.onclick=function(){pipeSel.value=String(pIdx);renderPhotoView(pIdx);};})(pi); thumbs2.appendChild(more2); }
+          card2.appendChild(thumbs2); photoArea.appendChild(card2);
+        });
+        return;
+      }
+
+      var pi = parseInt(pipeVal); var p = pipes[pi]; if(!p) return;
+
+      // Section header
+      var sHdr2 = document.createElement('div');
+      sHdr2.style.cssText='display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:8px 10px;background:var(--g7);border-radius:8px';
+      sHdr2.innerHTML='<div style="flex:1"><div style="font-size:13px;font-weight:700;color:#f1f5f9">'+(p.id||'Section '+(pi+1))+'</div><div style="font-size:10px;color:var(--g3)">'+(p.size?p.size+'" pipe':'')+(p.location?' · '+p.location:'')+'</div></div>';
+      var delSecBtn=document.createElement('button'); delSecBtn.className='btn btn-xs btn-r'; delSecBtn.textContent='Delete section';
+      (function(pIdx,wId){ delSecBtn.onclick=function(){ if(confirm('Delete this section and all photos?')){ window.PROD_PHOTOS[wId].pipes.splice(pIdx,1); pipes.splice(pIdx,1); saveProdPhotos(); populatePipeSel(); pipeSel.value='__all__'; renderPhotoView('__all__'); } }; })(pi,woId);
+      sHdr2.appendChild(delSecBtn); photoArea.appendChild(sHdr2);
+
+      function buildPhotoSec(label, key, icon) {
+        var sec=document.createElement('div'); sec.style.cssText='margin-bottom:14px';
+        var secHd2=document.createElement('div'); secHd2.style.cssText='font-size:11px;font-weight:700;color:var(--g5);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;display:flex;align-items:center;gap:6px'; secHd2.textContent=icon+' '+label;
+        var cnt=document.createElement('span'); cnt.style.cssText='background:var(--g1);color:var(--g5);padding:1px 6px;border-radius:20px;font-size:10px;font-weight:600'; cnt.textContent=((p[key]||[]).length)+' photos'; secHd2.appendChild(cnt); sec.appendChild(secHd2);
+        var grid2=document.createElement('div'); grid2.style.cssText='display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:6px';
+
+        function rebuildPhGrid() {
+          grid2.innerHTML='';
+          (p[key]||[]).forEach(function(src,pi2){
+            var wrap2=document.createElement('div'); wrap2.style.cssText='position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:var(--g1)';
+            var img2=document.createElement('img'); img2.src=src; img2.style.cssText='width:100%;height:100%;object-fit:cover;cursor:pointer'; img2.onclick=function(){window.open(src,'_blank');};
+            var dx2=document.createElement('button'); dx2.textContent='✕'; dx2.style.cssText='position:absolute;top:3px;right:3px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:20px;height:20px;font-size:10px;cursor:pointer;line-height:1;padding:0';
+            (function(phIdx,pKey2,pIdx2,wId){ dx2.onclick=function(e){ e.stopPropagation(); window.PROD_PHOTOS[wId].pipes[pIdx2][pKey2].splice(phIdx,1); p[pKey2]=window.PROD_PHOTOS[wId].pipes[pIdx2][pKey2]; saveProdPhotos(); rebuildPhGrid(); cnt.textContent=(p[pKey2]||[]).length+' photos'; populatePipeSel(); }; })(pi2,key,pi,woId);
+            wrap2.appendChild(img2); wrap2.appendChild(dx2); grid2.appendChild(wrap2);
+          });
+          var upTile2=document.createElement('div'); upTile2.style.cssText='aspect-ratio:1;border-radius:8px;border:2px dashed var(--g2);display:flex;align-items:center;justify-content:center;cursor:pointer;background:var(--g0);flex-direction:column;gap:3px;min-height:70px';
+          upTile2.innerHTML='<span style="font-size:22px">📷</span><span style="font-size:9px;color:var(--g4)">Add photos</span>';
+          var fi2=document.createElement('input'); fi2.type='file'; fi2.accept='image/*'; fi2.multiple=true; fi2.style.display='none';
+          upTile2.onclick=function(){fi2.click();};
+          (function(pKey2,pIdx2,wId){ fi2.onchange=function(){
+            var files=Array.from(this.files); if(!files.length) return; var left=files.length;
+            if(!window.PROD_PHOTOS[wId].pipes[pIdx2][pKey2]) window.PROD_PHOTOS[wId].pipes[pIdx2][pKey2]=[];
+            files.forEach(function(f){ var rd=new FileReader(); rd.onload=function(e){ window.PROD_PHOTOS[wId].pipes[pIdx2][pKey2].push(e.target.result); p[pKey2]=window.PROD_PHOTOS[wId].pipes[pIdx2][pKey2]; left--; if(left===0){saveProdPhotos();rebuildPhGrid();cnt.textContent=(p[pKey2]||[]).length+' photos';populatePipeSel();showToast(files.length+' photo'+(files.length>1?'s':'')+' added');} }; rd.readAsDataURL(f); });
+          }; })(key,pi,woId);
+          grid2.appendChild(upTile2); grid2.appendChild(fi2);
+        }
+        rebuildPhGrid(); sec.appendChild(grid2); return sec;
+      }
+      photoArea.appendChild(buildPhotoSec('Before work','before','🔴'));
+      photoArea.appendChild(buildPhotoSec('After work / Completed','after','🟢'));
+    }
+
+    // Wire controls
+    addPipeBtn.onclick = function(){ addForm.style.display = addForm.style.display==='none'?'block':'none'; };
+    var cfmBtn=addForm.querySelector('.ppf-confirm');
+    var cnlBtn=addForm.querySelector('.ppf-cancel');
+    if(cfmBtn){ cfmBtn.onclick=function(){
+      var pId=(addForm.querySelector('.ppf-id')||{}).value||('Section '+(pipes.length+1));
+      var pSz=(addForm.querySelector('.ppf-size')||{}).value||'';
+      var pLoc=(addForm.querySelector('.ppf-loc')||{}).value||'';
+      pipes.push({id:pId,size:pSz,location:pLoc,before:[],after:[]});
+      window.PROD_PHOTOS[woId].pipes=pipes;
+      saveProdPhotos(); populatePipeSel();
+      pipeSel.value=String(pipes.length-1); renderPhotoView(pipes.length-1);
+      addForm.style.display='none';
+      addForm.querySelectorAll('input').forEach(function(el){el.value='';});
+      showToast('Section added: '+pId);
+    }; }
+    if(cnlBtn){ cnlBtn.onclick=function(){ addForm.style.display='none'; }; }
+    pipeSel.onchange=function(){ renderPhotoView(this.value); };
+
+    populatePipeSel();
+    renderPhotoView(pipes.length ? '__all__' : '');
+  }
+
+  woSel.onchange = function() { renderPipeArea(this.value); };
+  renderPipeArea('');
+};
+
+
+
+// ── Temp photo buffers for current prod entry ──────────────────────────────
+var _prodBeforePhotos = [];
+var _prodAfterPhotos  = [];
+
+window.handleProdPhotoUpload = function(key, inp) {
+  var files = Array.from(inp.files);
+  if (!files.length) return;
+  var thumbsEl = document.getElementById('prod-' + key + '-thumbs');
+  var left = files.length;
+  files.forEach(function(f) {
+    var rd = new FileReader();
+    rd.onload = function(e) {
+      var src = e.target.result;
+      if (key === 'before') _prodBeforePhotos.push(src);
+      else                  _prodAfterPhotos.push(src);
+      // Add thumbnail
+      if (thumbsEl) {
+        var wrap = document.createElement('div');
+        wrap.style.cssText = 'position:relative;width:44px;height:44px;border-radius:6px;overflow:hidden;flex-shrink:0';
+        var img = document.createElement('img');
+        img.src = src; img.style.cssText = 'width:100%;height:100%;object-fit:cover;cursor:pointer';
+        img.onclick = function() { window.open(src, '_blank'); };
+        var dx = document.createElement('button');
+        dx.textContent = '✕'; dx.style.cssText = 'position:absolute;top:1px;right:1px;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;width:16px;height:16px;font-size:8px;cursor:pointer;line-height:1;padding:0';
+        (function(s, k) {
+          dx.onclick = function(e) {
+            e.stopPropagation();
+            if (k === 'before') _prodBeforePhotos = _prodBeforePhotos.filter(function(x){ return x!==s; });
+            else                _prodAfterPhotos  = _prodAfterPhotos.filter(function(x){ return x!==s; });
+            wrap.remove();
+          };
+        })(src, key);
+        wrap.appendChild(img); wrap.appendChild(dx); thumbsEl.appendChild(wrap);
+      }
+      left--;
+      if (left === 0) showToast(files.length + ' photo' + (files.length>1?'s':'') + ' ready — click Log production to save');
+    };
+    rd.readAsDataURL(f);
+  });
+  inp.value = ''; // reset so same file can be re-selected
+};
+
+window.handleProdPipeSel = function(sel) {
+  var inp = document.getElementById('prod-pipe');
+  var sizInp = document.getElementById('prod-pipe-size');
+  if (!inp) return;
+  if (sel.value === '__custom__') {
+    inp.style.display = ''; sel.style.display = 'none'; inp.focus();
+  } else if (sel.value) {
+    inp.value = sel.value;
+    // Try to auto-fill size from WO pipe sections
+    var woId = (document.getElementById('prod-wo-sel')||{}).value;
+    var wo   = (window.WO||[]).find(function(o){ return o.id===woId; });
+    if (wo && wo.pipePhotoSections) {
+      var ps = wo.pipePhotoSections.find(function(p){ return p.id===sel.value; });
+      if (ps && ps.size && sizInp) sizInp.value = ps.size;
+    }
+  }
+};
+
+window.populateProdPipeSel = function() {
+  var sel = document.getElementById('prod-pipe-sel');
+  if (!sel) return;
+  sel.innerHTML = '<option value="">— Select pipe / section —</option>';
+  var woId = (document.getElementById('prod-wo-sel')||{}).value;
+  var wo = (window.WO||[]).find(function(o){ return o.id===woId; });
+  if (wo && wo.pipePhotoSections && wo.pipePhotoSections.length) {
+    wo.pipePhotoSections.forEach(function(p) {
+      var opt = document.createElement('option'); opt.value = p.id;
+      opt.textContent = p.id + (p.size?' ('+p.size+'")':'') + (p.location?' · '+p.location:'');
+      sel.appendChild(opt);
+    });
+  }
+  var customOpt = document.createElement('option'); customOpt.value='__custom__'; customOpt.textContent='+ Type new pipe ID'; sel.appendChild(customOpt);
+};
+
+// Override syncProdPipes to also populate pipe dropdown
+var _origSyncProdPipes = window.syncProdPipes;
+window.syncProdPipes = function() {
+  if (typeof _origSyncProdPipes === 'function') _origSyncProdPipes();
+  populateProdPipeSel();
+};
+
+// Override addProd to capture photos and pipe ID from dropdown
+var _origAddProd = window.addProd;
+window.addProd = function() {
+  var woSel = document.getElementById('prod-wo-sel');
+  if (!woSel || !woSel.value) { showToast('Select a work order first', 'red'); return; }
+  var woId = woSel.value;
+
+  // Get pipe ID from dropdown or text input
+  var pipeSel = document.getElementById('prod-pipe-sel');
+  var pipeInp = document.getElementById('prod-pipe');
+  var pipeId = '';
+  if (pipeSel && pipeSel.value && pipeSel.value !== '__custom__') {
+    pipeId = pipeSel.value;
+  } else if (pipeInp && pipeInp.value.trim()) {
+    pipeId = pipeInp.value.trim();
+  }
+
+  var pipeSize = (document.getElementById('prod-pipe-size')||{}).value || '';
+
+  // Attach photos to PROD_PHOTOS under this WO + pipe
+  if (_prodBeforePhotos.length || _prodAfterPhotos.length) {
+    if (!window.PROD_PHOTOS) window.PROD_PHOTOS = {};
+    if (!window.PROD_PHOTOS[woId]) window.PROD_PHOTOS[woId] = { pipes: [] };
+    var pipes = window.PROD_PHOTOS[woId].pipes;
+
+    if (pipeId) {
+      var existing = pipes.find(function(p){ return p.id === pipeId; });
+      if (!existing) {
+        existing = { id: pipeId, size: pipeSize, location: '', before: [], after: [] };
+        pipes.push(existing);
+      }
+      _prodBeforePhotos.forEach(function(src){ existing.before.push(src); });
+      _prodAfterPhotos.forEach(function(src){  existing.after.push(src);  });
+    } else {
+      // No pipe ID — store under a generic entry named by date
+      var dateVal = (document.getElementById('prod-date')||{}).value || new Date().toISOString().slice(0,10);
+      var genId   = 'Entry-' + dateVal;
+      var gen = pipes.find(function(p){ return p.id === genId; });
+      if (!gen) { gen = { id:genId, size:pipeSize, location:'', before:[], after:[] }; pipes.push(gen); }
+      _prodBeforePhotos.forEach(function(src){ gen.before.push(src); });
+      _prodAfterPhotos.forEach(function(src){  gen.after.push(src);  });
+    }
+    saveProdPhotos();
+  }
+
+  // Patch prod-pipe value for the original addProd
+  if (pipeInp) pipeInp.value = pipeId || pipeSize || (document.getElementById('prod-pipe-size')||{}).value || '';
+
+  // Call original
+  if (typeof _origAddProd === 'function') _origAddProd();
+
+  // Clear photos
+  _prodBeforePhotos = []; _prodAfterPhotos = [];
+  var bt = document.getElementById('prod-before-thumbs'); if (bt) bt.innerHTML = '';
+  var at = document.getElementById('prod-after-thumbs');  if (at) at.innerHTML = '';
+  if (pipeSel) { pipeSel.value = ''; pipeSel.style.display = ''; }
+  if (pipeInp) { pipeInp.value = ''; pipeInp.style.display = 'none'; }
+  var sInp = document.getElementById('prod-pipe-size'); if (sInp) sInp.value = '';
+};
+
+// Override renderProduction to show photo count badge in table
+var _origRenderProduction = window.renderProduction;
+window.renderProduction = function() {
+  if (typeof _origRenderProduction === 'function') _origRenderProduction();
+  // Update photo badges in table rows
+  setTimeout(function() {
+    var rows = document.querySelectorAll('#prod-tbody tr');
+    rows.forEach(function(tr) {
+      var photoCell = tr.querySelector('td:nth-child(8)');
+      if (!photoCell) return;
+      var woCells  = tr.querySelectorAll('td');
+      if (woCells.length < 2) return;
+      var woId   = woCells[1].textContent.trim();
+      var pipeId = woCells[2] ? woCells[2].textContent.replace('"','').trim() : '';
+      var count  = 0;
+      if (window.PROD_PHOTOS && window.PROD_PHOTOS[woId]) {
+        var pipes = window.PROD_PHOTOS[woId].pipes || [];
+        var ps    = pipes.find(function(p){ return p.id===pipeId; });
+        if (ps) count = (ps.before||[]).length + (ps.after||[]).length;
+      }
+      if (count > 0) {
+        photoCell.innerHTML = '<span style="background:var(--blt);color:var(--blue);padding:2px 6px;border-radius:20px;font-size:10px;font-weight:600;cursor:pointer" onclick="switchProdTab(\'photos\')">📷 '+count+'</span>';
+      } else {
+        photoCell.innerHTML = '<span style="color:var(--g3);font-size:10px">—</span>';
+      }
+    });
+  }, 50);
+};
+
+
+
+// ── DISPATCH PROJECTS ──────────────────────────────────────────────────────
+// Projects stored in localStorage as array of {num, name, contract, client, pm}
+window.DISP_PROJECTS = JSON.parse(localStorage.getItem('mor_disp_projects')||'null') || [
+  { num:'PROJ-30264-2026', name:'SWBNO Contract 30264', contract:'SWBNO #30264', client:'SWBNO', pm:'' },
+  { num:'PROJ-30244-2026', name:'SWBNO Contract 30244', contract:'SWBNO #30244', client:'SWBNO', pm:'' }
+];
+
+window.saveDispProjects = function() {
+  localStorage.setItem('mor_disp_projects', JSON.stringify(window.DISP_PROJECTS));
+};
+
+window.populateDispProjSel = function() {
+  var sel = document.getElementById('disp-proj-sel');
+  if (!sel) return;
+  var cur = sel.value;
+  sel.innerHTML = '<option value="">— All projects / select one —</option>';
+  (window.DISP_PROJECTS || []).forEach(function(p) {
+    var opt = document.createElement('option');
+    opt.value = p.num;
+    opt.textContent = p.num + (p.name ? ' — ' + p.name : '');
+    if (p.num === cur) opt.selected = true;
+    sel.appendChild(opt);
+  });
+};
+
+window.renderDispProjectsList = function() {
+  var el = document.getElementById('disp-projects-list');
+  if (!el) return;
+  if (!window.DISP_PROJECTS || !window.DISP_PROJECTS.length) {
+    el.innerHTML = '<div style="color:var(--g4);padding:8px 0">No projects yet. Click + Add project.</div>';
+    return;
+  }
+  el.innerHTML = '';
+  window.DISP_PROJECTS.forEach(function(p, pi) {
+    var row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:1px solid var(--g1)';
+    row.innerHTML =
+      '<div style="flex:1;min-width:0">' +
+        '<div style="font-weight:600;color:var(--g8)">' + p.num + '</div>' +
+        '<div style="color:var(--g4);font-size:10px">' +
+          (p.name||'') + (p.contract?' · '+p.contract:'') + (p.client?' · '+p.client:'') + (p.pm?' · PM: '+p.pm:'') +
+        '</div>' +
+      '</div>';
+    var editBtn = document.createElement('button');
+    editBtn.className = 'btn btn-xs'; editBtn.textContent = '✏️';
+    (function(idx) {
+      editBtn.onclick = function() { openEditDispProject(idx); };
+    })(pi);
+    var delBtn = document.createElement('button');
+    delBtn.className = 'btn btn-xs btn-r'; delBtn.textContent = '✕';
+    (function(idx) {
+      delBtn.onclick = function() {
+        if (confirm('Remove project ' + window.DISP_PROJECTS[idx].num + '?')) {
+          window.DISP_PROJECTS.splice(idx, 1);
+          saveDispProjects();
+          populateDispProjSel();
+          renderDispProjectsList();
+          showToast('Project removed');
+        }
+      };
+    })(pi);
+    row.appendChild(editBtn); row.appendChild(delBtn);
+    el.appendChild(row);
+  });
+};
+
+window.openAddDispProject = function() {
+  var form = document.getElementById('disp-add-proj-form');
+  if (!form) return;
+  // Clear fields
+  ['disp-new-proj-num','disp-new-proj-name','disp-new-proj-contract','disp-new-proj-client','disp-new-proj-pm'].forEach(function(id) {
+    var el = document.getElementById(id); if (el) el.value = '';
+  });
+  form.removeAttribute('data-edit-idx');
+  form.querySelector('button').textContent = 'Save project';
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+};
+
+window.openEditDispProject = function(idx) {
+  var p = window.DISP_PROJECTS[idx];
+  if (!p) return;
+  var form = document.getElementById('disp-add-proj-form');
+  if (!form) return;
+  var fields = {
+    'disp-new-proj-num':      p.num      || '',
+    'disp-new-proj-name':     p.name     || '',
+    'disp-new-proj-contract': p.contract || '',
+    'disp-new-proj-client':   p.client   || '',
+    'disp-new-proj-pm':       p.pm       || ''
+  };
+  Object.keys(fields).forEach(function(id) {
+    var el = document.getElementById(id); if (el) el.value = fields[id];
+  });
+  form.setAttribute('data-edit-idx', String(idx));
+  var saveBtn = form.querySelector('button');
+  if (saveBtn) saveBtn.textContent = 'Update project';
+  form.style.display = 'block';
+  form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+};
+
+window.saveDispProject = function() {
+  var num      = (document.getElementById('disp-new-proj-num')||{}).value.trim();
+  var name     = (document.getElementById('disp-new-proj-name')||{}).value.trim();
+  var contract = (document.getElementById('disp-new-proj-contract')||{}).value.trim();
+  var client   = (document.getElementById('disp-new-proj-client')||{}).value.trim();
+  var pm       = (document.getElementById('disp-new-proj-pm')||{}).value.trim();
+
+  if (!num) { showToast('Enter a project number', 'red'); return; }
+
+  var form     = document.getElementById('disp-add-proj-form');
+  var editIdx  = form ? form.getAttribute('data-edit-idx') : null;
+
+  var proj = { num:num, name:name, contract:contract, client:client, pm:pm };
+
+  if (editIdx !== null && editIdx !== '') {
+    window.DISP_PROJECTS[parseInt(editIdx)] = proj;
+    showToast('Project updated: ' + num);
+  } else {
+    // Check for duplicate
+    var exists = window.DISP_PROJECTS.some(function(p){ return p.num === num; });
+    if (exists) { showToast('Project number already exists', 'red'); return; }
+    window.DISP_PROJECTS.push(proj);
+    showToast('Project added: ' + num);
+  }
+
+  saveDispProjects();
+
+  // Also sync to window.PROJECTS for WO modal dropdown
+  if (!window.PROJECTS) window.PROJECTS = [];
+  if (window.PROJECTS.indexOf(num) < 0) {
+    window.PROJECTS.push(num);
+    if (typeof saveProjects === 'function') saveProjects();
+  }
+
+  populateDispProjSel();
+  renderDispProjectsList();
+  if (form) { form.style.display = 'none'; form.removeAttribute('data-edit-idx'); }
+
+  // Select the new project in the dropdown
+  var sel = document.getElementById('disp-proj-sel');
+  if (sel) { sel.value = num; handleDispProjSel(sel); }
+};
+
+window.cancelDispProject = function() {
+  var form = document.getElementById('disp-add-proj-form');
+  if (form) { form.style.display = 'none'; form.removeAttribute('data-edit-idx'); }
+};
+
+window.handleDispProjSel = function(sel) {
+  if (!sel) return;
+  var projNum = sel.value;
+  // Filter WO dropdown to show only WOs matching this project
+  var woCurSel = document.getElementById('disp-wo-sel');
+  if (!woCurSel) return;
+  var cur = woCurSel.value;
+  woCurSel.innerHTML = '';
+  var allOpt = document.createElement('option'); allOpt.value = ''; allOpt.textContent = '— Select work order —'; woCurSel.appendChild(allOpt);
+  var filtered = (window.WO || []).filter(function(o) {
+    if (!projNum) return true; // show all if no project selected
+    return (o.projnum === projNum) || (o.contract && projNum && o.contract.indexOf(projNum) >= 0);
+  });
+  filtered.forEach(function(o) {
+    var opt = document.createElement('option'); opt.value = o.id;
+    opt.textContent = o.id + ' — ' + o.type + (o.status ? ' [' + o.status + ']' : '');
+    if (o.id === cur) opt.selected = true;
+    woCurSel.appendChild(opt);
+  });
+  if (!filtered.length) {
+    var noneOpt = document.createElement('option'); noneOpt.value=''; noneOpt.textContent='No WOs for this project yet'; woCurSel.appendChild(noneOpt);
+  }
+};
+
+// Override renderDispatch to show project column and init project UI
+var _origRenderDispatch2 = window.renderDispatch;
+window.renderDispatch = function() {
+  populateDispatchTruckDD();
+  renderDispatchTrucks();
+  populateDispProjSel();
+  renderDispProjectsList();
+
+  // Initialize WO dropdown (show all if no project selected)
+  var projSel = document.getElementById('disp-proj-sel');
+  if (projSel) handleDispProjSel(projSel);
+
+  var tbody = document.getElementById('dispatch-tbody');
+  if (!tbody) return;
+  var dispatched = (window.WO||[]).filter(function(o){ return o.schedDate || o.status==='Scheduled' || o.status==='In Progress'; });
+  if (!dispatched.length) {
+    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--g4);padding:20px">No dispatched work orders</td></tr>';
+    return;
+  }
+  tbody.innerHTML = '';
+  dispatched.forEach(function(o) {
+    var tr = document.createElement('tr');
+    // Find project name
+    var proj = (window.DISP_PROJECTS||[]).find(function(p){ return p.num===o.projnum; });
+    var projLabel = o.projnum ? (proj ? proj.num + '<br><span style="font-size:9px;color:var(--g4)">' + (proj.name||'') + '</span>' : o.projnum) : '<span style="color:var(--g4)">—</span>';
+    tr.innerHTML =
+      '<td><b>' + o.id + '</b></td>' +
+      '<td style="font-size:10px">' + projLabel + '</td>' +
+      '<td style="font-size:10px">' + o.type + '</td>' +
+      '<td style="font-size:10px">' + (o.address||o.location||'—') + '</td>' +
+      '<td>' + (o.foreman||o.crew||'—') + '</td>' +
+      '<td style="font-size:10px">' + ((o.trucks&&o.trucks.length)?o.trucks.join(', '):(o.truck||'—')) + '</td>' +
+      '<td>' + (o.schedDate||'—') + '</td>' +
+      '<td>' + (o.schedTime||'—') + '</td>' +
+      '<td>' + (o.status||'—') + '</td>';
+    tbody.appendChild(tr);
+  });
+};
 
 </script>
 
@@ -5104,6 +7034,7 @@ console.log('[MOR v6] Truck storage + webhook engine loaded');
 <script>
 
 
+
 // ── DEFINITIVE NAV + INIT PATCH ──────────────────────────────────────────
 (function() {
   window.nav = function(id, el) {
@@ -5120,11 +7051,11 @@ console.log('[MOR v6] Truck storage + webhook engine loaded');
     function runA(fn,a) { if (typeof fn==='function') try{ fn(a); }catch(e){} }
     if (id==='dashboard')   { run(renderDash); }
     if (id==='intake')      { runA(popWOSel,'wo-filter'); run(renderWOs); }
-    if (id==='dispatch')    { run(renderDispatch); }
-    if (id==='production')  { run(renderProduction); runA(popWOSel,'prod-wo-sel'); runA(popWOSel,'ci-wo'); }
+    if (id==='dispatch')    { run(renderDispatch); run(populateDispatchTruckDD); run(renderDispatchTrucks); }
+    if (id==='production')  { run(renderProduction); runA(popWOSel,'prod-wo-sel'); runA(popWOSel,'ci-wo'); run(syncProdPipes); }
     if (id==='safety')      { run(renderSafety); run(renderCerts); runA(popWOSel,'safe-wo-sel'); }
     if (id==='fleet')       { run(renderFleet); run(updateAllTruckSelects); }
-    if (id==='billing')     { run(renderBilling); }
+    if (id==='billing')     { run(renderBilling); run(populateBillingMonthSel); }
     if (id==='changeorder') { run(renderCOs); runA(popWOSel,'co-wo-sel'); }
     if (id==='qc')          { run(renderQC); }
     if (id==='comms')       { run(renderComms); runA(popWOSel,'comms-wo'); }
@@ -5169,6 +7100,25 @@ console.log('[MOR v6] Truck storage + webhook engine loaded');
   if (document.readyState==='loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
 })();
 
+
+
+window.exportBillingMonthlyCSV = function() {
+  var monthSel = document.getElementById('billing-month-sel');
+  var month = monthSel ? monthSel.value : new Date().toISOString().slice(0,7);
+  var monthly = WO.filter(function(o){ var d=o.completedDate||o.schedDate||o.due||''; return d.slice(0,7)===month; });
+  if (!monthly.length) { showToast('No work orders for this month','red'); return; }
+  var hdr = 'WO #,Project #,Type,Address,Crew Lead,Trucks,Date,Status,Qty,Unit,Billable';
+  var rows = monthly.map(function(o){
+    var billAmt = (Number(o.qty)||0)*(Number(o.unit)||0);
+    return ['"'+o.id+'"','"'+(o.projnum||'')+'"','"'+o.type+'"','"'+(o.address||o.location||'')+'"','"'+(o.foreman||o.crew||'')+'"','"'+((o.trucks&&o.trucks.length)?o.trucks.join('; '):(o.truck||''))+'"','"'+(o.completedDate||o.schedDate||'')+'"','"'+o.status+'"',o.qty||0,o.unit||0,billAmt.toFixed(2)].join(',');
+  });
+  var csv = hdr + '\n' + rows.join('\n');
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download = 'MOR_Billing_' + month + '.csv';
+  a.click();
+  showToast('Billing CSV downloaded');
+};
 
 </script>
 </body></html>';
