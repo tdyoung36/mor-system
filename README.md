@@ -1,3 +1,4 @@
+[MOR_Full_System (31).html](https://github.com/user-attachments/files/28424793/MOR_Full_System.31.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -793,6 +794,53 @@ textarea{resize:vertical;min-height:54px}
 .prod-tab.active { color: var(--c); border-bottom-color: var(--c); }
 .prod-tab:hover { color: var(--g7); }
 </style>
+
+<style>
+/* ── Prolog sheet print styles ─────────────────────────── */
+.prolog-section-hd {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 8px 20px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.prolog-info-cell {
+  padding: 12px 16px;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.prolog-info-cell:last-child { border-right: none; }
+.prolog-info-lbl { font-size: 9px; color: #94a3b8; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 3px; }
+.prolog-info-val { font-size: 13px; font-weight: 700; color: #1e293b; }
+.prolog-pipe-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.prolog-pipe-table th { background: #1e293b; color: #f1f5f9; padding: 8px 12px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: .5px; }
+.prolog-pipe-table td { padding: 8px 12px; border-bottom: 1px solid #f1f5f9; color: #334155; }
+.prolog-pipe-table tr:nth-child(even) td { background: #f8fafc; }
+.prolog-totals-row td { background: #0f172a !important; color: #f1f5f9 !important; font-weight: 700; }
+.prolog-summary-grid { display: grid; grid-template-columns: repeat(4,1fr); }
+.prolog-summary-cell { padding: 14px 16px; border-right: 1px solid #e2e8f0; border-top: 2px solid #22d3ee; }
+.prolog-summary-cell:last-child { border-right: none; }
+.prolog-summary-num { font-size: 22px; font-weight: 900; color: #1e293b; line-height: 1; }
+.prolog-summary-lbl { font-size: 10px; color: #94a3b8; margin-top: 4px; }
+.prolog-sig-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+.prolog-sig-cell { padding: 16px 20px; border-right: 1px solid #e2e8f0; }
+.prolog-sig-cell:last-child { border-right: none; }
+.prolog-sig-line { border-bottom: 1px solid #334155; height: 32px; margin: 8px 0 4px; }
+.prolog-sig-lbl { font-size: 9px; color: #94a3b8; text-transform: uppercase; letter-spacing: .5px; }
+.prolog-notes-area { padding: 16px 20px; border-top: 1px solid #e2e8f0; min-height: 80px; }
+.prolog-photo-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); gap: 6px; padding: 12px 20px; }
+.prolog-photo-thumb { aspect-ratio:1; border-radius:6px; overflow:hidden; background:#f1f5f9; cursor:pointer; }
+.prolog-photo-thumb img { width:100%; height:100%; object-fit:cover; }
+@media print {
+  .sidebar, .topbar, .nav, header, #mobile-menu-btn, .btn, button { display: none !important; }
+  .panel { padding: 0 !important; }
+  #prolog-sheet { border: none !important; }
+  body { background: white !important; }
+}
+</style>
 </head>
 <body>
 <!-- Mobile menu button -->
@@ -1204,22 +1252,20 @@ document.addEventListener('click', function(e) {
 <div id="panel-dispatch" class="panel">
   <div class="g2" style="margin-bottom:12px">
 
-    <!-- Schedule form -->
+    <!-- LEFT: Schedule form -->
     <div class="card card-sm">
       <div class="ct">Schedule work order
         <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('dispatch-alert')">📤 Spaces</button>
+        <button class="btn btn-sm btn-c" onclick="openDispatchReport()" style="margin-left:4px">📄 Client report</button>
       </div>
 
-      <!-- Project selector with + Add new -->
-      <div class="fg" style="margin-bottom:8px">
+      <!-- Project selector -->
+      <div class="fg" style="margin-bottom:6px">
         <span class="flbl">Project</span>
         <div style="display:flex;gap:5px;align-items:center">
-          <select id="disp-proj-sel" class="isel" style="flex:1" onchange="handleDispProjSel(this)">
-            <option value="">— All projects / select —</option>
-          </select>
+          <select id="disp-proj-sel" class="isel" style="flex:1" onchange="handleDispProjSel(this)"></select>
           <button class="btn btn-xs btn-c" onclick="openAddDispProject()" title="Add new project">+</button>
         </div>
-        <!-- Inline add project form (hidden) -->
         <div id="disp-add-proj-form" style="display:none;margin-top:6px;background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:8px">
           <div style="font-size:10px;font-weight:700;color:var(--g5);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">New project</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px">
@@ -1227,7 +1273,7 @@ document.addEventListener('click', function(e) {
             <input id="disp-new-proj-name" placeholder="Project name / description" style="font-size:11px">
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:6px">
-            <input id="disp-new-proj-contract" placeholder="Contract # (e.g. SWBNO #30264)" style="font-size:11px">
+            <input id="disp-new-proj-contract" placeholder="Contract #" style="font-size:11px">
             <input id="disp-new-proj-client" placeholder="Client / owner" style="font-size:11px">
             <input id="disp-new-proj-pm" placeholder="Project manager" style="font-size:11px">
           </div>
@@ -1238,9 +1284,69 @@ document.addEventListener('click', function(e) {
         </div>
       </div>
 
-      <!-- Work order — filtered by selected project -->
-      <div class="fg"><span class="flbl">Work order</span>
-        <select id="disp-wo-sel" onchange="fillDispatchFromWO()"></select>
+      <!-- WO # dropdown + add new inline -->
+      <div class="fg" style="margin-bottom:6px">
+        <span class="flbl">Work order #</span>
+        <div style="display:flex;gap:5px;align-items:center">
+          <select id="disp-wo-sel" class="isel" style="flex:1" onchange="fillDispatchFromWO()"></select>
+          <button class="btn btn-xs btn-c" onclick="toggleDispNewWO()" title="Create new WO">+ New</button>
+        </div>
+        <!-- Inline new WO quick-create -->
+        <div id="disp-new-wo-form" style="display:none;margin-top:6px;background:var(--g0);border:1px solid var(--c);border-radius:8px;padding:8px">
+          <div style="font-size:10px;font-weight:700;color:var(--c);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Quick-create work order</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px">
+            <input id="nwo-id" placeholder="WO # (e.g. WO-30264-010)" style="font-size:11px">
+            <input id="nwo-projnum" placeholder="Project # (auto-fills from above)" style="font-size:11px">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px">
+            <select id="nwo-contract" class="isel" style="width:100%">
+              <option>SWBNO #30264</option><option>SWBNO #30244</option>
+              <option>Emergency Response</option><option>Industrial Maintenance</option>
+            </select>
+            <select id="nwo-type" class="isel" style="width:100%">
+              <option>Sewer Main Cleaning</option><option>Storm Drain Cleaning</option>
+              <option>Catch Basin Cleaning</option><option>Wet Well / Lift Station Cleaning</option>
+              <option>CCTV Inspection Support</option><option>Vacuum Truck Services</option>
+              <option>Emergency Response</option>
+            </select>
+          </div>
+          <div style="display:flex;gap:5px">
+            <button class="btn btn-xs btn-c" onclick="saveDispNewWO()">Create WO</button>
+            <button class="btn btn-xs" onclick="toggleDispNewWO()">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="fg" style="margin-bottom:6px">
+        <span class="flbl">Service location / address</span>
+        <input type="text" id="disp-location" placeholder="Full address where service will be provided" style="width:100%">
+      </div>
+
+      <!-- Type of service -->
+      <div class="fg" style="margin-bottom:6px">
+        <span class="flbl">Type of service</span>
+        <div style="display:flex;gap:5px;align-items:center">
+          <select id="disp-service-type" class="isel" style="flex:1" onchange="handleDispServiceType(this)">
+            <option value="">— Select service type —</option>
+            <option>Sewer Main Cleaning</option>
+            <option>Storm Drain Cleaning</option>
+            <option>Catch Basin Cleaning</option>
+            <option>Wet Well / Lift Station Cleaning</option>
+            <option>Catch Basin Inspection</option>
+            <option>CCTV Inspection</option>
+            <option>Vacuum Truck Services</option>
+            <option>Hydro-excavation</option>
+            <option>Root Cutting</option>
+            <option>Grease Trap Cleaning</option>
+            <option>Emergency Response — Overflow</option>
+            <option>Emergency Response — Blockage</option>
+            <option>Pipe Lining / Rehabilitation</option>
+            <option>Debris / Spoils Removal</option>
+            <option>Other (specify)</option>
+          </select>
+          <input type="text" id="disp-service-custom" placeholder="Specify service" style="flex:1;display:none;font-size:12px">
+        </div>
       </div>
 
       <div class="fgrid fg2">
@@ -1251,8 +1357,14 @@ document.addEventListener('click', function(e) {
           </div>
         </div>
         <div class="fg"><span class="flbl">Date</span><input type="date" id="disp-date"></div>
-        <div class="fg"><span class="flbl">Start time</span><input type="text" id="disp-time" placeholder="07:00 AM"></div>
+        <div class="fg"><span class="flbl">Time started</span><input type="time" id="disp-time-start"></div>
+        <div class="fg"><span class="flbl">Time completed</span><input type="time" id="disp-time-end"></div>
         <div class="fg"><span class="flbl">Est. hours</span><input type="number" id="disp-hrs" placeholder="8"></div>
+        <div class="fg"><span class="flbl">Priority</span>
+          <select id="disp-priority" class="isel">
+            <option>Routine</option><option>Urgent</option><option>Emergency</option>
+          </select>
+        </div>
       </div>
 
       <!-- Multi-truck selector -->
@@ -1260,7 +1372,7 @@ document.addEventListener('click', function(e) {
         <span class="flbl">Trucks assigned</span>
         <div id="disp-truck-list" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px;min-height:28px"></div>
         <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-          <select id="disp-truck-add" class="isel" style="flex:1;min-width:160px">
+          <select id="disp-truck-add" class="isel" style="flex:1;min-width:140px">
             <option value="">— Select truck to add —</option>
           </select>
           <button class="btn btn-xs btn-c" onclick="addDispatchTruck()">+ Add</button>
@@ -1270,13 +1382,17 @@ document.addEventListener('click', function(e) {
       </div>
 
       <div class="fg" style="margin-top:8px">
-        <span class="flbl">Special instructions</span>
-        <textarea id="disp-notes" placeholder="Access, traffic control, SWBNO contact on site…"></textarea>
+        <span class="flbl">Special instructions / site notes</span>
+        <textarea id="disp-notes" rows="2" placeholder="Access, traffic control, SWBNO contact on site, confined space, permit required…"></textarea>
       </div>
-      <button class="btn btn-c" style="margin-top:8px" onclick="scheduleWO()">Assign &amp; Schedule</button>
+
+      <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+        <button class="btn btn-c" onclick="scheduleWO()">Assign &amp; Schedule</button>
+        <button class="btn" onclick="openDispatchReport()">📄 Generate client report</button>
+      </div>
     </div>
 
-    <!-- Pre-dispatch checklist + Project list -->
+    <!-- RIGHT: Checklist + Projects -->
     <div style="display:flex;flex-direction:column;gap:12px">
       <div class="card card-sm">
         <div class="ct">Pre-dispatch checklist</div>
@@ -1291,8 +1407,6 @@ document.addEventListener('click', function(e) {
           ▸ Emergency contact on crew sheet
         </div>
       </div>
-
-      <!-- Projects card -->
       <div class="card card-sm">
         <div class="ct" style="display:flex;align-items:center;justify-content:space-between">
           <span>Projects</span>
@@ -1303,15 +1417,44 @@ document.addEventListener('click', function(e) {
     </div>
   </div>
 
+  <!-- Dispatch board -->
   <div class="shd" style="font-size:11px">Dispatch board</div>
   <div class="tw">
     <table><thead><tr>
-      <th>WO #</th><th>Project</th><th>Type</th><th>Address</th>
-      <th>Crew lead</th><th>Trucks</th><th>Date</th><th>Time</th><th>Status</th>
+      <th>WO #</th><th>Project</th><th>Service type</th><th>Location</th>
+      <th>Crew lead</th><th>Trucks</th><th>Date</th><th>Start</th><th>End</th><th>Status</th><th>Report</th>
     </tr></thead><tbody id="dispatch-tbody"></tbody></table>
   </div>
 </div>
 
+<!-- ═══════ DISPATCH CLIENT REPORT MODAL ═══════ -->
+<div class="mbg" id="modal-dispatch-report">
+  <div class="mbox" style="max-width:700px;max-height:90vh;overflow-y:auto">
+    <div class="mh">
+      <h3>📄 Dispatch Service Report</h3>
+      <button class="btn btn-sm" onclick="closeModal('dispatch-report')">✕</button>
+    </div>
+    <div class="mb">
+      <!-- Report controls -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--g1)">
+        <select id="dr-wo-sel" class="isel" style="flex:1;min-width:140px" onchange="buildDispatchReport()">
+          <option value="">— Select work order —</option>
+        </select>
+        <input type="date" id="dr-date" oninput="buildDispatchReport()" style="font-size:12px">
+        <button class="btn btn-sm btn-c" onclick="buildDispatchReport()">🔄 Build report</button>
+        <button class="btn btn-sm" onclick="printDispatchReport()">🖨 Print / PDF</button>
+        <button class="btn btn-sm" onclick="copyDispatchReport()">📋 Copy</button>
+      </div>
+
+      <!-- Printable report -->
+      <div id="dispatch-report-content">
+        <div style="text-align:center;padding:30px;color:var(--g4)">Select a work order and date to generate the report.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ PRODUCTION ═══════ -->
 <!-- ═══════ PRODUCTION ═══════ -->
 <!-- ═══════ PRODUCTION ═══════ -->
 <div id="panel-production" class="panel">
@@ -1384,11 +1527,15 @@ document.addEventListener('click', function(e) {
 
     <!-- RIGHT: Log table + Pipe photos tab -->
     <div class="card" style="display:flex;flex-direction:column">
-      <div style="display:flex;gap:0;border-bottom:1px solid var(--g1);margin-bottom:12px">
-        <button class="prod-tab active" data-ptab="log" onclick="switchProdTab('log')">Production log</button>
-        <button class="prod-tab" data-ptab="photos" onclick="switchProdTab('photos')">📷 All pipe photos</button>
+      <div style="display:flex;gap:0;border-bottom:1px solid var(--g1);margin-bottom:12px;flex-wrap:wrap">
+        <button class="prod-tab active" data-ptab="log"   onclick="switchProdTab('log')">Production log</button>
+        <button class="prod-tab" data-ptab="notes"        onclick="switchProdTab('notes')">📋 Daily notes</button>
+        <button class="prod-tab" data-ptab="equipment"    onclick="switchProdTab('equipment')">⚙️ Equipment usage</button>
+        <button class="prod-tab" data-ptab="downtime"     onclick="switchProdTab('downtime')">⏸ Downtime</button>
+        <button class="prod-tab" data-ptab="photos"       onclick="switchProdTab('photos')">📷 Pipe photos</button>
       </div>
 
+      <!-- PRODUCTION LOG TAB -->
       <div id="prod-tab-log" style="flex:1">
         <div class="tw">
           <table><thead><tr><th>Date</th><th>WO</th><th>Pipe ID</th><th>Size</th><th>LF</th><th>Debris</th><th>Hrs</th><th>📷</th><th></th></tr></thead>
@@ -1396,6 +1543,141 @@ document.addEventListener('click', function(e) {
         </div>
       </div>
 
+      <!-- DAILY NOTES TAB -->
+      <div id="prod-tab-notes" style="display:none;flex:1">
+        <div style="margin-bottom:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <input type="date" id="notes-date-filter" class="isel" style="font-size:12px" oninput="renderDailyNotes()">
+          <select id="notes-wo-filter" class="isel" style="flex:1;min-width:140px" onchange="renderDailyNotes()">
+            <option value="">— All work orders —</option>
+          </select>
+          <button class="btn btn-xs btn-c" onclick="addDailyNote()">+ Add note</button>
+        </div>
+        <!-- Add note form (hidden) -->
+        <div id="notes-add-form" style="display:none;background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:10px;margin-bottom:10px">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:6px">
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Date</div><input type="date" id="note-new-date" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Work order</div><select id="note-new-wo" class="isel" style="width:100%"></select></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Category</div>
+              <select id="note-new-cat" class="isel" style="width:100%">
+                <option>General</option><option>Safety observation</option><option>Site condition</option>
+                <option>Equipment issue</option><option>Client communication</option><option>Delay / issue</option>
+                <option>Inspection finding</option><option>Completed milestone</option>
+              </select>
+            </div>
+          </div>
+          <textarea id="note-new-text" placeholder="Enter daily note, observation, or field report…" rows="3" style="width:100%;font-size:12px;margin-bottom:6px"></textarea>
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-xs btn-c" onclick="saveDailyNote()">Save note</button>
+            <button class="btn btn-xs" onclick="cancelDailyNote()">Cancel</button>
+          </div>
+        </div>
+        <div id="notes-list"></div>
+      </div>
+
+      <!-- EQUIPMENT USAGE TAB -->
+      <div id="prod-tab-equipment" style="display:none;flex:1">
+        <div style="margin-bottom:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <select id="equip-wo-filter" class="isel" style="flex:1;min-width:140px" onchange="renderEquipmentUsage()">
+            <option value="">— All work orders —</option>
+          </select>
+          <input type="date" id="equip-date-filter" class="isel" style="font-size:12px" oninput="renderEquipmentUsage()">
+          <button class="btn btn-xs btn-c" onclick="addEquipmentUsage()">+ Log equipment</button>
+        </div>
+        <!-- Add equipment form (hidden) -->
+        <div id="equip-add-form" style="display:none;background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:10px;margin-bottom:10px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px">
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Date</div><input type="date" id="equip-new-date" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Work order</div><select id="equip-new-wo" class="isel" style="width:100%"></select></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Equipment / truck</div>
+              <div style="display:flex;gap:4px">
+                <select id="equip-new-truck-sel" class="isel" style="flex:1" onchange="handleEquipTruckSel(this)">
+                  <option value="">— Select from fleet —</option>
+                </select>
+                <input id="equip-new-truck" placeholder="or type" style="flex:1;font-size:12px;display:none">
+              </div>
+            </div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Equipment type</div>
+              <select id="equip-new-type" class="isel" style="width:100%">
+                <option>Vacuum truck</option><option>Jet/vac truck</option><option>CCTV truck</option>
+                <option>Support vehicle</option><option>Rental equipment</option><option>Other</option>
+              </select>
+            </div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Operator</div>
+              <div style="display:flex;gap:4px">
+                <input id="equip-new-op" placeholder="Operator name" style="flex:1;font-size:12px">
+                <button class="btn btn-xs" onclick="empPickForField(this,function(n){document.getElementById('equip-new-op').value=n})">👤</button>
+              </div>
+            </div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Start time</div><input type="time" id="equip-new-start" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">End time</div><input type="time" id="equip-new-end" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Hours used</div><input type="number" id="equip-new-hrs" placeholder="0.0" step="0.5" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Miles / odometer</div><input type="number" id="equip-new-miles" placeholder="0" style="width:100%;font-size:12px"></div>
+            <div style="grid-column:1/-1"><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Notes</div><textarea id="equip-new-notes" placeholder="Equipment notes, issues, fuel usage…" rows="2" style="width:100%;font-size:12px"></textarea></div>
+          </div>
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-xs btn-c" onclick="saveEquipmentUsage()">Save entry</button>
+            <button class="btn btn-xs" onclick="cancelEquipmentUsage()">Cancel</button>
+          </div>
+        </div>
+        <!-- Equipment summary metrics -->
+        <div id="equip-metrics" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px"></div>
+        <div class="tw">
+          <table><thead><tr>
+            <th>Date</th><th>WO</th><th>Equipment</th><th>Type</th><th>Operator</th>
+            <th>Start</th><th>End</th><th>Hrs</th><th>Miles</th><th>Notes</th><th></th>
+          </tr></thead><tbody id="equip-tbody"></tbody></table>
+        </div>
+      </div>
+
+      <!-- DOWNTIME TAB -->
+      <div id="prod-tab-downtime" style="display:none;flex:1">
+        <div style="margin-bottom:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <select id="dt-wo-filter" class="isel" style="flex:1;min-width:140px" onchange="renderDowntime()">
+            <option value="">— All work orders —</option>
+          </select>
+          <input type="date" id="dt-date-filter" class="isel" style="font-size:12px" oninput="renderDowntime()">
+          <button class="btn btn-xs btn-c" onclick="addDowntime()">+ Log downtime</button>
+        </div>
+        <!-- Add downtime form (hidden) -->
+        <div id="dt-add-form" style="display:none;background:var(--rlt);border:1px solid var(--rmd);border-radius:8px;padding:10px;margin-bottom:10px">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:6px">
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Date</div><input type="date" id="dt-new-date" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Work order</div><select id="dt-new-wo" class="isel" style="width:100%"></select></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Downtime code / reason</div>
+              <select id="dt-new-code" class="isel" style="width:100%">
+                <option>Equipment breakdown</option><option>Equipment maintenance</option>
+                <option>Rain / weather delay</option><option>Traffic control delay</option>
+                <option>Site access blocked</option><option>SWBNO / client hold</option>
+                <option>Material / supply issue</option><option>Crew shortage</option>
+                <option>Permit delay</option><option>Utility conflict</option>
+                <option>Safety stop</option><option>Confined space hold</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Equipment involved</div><input type="text" id="dt-new-equip" placeholder="Unit # or N/A" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Start time</div><input type="time" id="dt-new-start" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">End time</div><input type="time" id="dt-new-end" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Hours lost</div><input type="number" id="dt-new-hrs" placeholder="0.0" step="0.5" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Reported to</div><input type="text" id="dt-new-reported" placeholder="Supervisor / SWBNO" style="width:100%;font-size:12px"></div>
+            <div><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Resolution / action taken</div><input type="text" id="dt-new-action" placeholder="How was it resolved?" style="width:100%;font-size:12px"></div>
+            <div style="grid-column:1/-1"><div style="font-size:10px;color:var(--g4);margin-bottom:2px">Details</div><textarea id="dt-new-notes" placeholder="Describe the downtime event in detail…" rows="2" style="width:100%;font-size:12px"></textarea></div>
+          </div>
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-xs btn-c" onclick="saveDowntime()">Save downtime</button>
+            <button class="btn btn-xs" onclick="cancelDowntime()">Cancel</button>
+          </div>
+        </div>
+        <!-- Downtime summary -->
+        <div id="dt-metrics" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px"></div>
+        <div class="tw">
+          <table><thead><tr>
+            <th>Date</th><th>WO</th><th>Code / Reason</th><th>Equipment</th>
+            <th>Start</th><th>End</th><th>Hrs lost</th><th>Resolution</th><th>Reported to</th><th></th>
+          </tr></thead><tbody id="dt-tbody"></tbody></table>
+        </div>
+      </div>
+
+      <!-- PIPE PHOTOS TAB -->
       <div id="prod-tab-photos" style="display:none;flex:1">
         <div id="prod-photo-panel"></div>
       </div>
@@ -2294,44 +2576,49 @@ document.addEventListener('click', function(e) {
 
 <!-- ═══════ PROLOG ═══════ -->
 <div id="panel-prolog" class="panel">
-<div class="form-page">
-  <div class="form-header">
-    <div><div class="form-logo">MOR</div><div class="form-co">MOR Logistics Environmental Services LLC · Houma, Louisiana</div></div>
-    <div class="form-title-block"><div class="form-title">PROJECT PROLOG / NARRATIVE</div><div class="form-subtitle">Contract narrative · scope summary · project overview</div></div>
+
+  <!-- Header row -->
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+    <div style="flex:1">
+      <div style="font-size:18px;font-weight:800;color:var(--g8)">Project Prolog — Daily Production Sheet</div>
+      <div style="font-size:11px;color:var(--g4);margin-top:2px">Auto-builds from Production Tracking entries · One sheet per day per project</div>
+    </div>
+    <input type="date" id="prolog-date-sel" onchange="buildPrologSheet()" style="font-size:12px">
+    <select id="prolog-wo-sel" class="isel" onchange="buildPrologSheet()" style="min-width:180px">
+      <option value="">— All work orders —</option>
+    </select>
+    <button class="btn btn-sm btn-c" onclick="buildPrologSheet()">🔄 Refresh</button>
+    <button class="btn btn-sm" onclick="printPrologSheet()">🖨 Print / PDF</button>
+    <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('daily-report')">📤 Spaces</button>
   </div>
-  <div class="form-meta">
-    <div class="fm-field"><span class="fm-lbl">WO #</span><input class="fm-inp" id="pro-woid" placeholder="WO-30264-001"></div>
-    <div class="fm-field"><span class="fm-lbl">Contract</span><select class="fm-inp" id="pro-contract"><option>SWBNO #30264</option><option>SWBNO #30244</option><option>Emergency Response</option></select></div>
-    <div class="fm-field"><span class="fm-lbl">Date</span><input class="fm-inp" type="date" id="pro-date"></div>
-    <div class="fm-field"><span class="fm-lbl">Project Manager</span><input class="fm-inp" id="pro-pm" placeholder="PM name"></div>
-    <div class="fm-field"><span class="fm-lbl">Client</span><input class="fm-inp" id="pro-client" value="Sewerage &amp; Water Board of New Orleans"></div>
-    <div class="fm-field"><span class="fm-lbl">Client contact</span><input class="fm-inp" id="pro-contact" placeholder="Name / phone / email"></div>
-    <div class="fm-field"><span class="fm-lbl">Start date</span><input class="fm-inp" type="date" id="pro-start"></div>
-    <div class="fm-field"><span class="fm-lbl">Est. completion</span><input class="fm-inp" type="date" id="pro-end"></div>
+
+  <!-- The printable sheet -->
+  <div id="prolog-sheet" style="background:white;border:1px solid var(--g1);border-radius:10px;padding:0;overflow:hidden">
+
+    <!-- Sheet header -->
+    <div style="background:#0f172a;padding:18px 24px;display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#22d3ee;letter-spacing:-1px">MOR</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">MOR Logistics Environmental Services LLC · DBE Certified · Houma, Louisiana</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:14px;font-weight:700;color:#f1f5f9">PROJECT PROLOG</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Daily Production Summary</div>
+      </div>
+    </div>
+
+    <!-- Project info bar -->
+    <div id="prolog-info-bar" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:2px solid #e2e8f0"></div>
+
+    <!-- Sheet body -->
+    <div id="prolog-sheet-body" style="padding:0">
+      <div style="text-align:center;padding:40px;color:#94a3b8;font-size:13px">
+        Select a date and work order to generate the daily prolog sheet.
+      </div>
+    </div>
+
   </div>
-  <div class="form-body">
-    <div class="form-section">
-      <div class="fsec-title"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Writing prompts — click to insert</div>
-      <div class="prolog-prompts" id="prolog-prompts"></div>
-    </div>
-    <div class="form-section">
-      <div class="fsec-title"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Project narrative</div>
-      <textarea class="prolog-area" id="pro-narrative" placeholder="Begin your project narrative here..."></textarea>
-    </div>
-    <div class="fgrid fg2" style="margin-top:10px">
-      <div class="fm-field"><span class="fm-lbl">Scope of work detail</span><textarea class="fm-inp" rows="4" id="pro-scope" placeholder="Tasks: cleaning LF, CCTV footage, debris tickets, confined space, traffic control, disposal…"></textarea></div>
-      <div class="fm-field"><span class="fm-lbl">Site conditions &amp; access notes</span><textarea class="fm-inp" rows="4" id="pro-conditions" placeholder="Traffic, access restrictions, utility conflicts, soil conditions, SWBNO rep on site…"></textarea></div>
-      <div class="fm-field"><span class="fm-lbl">Quantities &amp; pricing summary</span><textarea class="fm-inp" rows="3" id="pro-quantities" placeholder="1,250 LF @ $2.50/LF = $3,125&#10;3 debris tickets @ $475 = $1,425&#10;Total: $4,550"></textarea></div>
-      <div class="fm-field"><span class="fm-lbl">Regulatory &amp; compliance notes</span><textarea class="fm-inp" rows="3" id="pro-regulatory" placeholder="SWBNO permit #, LDEQ requirements, disposal facility approvals, DBE requirements…"></textarea></div>
-    </div>
-    <div class="sig-grid" style="margin-top:14px">
-      <div class="sig-block"><div class="sig-lbl">Prepared by (PM)</div><input class="sig-name-inp" id="pro-sig1" placeholder="Print name"><div class="sig-canvas">Sign here</div></div>
-      <div class="sig-block"><div class="sig-lbl">Approved by (Owner)</div><input class="sig-name-inp" id="pro-sig2" placeholder="Print name"><div class="sig-canvas">Sign here</div></div>
-      <div class="sig-block"><div class="sig-lbl">Client acknowledgment</div><input class="sig-name-inp" id="pro-sig3" placeholder="Print name"><div class="sig-canvas">Sign here</div></div>
-    </div>
-    <div style="font-size:8px;color:var(--g4);font-family:monospace;margin-top:10px">MOR_[CONTRACT]_[WOID]_Prolog_[DATE].pdf</div>
-  </div>
-</div>
+
 </div>
 
 <!-- ═══════ DAILY INSPECTION ═══════ -->
@@ -2768,44 +3055,49 @@ document.addEventListener('click', function(e) {
 
 <!-- ═══════ PROLOG ═══════ -->
 <div id="panel-prolog" class="panel">
-<div class="form-page">
-  <div class="form-header">
-    <div><div class="form-logo">MOR</div><div class="form-co">MOR Logistics Environmental Services LLC · Houma, Louisiana</div></div>
-    <div class="form-title-block"><div class="form-title">PROJECT PROLOG / NARRATIVE</div><div class="form-subtitle">Contract narrative · scope summary · project overview</div></div>
+
+  <!-- Header row -->
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+    <div style="flex:1">
+      <div style="font-size:18px;font-weight:800;color:var(--g8)">Project Prolog — Daily Production Sheet</div>
+      <div style="font-size:11px;color:var(--g4);margin-top:2px">Auto-builds from Production Tracking entries · One sheet per day per project</div>
+    </div>
+    <input type="date" id="prolog-date-sel" onchange="buildPrologSheet()" style="font-size:12px">
+    <select id="prolog-wo-sel" class="isel" onchange="buildPrologSheet()" style="min-width:180px">
+      <option value="">— All work orders —</option>
+    </select>
+    <button class="btn btn-sm btn-c" onclick="buildPrologSheet()">🔄 Refresh</button>
+    <button class="btn btn-sm" onclick="printPrologSheet()">🖨 Print / PDF</button>
+    <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('daily-report')">📤 Spaces</button>
   </div>
-  <div class="form-meta">
-    <div class="fm-field"><span class="fm-lbl">WO #</span><input class="fm-inp" id="pro-woid" placeholder="WO-30264-001"></div>
-    <div class="fm-field"><span class="fm-lbl">Contract</span><select class="fm-inp" id="pro-contract"><option>SWBNO #30264</option><option>SWBNO #30244</option><option>Emergency Response</option></select></div>
-    <div class="fm-field"><span class="fm-lbl">Date</span><input class="fm-inp" type="date" id="pro-date"></div>
-    <div class="fm-field"><span class="fm-lbl">Project Manager</span><input class="fm-inp" id="pro-pm" placeholder="PM name"></div>
-    <div class="fm-field"><span class="fm-lbl">Client</span><input class="fm-inp" id="pro-client" value="Sewerage &amp; Water Board of New Orleans"></div>
-    <div class="fm-field"><span class="fm-lbl">Client contact</span><input class="fm-inp" id="pro-contact" placeholder="Name / phone / email"></div>
-    <div class="fm-field"><span class="fm-lbl">Start date</span><input class="fm-inp" type="date" id="pro-start"></div>
-    <div class="fm-field"><span class="fm-lbl">Est. completion</span><input class="fm-inp" type="date" id="pro-end"></div>
+
+  <!-- The printable sheet -->
+  <div id="prolog-sheet" style="background:white;border:1px solid var(--g1);border-radius:10px;padding:0;overflow:hidden">
+
+    <!-- Sheet header -->
+    <div style="background:#0f172a;padding:18px 24px;display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#22d3ee;letter-spacing:-1px">MOR</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">MOR Logistics Environmental Services LLC · DBE Certified · Houma, Louisiana</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:14px;font-weight:700;color:#f1f5f9">PROJECT PROLOG</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Daily Production Summary</div>
+      </div>
+    </div>
+
+    <!-- Project info bar -->
+    <div id="prolog-info-bar" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:2px solid #e2e8f0"></div>
+
+    <!-- Sheet body -->
+    <div id="prolog-sheet-body" style="padding:0">
+      <div style="text-align:center;padding:40px;color:#94a3b8;font-size:13px">
+        Select a date and work order to generate the daily prolog sheet.
+      </div>
+    </div>
+
   </div>
-  <div class="form-body">
-    <div class="form-section">
-      <div class="fsec-title"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Writing prompts — click to insert</div>
-      <div class="prolog-prompts" id="prolog-prompts"></div>
-    </div>
-    <div class="form-section">
-      <div class="fsec-title"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Project narrative</div>
-      <textarea class="prolog-area" id="pro-narrative" placeholder="Begin your project narrative here..."></textarea>
-    </div>
-    <div class="fgrid fg2" style="margin-top:10px">
-      <div class="fm-field"><span class="fm-lbl">Scope of work detail</span><textarea class="fm-inp" rows="4" id="pro-scope" placeholder="Tasks: cleaning LF, CCTV footage, debris tickets, confined space, traffic control, disposal…"></textarea></div>
-      <div class="fm-field"><span class="fm-lbl">Site conditions &amp; access notes</span><textarea class="fm-inp" rows="4" id="pro-conditions" placeholder="Traffic, access restrictions, utility conflicts, soil conditions, SWBNO rep on site…"></textarea></div>
-      <div class="fm-field"><span class="fm-lbl">Quantities &amp; pricing summary</span><textarea class="fm-inp" rows="3" id="pro-quantities" placeholder="1,250 LF @ $2.50/LF = $3,125&#10;3 debris tickets @ $475 = $1,425&#10;Total: $4,550"></textarea></div>
-      <div class="fm-field"><span class="fm-lbl">Regulatory &amp; compliance notes</span><textarea class="fm-inp" rows="3" id="pro-regulatory" placeholder="SWBNO permit #, LDEQ requirements, disposal facility approvals, DBE requirements…"></textarea></div>
-    </div>
-    <div class="sig-grid" style="margin-top:14px">
-      <div class="sig-block"><div class="sig-lbl">Prepared by (PM)</div><input class="sig-name-inp" id="pro-sig1" placeholder="Print name"><div class="sig-canvas">Sign here</div></div>
-      <div class="sig-block"><div class="sig-lbl">Approved by (Owner)</div><input class="sig-name-inp" id="pro-sig2" placeholder="Print name"><div class="sig-canvas">Sign here</div></div>
-      <div class="sig-block"><div class="sig-lbl">Client acknowledgment</div><input class="sig-name-inp" id="pro-sig3" placeholder="Print name"><div class="sig-canvas">Sign here</div></div>
-    </div>
-    <div style="font-size:8px;color:var(--g4);font-family:monospace;margin-top:10px">MOR_[CONTRACT]_[WOID]_Prolog_[DATE].pdf</div>
-  </div>
-</div>
+
 </div>
 
 <!-- ═══════ DAILY INSPECTION ═══════ -->
@@ -3310,6 +3602,25 @@ document.addEventListener('click', function(e) {
   </div>
 </div>
 
+
+<!-- ═══════ WO PRODUCTION COMPLETION REPORT MODAL ═══════ -->
+<div class="mbg" id="modal-wo-prod-report">
+  <div class="mbox" style="max-width:820px;max-height:92vh;overflow-y:auto">
+    <div class="mh" style="position:sticky;top:0;z-index:10;background:var(--g7)">
+      <h3>📋 Work Order Completion Report</h3>
+      <div style="display:flex;gap:6px;align-items:center">
+        <button class="btn btn-sm btn-c" onclick="printWOProductionReport()">🖨 Print / PDF</button>
+        <button class="btn btn-sm" onclick="copyWOProductionReport()">📋 Copy</button>
+        <button class="btn btn-sm btn-spaces" onclick="sendToSpaces('work-complete')">📤 Spaces</button>
+        <button class="btn btn-sm" onclick="closeModal('wo-prod-report')">✕</button>
+      </div>
+    </div>
+    <div class="mb" style="padding:0">
+      <div id="wo-prod-report-content"></div>
+    </div>
+  </div>
+</div>
+
 <!-- GOOGLE SPACES COMPOSE MODAL -->
 <div class="mbg" id="modal-spaces">
   <div class="mbox">
@@ -3347,6 +3658,10 @@ document.addEventListener('click', function(e) {
 </div>
 
 <script>
+
+
+
+
 
 
 
@@ -3720,13 +4035,18 @@ function renderWOs() {
         var spacesBtn = document.createElement('button');
         spacesBtn.className = 'btn btn-xs btn-spaces'; spacesBtn.textContent = '📤 Spaces';
         spacesBtn.onclick = function() { sendToSpaces('work-complete'); };
-        // Submit to client button — only show when WO is Ready for Billing or Complete
         var clientBtn = document.createElement('button');
         clientBtn.className = 'btn btn-xs btn-c';
         clientBtn.textContent = '📨 Submit to client';
         clientBtn.style.display = (o.status === 'Ready for Billing' || o.status === 'Complete') ? '' : 'none';
         (function(woObj) { clientBtn.onclick = function() { openClientSubmit(woObj); }; })(o);
-        btnRow.appendChild(clientBtn); btnRow.appendChild(spacesBtn); btnRow.appendChild(delBtn);
+        var prodRptBtn = document.createElement('button');
+        prodRptBtn.className = 'btn btn-xs';
+        prodRptBtn.style.cssText = 'background:var(--tlt);color:var(--teal);border:1px solid var(--tmd)';
+        prodRptBtn.textContent = '📋 Production report';
+        prodRptBtn.title = 'Full production report for this WO';
+        (function(woObj) { prodRptBtn.onclick = function() { openWOProductionReport(woObj); }; })(o);
+        btnRow.appendChild(prodRptBtn); btnRow.appendChild(clientBtn); btnRow.appendChild(spacesBtn); btnRow.appendChild(delBtn);
         actWrap.appendChild(btnRow);
 
         tabContent.appendChild(actWrap);
@@ -4781,13 +5101,20 @@ window.copyClientSubmit = function() {
 
 // ── PRODUCTION: Tab switcher ───────────────────────────────────────────────
 window.switchProdTab = function(tab) {
-  document.querySelectorAll('.prod-tab').forEach(function(b){ b.classList.remove('active'); b.style.borderBottomColor='transparent'; b.style.color='var(--g4)'; });
-  document.querySelectorAll('.prod-tab').forEach(function(b){ if(b.getAttribute('data-ptab')===tab){ b.classList.add('active'); b.style.borderBottomColor='var(--c)'; b.style.color='var(--c)'; } });
-  var logPane    = document.getElementById('prod-tab-log');
-  var photosPane = document.getElementById('prod-tab-photos');
-  if (logPane)    logPane.style.display    = tab === 'log'    ? '' : 'none';
-  if (photosPane) photosPane.style.display = tab === 'photos' ? '' : 'none';
-  if (tab === 'photos') renderProdPipePhotos();
+  document.querySelectorAll('.prod-tab').forEach(function(b){
+    b.classList.remove('active'); b.style.borderBottomColor='transparent'; b.style.color='var(--g4)';
+  });
+  document.querySelectorAll('.prod-tab').forEach(function(b){
+    if(b.getAttribute('data-ptab')===tab){ b.classList.add('active'); b.style.borderBottomColor='var(--c)'; b.style.color='var(--c)'; }
+  });
+  ['log','notes','equipment','downtime','photos'].forEach(function(t){
+    var el = document.getElementById('prod-tab-'+t);
+    if (el) el.style.display = t===tab ? '' : 'none';
+  });
+  if (tab === 'photos')    renderProdPipePhotos();
+  if (tab === 'notes')     renderDailyNotes();
+  if (tab === 'equipment') renderEquipmentUsage();
+  if (tab === 'downtime')  renderDowntime();
 };
 
 // ── Sync pipe sections from selected WO ────────────────────────────────────
@@ -5382,6 +5709,1329 @@ window.renderDispatch = function() {
       '<td>' + (o.status||'—') + '</td>';
     tbody.appendChild(tr);
   });
+};
+
+
+
+// ── PROJECT PROLOG — Daily Production Sheet ────────────────────────────────
+window.buildPrologSheet = function() {
+  var dateEl = document.getElementById('prolog-date-sel');
+  var woEl   = document.getElementById('prolog-wo-sel');
+  var date   = dateEl ? dateEl.value : '';
+  var woId   = woEl   ? woEl.value   : '';
+
+  // Populate WO selector
+  if (woEl && woEl.options.length <= 1) {
+    (window.WO||[]).forEach(function(o) {
+      var opt = document.createElement('option'); opt.value=o.id;
+      opt.textContent=o.id+' — '+o.type;
+      woEl.appendChild(opt);
+    });
+  }
+
+  if (!date) {
+    // Default to today
+    date = new Date().toISOString().slice(0,10);
+    if (dateEl) dateEl.value = date;
+  }
+
+  // Get all production entries for this date (and WO if selected)
+  var entries = (window.PROD||[]).filter(function(p) {
+    var match = p.date === date;
+    if (woId) match = match && p.woId === woId;
+    return match;
+  });
+
+  // Get WO info
+  var wo = null;
+  if (woId) {
+    wo = (window.WO||[]).find(function(o){ return o.id===woId; });
+  } else if (entries.length) {
+    wo = (window.WO||[]).find(function(o){ return o.id===entries[0].woId; });
+  }
+
+  // Get pipe photos for this WO
+  var pipePhotos = {};
+  if (wo && window.PROD_PHOTOS && window.PROD_PHOTOS[wo.id]) {
+    var photoPipes = window.PROD_PHOTOS[wo.id].pipes || [];
+    photoPipes.forEach(function(p){ pipePhotos[p.id] = p; });
+  }
+
+  // Build the sheet
+  var infoBar = document.getElementById('prolog-info-bar');
+  var body    = document.getElementById('prolog-sheet-body');
+  if (!infoBar || !body) return;
+
+  // ── INFO BAR ────────────────────────────────────────────────────────────
+  var dateObj = new Date(date + 'T12:00:00');
+  var dateStr = dateObj.toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+  var infoItems = [
+    ['Work date',      dateStr],
+    ['Work order',     wo ? wo.id : (entries.length ? entries[0].woId : '—')],
+    ['Contract',       wo ? wo.contract : (entries.length ? (entries[0].contract||'—') : '—')],
+    ['Project #',      wo ? (wo.projnum||'—') : '—'],
+    ['Location',       wo ? (wo.address||wo.location||'—') : (entries.length ? (entries[0].street||'—') : '—')],
+    ['Foreman',        wo ? (wo.foreman||wo.crew||'—') : (entries.length ? (entries[0].crew||'—') : '—')],
+    ['Contract type',  wo ? (wo.type||'—') : '—'],
+    ['SWBNO WO #',     wo ? (wo.id||'—') : '—']
+  ];
+  infoBar.innerHTML = '';
+  infoItems.forEach(function(item) {
+    var cell = document.createElement('div');
+    cell.className = 'prolog-info-cell';
+    cell.innerHTML = '<div class="prolog-info-lbl">'+item[0]+'</div><div class="prolog-info-val">'+item[1]+'</div>';
+    infoBar.appendChild(cell);
+  });
+
+  // ── BODY ─────────────────────────────────────────────────────────────────
+  body.innerHTML = '';
+
+  // Crew section
+  var crew = [];
+  if (wo && wo.workers && wo.workers.length) crew = wo.workers;
+  var trucks = wo ? ((wo.trucks&&wo.trucks.length)?wo.trucks:(wo.truck?[wo.truck]:[])) : [];
+
+  // Section: Crew & Equipment
+  body.innerHTML += '<div class="prolog-section-hd">👷 Crew & Equipment</div>';
+  var crewGrid = document.createElement('div');
+  crewGrid.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:0';
+
+  var crewLeft = document.createElement('div');
+  crewLeft.style.cssText = 'padding:12px 20px;border-right:1px solid #e2e8f0';
+  crewLeft.innerHTML = '<div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">Crew members</div>';
+  if (!crew.length) {
+    crewLeft.innerHTML += '<div style="font-size:11px;color:#94a3b8">No crew recorded — add workers in Work Order tab</div>';
+  } else {
+    var crewTbl = '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="border-bottom:1px solid #e2e8f0"><th style="text-align:left;padding:4px 0;color:#64748b;font-weight:600;font-size:10px">Name</th><th style="text-align:left;padding:4px 0;color:#64748b;font-weight:600;font-size:10px">Role</th><th style="text-align:left;padding:4px 0;color:#64748b;font-weight:600;font-size:10px">Hours</th></tr></thead><tbody>';
+    crew.forEach(function(w) {
+      crewTbl += '<tr style="border-bottom:1px solid #f8fafc"><td style="padding:5px 0">'+w.name+'</td><td style="padding:5px 0;color:#64748b">'+(w.role||'—')+'</td><td style="padding:5px 0">'+(w.hours||'—')+'</td></tr>';
+    });
+    crewTbl += '</tbody></table>';
+    crewLeft.innerHTML += crewTbl;
+  }
+
+  var crewRight = document.createElement('div');
+  crewRight.style.cssText = 'padding:12px 20px';
+  crewRight.innerHTML = '<div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">Equipment / Trucks</div>';
+  if (!trucks.length) {
+    crewRight.innerHTML += '<div style="font-size:11px;color:#94a3b8">No trucks recorded</div>';
+  } else {
+    trucks.forEach(function(t) {
+      crewRight.innerHTML += '<div style="font-size:12px;font-weight:600;color:#1e293b;padding:4px 0;border-bottom:1px solid #f8fafc">🚛 '+t+'</div>';
+    });
+  }
+
+  crewGrid.appendChild(crewLeft); crewGrid.appendChild(crewRight);
+  body.appendChild(crewGrid);
+
+  // Section: Pipe Production Log
+  var pipeSection = document.createElement('div');
+  pipeSection.innerHTML = '<div class="prolog-section-hd">🔵 Pipe Production Log — ' + date + '</div>';
+
+  if (!entries.length) {
+    pipeSection.innerHTML += '<div style="padding:20px;text-align:center;color:#94a3b8;font-size:12px">No production entries logged for this date.' + (woId?'':' Select a specific work order or add entries in Production Tracking.') + '</div>';
+  } else {
+    var tbl = '<table class="prolog-pipe-table"><thead><tr>';
+    ['Pipe ID / Segment','Size (in)','Location / Street','LF Cleaned','Debris Tix','Crew Hrs','CCTV Runs','Notes','📷'].forEach(function(h2){
+      tbl += '<th>'+h2+'</th>';
+    });
+    tbl += '</tr></thead><tbody>';
+
+    var totalLF=0, totalDeb=0, totalHrs=0, totalCCTV=0;
+    entries.forEach(function(p, pi) {
+      totalLF   += Number(p.lf||0);
+      totalDeb  += Number(p.deb||0);
+      totalHrs  += Number(p.hrs||0);
+      totalCCTV += Number(p.cctv||0);
+      var pipeKey = p.pipe || p.pipeId || '';
+      var photoCount = 0;
+      if (pipePhotos[pipeKey]) {
+        photoCount = ((pipePhotos[pipeKey].before||[]).length) + ((pipePhotos[pipeKey].after||[]).length);
+      }
+      tbl += '<tr>' +
+        '<td style="font-weight:600">' + (pipeKey||'—') + '</td>' +
+        '<td>' + (p.pipeSize||p.pipe_size||'—') + '</td>' +
+        '<td>' + (p.street||p.location||p.notes_street||'—') + '</td>' +
+        '<td style="font-weight:700;color:#0f172a">' + (p.lf||0) + ' LF</td>' +
+        '<td>' + (p.deb||0) + '</td>' +
+        '<td>' + (p.hrs||0) + '</td>' +
+        '<td>' + (p.cctv||0) + '</td>' +
+        '<td style="font-size:10px;color:#64748b">' + (p.notes||'') + '</td>' +
+        '<td>' + (photoCount>0?'<span style="color:#3b82f6;font-weight:700">'+photoCount+'📷</span>':'<span style="color:#cbd5e1">—</span>') + '</td>' +
+        '</tr>';
+    });
+    // Totals row
+    tbl += '<tr class="prolog-totals-row">' +
+      '<td colspan="3">DAILY TOTALS</td>' +
+      '<td>' + totalLF + ' LF</td>' +
+      '<td>' + totalDeb + '</td>' +
+      '<td>' + totalHrs + '</td>' +
+      '<td>' + totalCCTV + '</td>' +
+      '<td colspan="2"></td>' +
+      '</tr></tbody></table>';
+    pipeSection.innerHTML += tbl;
+
+    // Summary metrics
+    var segments = entries.length;
+    var avgLF = segments ? Math.round(totalLF / segments) : 0;
+    pipeSection.innerHTML += '<div class="prolog-summary-grid">' +
+      '<div class="prolog-summary-cell"><div class="prolog-summary-num">' + totalLF.toLocaleString() + '</div><div class="prolog-summary-lbl">Total LF Cleaned</div></div>' +
+      '<div class="prolog-summary-cell"><div class="prolog-summary-num">' + segments + '</div><div class="prolog-summary-lbl">Pipe Segments</div></div>' +
+      '<div class="prolog-summary-cell"><div class="prolog-summary-num">' + totalDeb + '</div><div class="prolog-summary-lbl">Debris Tickets</div></div>' +
+      '<div class="prolog-summary-cell"><div class="prolog-summary-num">' + avgLF + '</div><div class="prolog-summary-lbl">Avg LF / Segment</div></div>' +
+      '</div>';
+  }
+  body.appendChild(pipeSection);
+
+  // Section: Before / After Photos (per pipe)
+  var photoEntries = entries.filter(function(p){ return p.pipe && pipePhotos[p.pipe]; });
+  if (photoEntries.length || Object.keys(pipePhotos).length) {
+    var photoSection = document.createElement('div');
+    photoSection.innerHTML = '<div class="prolog-section-hd">📷 Pipe Photo Documentation</div>';
+
+    var pipesToShow = entries.length ? entries.map(function(p){ return p.pipe; }).filter(Boolean) : Object.keys(pipePhotos);
+    var shownPipes = {};
+    pipesToShow.forEach(function(pipeId) {
+      if (!pipeId || shownPipes[pipeId]) return;
+      shownPipes[pipeId] = true;
+      var pp = pipePhotos[pipeId];
+      if (!pp) return;
+      var beforePh = pp.before || [];
+      var afterPh  = pp.after  || [];
+      if (!beforePh.length && !afterPh.length) return;
+
+      var pipeDiv = document.createElement('div');
+      pipeDiv.style.cssText = 'border-bottom:1px solid #f1f5f9;padding:12px 20px';
+      pipeDiv.innerHTML = '<div style="font-size:11px;font-weight:700;color:#1e293b;margin-bottom:8px">'+pipeId+(pp.size?' · '+pp.size+'"':'')+(pp.location?' · '+pp.location:'')+'</div>';
+
+      if (beforePh.length) {
+        pipeDiv.innerHTML += '<div style="font-size:10px;color:#ef4444;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">🔴 Beginning / Before</div>';
+        var bGrid = document.createElement('div');
+        bGrid.className = 'prolog-photo-grid'; bGrid.style.padding='0 0 8px 0';
+        beforePh.slice(0,8).forEach(function(src){
+          var wrap=document.createElement('div'); wrap.className='prolog-photo-thumb';
+          var img=document.createElement('img'); img.src=src; img.loading='lazy';
+          img.onclick=function(){window.open(src,'_blank');};
+          wrap.appendChild(img); bGrid.appendChild(wrap);
+        });
+        if(beforePh.length>8){ var more=document.createElement('div'); more.className='prolog-photo-thumb'; more.style.cssText='display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#64748b;background:#f1f5f9'; more.textContent='+' + (beforePh.length-8) + ' more'; bGrid.appendChild(more); }
+        pipeDiv.appendChild(bGrid);
+      }
+
+      if (afterPh.length) {
+        pipeDiv.innerHTML += '<div style="font-size:10px;color:#16a34a;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">🟢 Finished / After</div>';
+        var aGrid = document.createElement('div');
+        aGrid.className = 'prolog-photo-grid'; aGrid.style.padding='0 0 8px 0';
+        afterPh.slice(0,8).forEach(function(src){
+          var wrap=document.createElement('div'); wrap.className='prolog-photo-thumb';
+          var img=document.createElement('img'); img.src=src; img.loading='lazy';
+          img.onclick=function(){window.open(src,'_blank');};
+          wrap.appendChild(img); aGrid.appendChild(wrap);
+        });
+        if(afterPh.length>8){ var more2=document.createElement('div'); more2.className='prolog-photo-thumb'; more2.style.cssText='display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#64748b;background:#f1f5f9'; more2.textContent='+'+(afterPh.length-8)+' more'; aGrid.appendChild(more2); }
+        pipeDiv.appendChild(aGrid);
+      }
+      photoSection.appendChild(pipeDiv);
+    });
+    body.appendChild(photoSection);
+  }
+
+  // Section: Daily Notes
+  var notesSection = document.createElement('div');
+  notesSection.innerHTML = '<div class="prolog-section-hd">📋 Daily Notes & Field Observations</div>';
+  var notesDiv = document.createElement('div');
+  notesDiv.className = 'prolog-notes-area';
+  // Collect notes from production entries
+  var allNotes = entries.map(function(p){ return p.notes; }).filter(Boolean);
+  var woNotes  = wo ? (wo.notes||'') : '';
+  if (allNotes.length || woNotes) {
+    var notesHtml = '';
+    if (woNotes) notesHtml += '<div style="font-size:11px;color:#334155;margin-bottom:6px"><b>WO Notes:</b> '+woNotes+'</div>';
+    allNotes.forEach(function(n,ni){ notesHtml += '<div style="font-size:11px;color:#334155;padding:3px 0;border-bottom:1px dashed #f1f5f9">'+n+'</div>'; });
+    notesDiv.innerHTML = notesHtml;
+  } else {
+    notesDiv.innerHTML = '<div style="font-size:11px;color:#94a3b8;font-style:italic">No notes entered for this date.</div>';
+  }
+  notesSection.appendChild(notesDiv);
+  body.appendChild(notesSection);
+
+  // Section: Sign-off
+  var sigSection = document.createElement('div');
+  sigSection.innerHTML = '<div class="prolog-section-hd">✍️ Sign-off & Certification</div>';
+  sigSection.innerHTML += '<div class="prolog-sig-grid">' +
+    '<div class="prolog-sig-cell"><div class="prolog-sig-lbl">Operator / Crew Lead</div><div class="prolog-sig-line"></div><div style="font-size:10px;color:#94a3b8">Print name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div></div>' +
+    '<div class="prolog-sig-cell"><div class="prolog-sig-lbl">Field Supervisor</div><div class="prolog-sig-line"></div><div style="font-size:10px;color:#94a3b8">Print name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div></div>' +
+    '<div class="prolog-sig-cell"><div class="prolog-sig-lbl">Project Manager / MOR</div><div class="prolog-sig-line"></div><div style="font-size:10px;color:#94a3b8">Print name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div></div>' +
+  '</div>';
+  // Footer
+  sigSection.innerHTML += '<div style="padding:10px 20px;background:#f8fafc;border-top:1px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center">' +
+    '<div style="font-size:10px;color:#94a3b8">MOR Logistics Environmental Services LLC · SWBNO ' + (wo?wo.contract:'Contract') + ' · Generated ' + new Date().toLocaleString() + '</div>' +
+    '<div style="font-size:10px;color:#94a3b8">Page 1 of 1</div>' +
+    '</div>';
+  body.appendChild(sigSection);
+};
+
+window.printPrologSheet = function() {
+  window.print();
+};
+
+// Hook into nav to auto-build sheet
+var _origNavForProlog = window.nav;
+window.nav = function(id, el) {
+  if (typeof _origNavForProlog === 'function') _origNavForProlog(id, el);
+  if (id === 'prolog') {
+    setTimeout(function() {
+      // Populate WO selector
+      var woEl = document.getElementById('prolog-wo-sel');
+      if (woEl && woEl.options.length <= 1) {
+        (window.WO||[]).forEach(function(o) {
+          var opt = document.createElement('option'); opt.value=o.id;
+          opt.textContent=o.id+' — '+o.type;
+          woEl.appendChild(opt);
+        });
+      }
+      // Set date to today
+      var dateEl = document.getElementById('prolog-date-sel');
+      if (dateEl && !dateEl.value) dateEl.value = new Date().toISOString().slice(0,10);
+      buildPrologSheet();
+    }, 100);
+  }
+};
+
+
+
+// ══════════════════════════════════════════════════════════════════════════
+// DAILY NOTES
+// ══════════════════════════════════════════════════════════════════════════
+window.DAILY_NOTES = JSON.parse(localStorage.getItem('mor_daily_notes')||'[]');
+window.saveDailyNotes = function(){ localStorage.setItem('mor_daily_notes', JSON.stringify(window.DAILY_NOTES)); };
+
+window.addDailyNote = function() {
+  var form = document.getElementById('notes-add-form');
+  if (!form) return;
+  // Populate WO dropdown
+  var woSel = document.getElementById('note-new-wo');
+  if (woSel && woSel.options.length <= 1) {
+    var blk = document.createElement('option'); blk.value=''; blk.textContent='— Select WO —'; woSel.appendChild(blk);
+    (window.WO||[]).forEach(function(o){ var opt=document.createElement('option');opt.value=o.id;opt.textContent=o.id+' — '+o.type;woSel.appendChild(opt); });
+  }
+  // Default date to today or prod-date
+  var nd = document.getElementById('note-new-date');
+  if (nd && !nd.value) nd.value = (document.getElementById('prod-date')||{}).value || new Date().toISOString().slice(0,10);
+  form.style.display = form.style.display==='none' ? 'block' : 'none';
+};
+
+window.cancelDailyNote = function() {
+  var form = document.getElementById('notes-add-form'); if(form) form.style.display='none';
+};
+
+window.saveDailyNote = function() {
+  var date = (document.getElementById('note-new-date')||{}).value || new Date().toISOString().slice(0,10);
+  var wo   = (document.getElementById('note-new-wo')||{}).value   || '';
+  var cat  = (document.getElementById('note-new-cat')||{}).value  || 'General';
+  var text = (document.getElementById('note-new-text')||{}).value || '';
+  if (!text.trim()) { showToast('Enter a note first','red'); return; }
+  window.DAILY_NOTES.unshift({ id:Date.now(), date:date, wo:wo, cat:cat, text:text, created:new Date().toISOString() });
+  saveDailyNotes(); cancelDailyNote(); renderDailyNotes();
+  // Clear text
+  var el = document.getElementById('note-new-text'); if(el) el.value='';
+  showToast('Daily note saved');
+};
+
+window.renderDailyNotes = function() {
+  var el = document.getElementById('notes-list'); if(!el) return;
+
+  // Populate filter WO sel
+  var wf = document.getElementById('notes-wo-filter');
+  if (wf && wf.options.length <= 1) {
+    (window.WO||[]).forEach(function(o){ var opt=document.createElement('option');opt.value=o.id;opt.textContent=o.id+' — '+o.type;wf.appendChild(opt); });
+  }
+
+  var dateF = (document.getElementById('notes-date-filter')||{}).value || '';
+  var woF   = (document.getElementById('notes-wo-filter')||{}).value   || '';
+  var notes = window.DAILY_NOTES.filter(function(n){
+    if (dateF && n.date !== dateF) return false;
+    if (woF   && n.wo   !== woF)   return false;
+    return true;
+  });
+
+  if (!notes.length) {
+    el.innerHTML = '<div style="text-align:center;padding:28px;color:var(--g4);font-size:12px;border:1px dashed var(--g2);border-radius:8px">No daily notes yet. Click <b>+ Add note</b> to start logging daily observations.</div>';
+    return;
+  }
+
+  var catColors = {'General':'pc','Safety observation':'pr','Site condition':'pg','Equipment issue':'pa','Client communication':'pb','Delay / issue':'pr','Inspection finding':'pc','Completed milestone':'pg'};
+
+  el.innerHTML = '';
+  notes.forEach(function(n, ni) {
+    var card = document.createElement('div');
+    card.style.cssText = 'background:var(--g0);border:1px solid var(--g1);border-radius:8px;padding:10px 12px;margin-bottom:8px';
+    var clr = catColors[n.cat] || 'pc';
+    card.innerHTML =
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">' +
+        '<span class="pill '+clr+'">'+n.cat+'</span>' +
+        '<span style="font-size:11px;font-weight:600;color:var(--g6)">'+n.date+'</span>' +
+        (n.wo?'<span style="font-size:10px;color:var(--g4)">'+n.wo+'</span>':'') +
+        '<button class="btn btn-xs btn-r" style="margin-left:auto" data-note-idx="'+ni+'">✕</button>' +
+      '</div>' +
+      '<div style="font-size:12px;color:var(--g8);line-height:1.6">'+n.text+'</div>';
+    var delBtn = card.querySelector('[data-note-idx]');
+    if (delBtn) {
+      (function(idx) {
+        delBtn.onclick = function() {
+          window.DAILY_NOTES.splice(idx, 1); saveDailyNotes(); renderDailyNotes();
+        };
+      })(ni);
+    }
+    el.appendChild(card);
+  });
+};
+
+// ══════════════════════════════════════════════════════════════════════════
+// EQUIPMENT USAGE
+// ══════════════════════════════════════════════════════════════════════════
+window.EQUIP_USAGE = JSON.parse(localStorage.getItem('mor_equip_usage')||'[]');
+window.saveEquipUsage = function(){ localStorage.setItem('mor_equip_usage', JSON.stringify(window.EQUIP_USAGE)); };
+
+window.addEquipmentUsage = function() {
+  var form = document.getElementById('equip-add-form'); if (!form) return;
+  var woSel = document.getElementById('equip-new-wo');
+  if (woSel && woSel.options.length <= 1) {
+    (window.WO||[]).forEach(function(o){ var opt=document.createElement('option');opt.value=o.id;opt.textContent=o.id+' — '+o.type;woSel.appendChild(opt); });
+  }
+  var truckSel = document.getElementById('equip-new-truck-sel');
+  if (truckSel && truckSel.options.length <= 1) {
+    (window.FLEET||[]).forEach(function(f){ var opt=document.createElement('option');opt.value=f.truck;opt.textContent=f.truck+(f.assigned?' · '+f.assigned:'');truckSel.appendChild(opt); });
+    var cust=document.createElement('option');cust.value='__custom__';cust.textContent='+ Type custom';truckSel.appendChild(cust);
+  }
+  var nd = document.getElementById('equip-new-date');
+  if (nd && !nd.value) nd.value = (document.getElementById('prod-date')||{}).value || new Date().toISOString().slice(0,10);
+  form.style.display = form.style.display==='none'?'block':'none';
+};
+
+window.handleEquipTruckSel = function(sel) {
+  var inp = document.getElementById('equip-new-truck');
+  if (!inp) return;
+  if (sel.value === '__custom__') { inp.style.display=''; sel.style.display='none'; inp.focus(); }
+  else { inp.value = sel.value; }
+};
+
+window.cancelEquipmentUsage = function() {
+  var form = document.getElementById('equip-add-form'); if(form) form.style.display='none';
+};
+
+window.saveEquipmentUsage = function() {
+  var sel = document.getElementById('equip-new-truck-sel');
+  var inp = document.getElementById('equip-new-truck');
+  var truck = (sel && sel.value && sel.value!=='__custom__') ? sel.value : ((inp&&inp.value.trim())||'');
+  var entry = {
+    id:    Date.now(),
+    date:  (document.getElementById('equip-new-date')||{}).value  || new Date().toISOString().slice(0,10),
+    wo:    (document.getElementById('equip-new-wo')||{}).value    || '',
+    truck: truck,
+    type:  (document.getElementById('equip-new-type')||{}).value  || '',
+    op:    (document.getElementById('equip-new-op')||{}).value    || '',
+    start: (document.getElementById('equip-new-start')||{}).value || '',
+    end:   (document.getElementById('equip-new-end')||{}).value   || '',
+    hrs:   (document.getElementById('equip-new-hrs')||{}).value   || '',
+    miles: (document.getElementById('equip-new-miles')||{}).value || '',
+    notes: (document.getElementById('equip-new-notes')||{}).value || ''
+  };
+  if (!truck) { showToast('Select or enter equipment','red'); return; }
+  window.EQUIP_USAGE.unshift(entry); saveEquipUsage(); cancelEquipmentUsage(); renderEquipmentUsage();
+  showToast('Equipment entry saved');
+};
+
+window.renderEquipmentUsage = function() {
+  var tbody = document.getElementById('equip-tbody'); if (!tbody) return;
+
+  // Populate filter selects
+  ['equip-wo-filter'].forEach(function(id) {
+    var wf = document.getElementById(id);
+    if (wf && wf.options.length <= 1) {
+      (window.WO||[]).forEach(function(o){ var opt=document.createElement('option');opt.value=o.id;opt.textContent=o.id;wf.appendChild(opt); });
+    }
+  });
+
+  var woF   = (document.getElementById('equip-wo-filter')||{}).value   || '';
+  var dateF = (document.getElementById('equip-date-filter')||{}).value || '';
+  var items = window.EQUIP_USAGE.filter(function(e){
+    if (woF   && e.wo   !== woF)   return false;
+    if (dateF && e.date !== dateF) return false;
+    return true;
+  });
+
+  // Metrics
+  var mEl = document.getElementById('equip-metrics');
+  if (mEl) {
+    var totalHrs   = items.reduce(function(s,e){return s+Number(e.hrs||0);},0);
+    var totalMiles = items.reduce(function(s,e){return s+Number(e.miles||0);},0);
+    var uniqueEquip = [...new Set(items.map(function(e){return e.truck;}).filter(Boolean))].length;
+    mEl.innerHTML =
+      '<div class="mc" style="background:var(--g0)"><div class="ml">Hours logged</div><div class="mv">'+totalHrs.toFixed(1)+'</div><div class="ms">Equipment hours</div></div>' +
+      '<div class="mc" style="background:var(--g0)"><div class="ml">Miles recorded</div><div class="mv">'+totalMiles.toLocaleString()+'</div><div class="ms">Total distance</div></div>' +
+      '<div class="mc" style="background:var(--g0)"><div class="ml">Unique equipment</div><div class="mv">'+uniqueEquip+'</div><div class="ms">Units used</div></div>';
+  }
+
+  if (!items.length) {
+    tbody.innerHTML = '<tr><td colspan="11" style="text-align:center;padding:20px;color:var(--g4)">No equipment entries. Click <b>+ Log equipment</b> to start.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = '';
+  items.forEach(function(e, ei) {
+    var tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td>'+e.date+'</td><td>'+e.wo+'</td>' +
+      '<td style="font-weight:600">'+e.truck+'</td>' +
+      '<td style="font-size:10px">'+e.type+'</td>' +
+      '<td>'+e.op+'</td>' +
+      '<td>'+e.start+'</td><td>'+e.end+'</td>' +
+      '<td style="font-weight:700">'+e.hrs+'</td>' +
+      '<td>'+e.miles+'</td>' +
+      '<td style="font-size:10px;color:var(--g5)">'+e.notes+'</td>';
+    var tdDel=document.createElement('td');
+    var db=document.createElement('button'); db.className='btn btn-xs btn-r'; db.textContent='✕';
+    (function(idx){ db.onclick=function(){ window.EQUIP_USAGE.splice(idx,1); saveEquipUsage(); renderEquipmentUsage(); }; })(ei);
+    tdDel.appendChild(db); tr.appendChild(tdDel); tbody.appendChild(tr);
+  });
+};
+
+// ══════════════════════════════════════════════════════════════════════════
+// DOWNTIME
+// ══════════════════════════════════════════════════════════════════════════
+window.DOWNTIME_LOG = JSON.parse(localStorage.getItem('mor_downtime')||'[]');
+window.saveDowntimeLog = function(){ localStorage.setItem('mor_downtime', JSON.stringify(window.DOWNTIME_LOG)); };
+
+window.addDowntime = function() {
+  var form = document.getElementById('dt-add-form'); if (!form) return;
+  var woSel = document.getElementById('dt-new-wo');
+  if (woSel && woSel.options.length <= 1) {
+    (window.WO||[]).forEach(function(o){ var opt=document.createElement('option');opt.value=o.id;opt.textContent=o.id+' — '+o.type;woSel.appendChild(opt); });
+  }
+  var nd = document.getElementById('dt-new-date');
+  if (nd && !nd.value) nd.value = (document.getElementById('prod-date')||{}).value || new Date().toISOString().slice(0,10);
+  form.style.display = form.style.display==='none'?'block':'none';
+};
+
+window.cancelDowntime = function() {
+  var form = document.getElementById('dt-add-form'); if(form) form.style.display='none';
+};
+
+window.saveDowntime = function() {
+  var entry = {
+    id:       Date.now(),
+    date:     (document.getElementById('dt-new-date')||{}).value     || new Date().toISOString().slice(0,10),
+    wo:       (document.getElementById('dt-new-wo')||{}).value       || '',
+    code:     (document.getElementById('dt-new-code')||{}).value     || '',
+    equip:    (document.getElementById('dt-new-equip')||{}).value    || '',
+    start:    (document.getElementById('dt-new-start')||{}).value    || '',
+    end:      (document.getElementById('dt-new-end')||{}).value      || '',
+    hrs:      (document.getElementById('dt-new-hrs')||{}).value      || '',
+    reported: (document.getElementById('dt-new-reported')||{}).value || '',
+    action:   (document.getElementById('dt-new-action')||{}).value   || '',
+    notes:    (document.getElementById('dt-new-notes')||{}).value    || ''
+  };
+  if (!entry.code) { showToast('Select a downtime reason','red'); return; }
+  window.DOWNTIME_LOG.unshift(entry); saveDowntimeLog(); cancelDowntime(); renderDowntime();
+  showToast('Downtime event logged');
+  // Send to safety Spaces channel
+  if (entry.hrs && Number(entry.hrs) > 1) {
+    var msg = 'DOWNTIME EVENT — ' + entry.date + '\\nWO: ' + entry.wo + '\\nReason: ' + entry.code + '\\nEquipment: ' + entry.equip + '\\nHours lost: ' + entry.hrs + (entry.action?'\\nResolution: '+entry.action:'');
+    sendToSpacesChannel('safety', msg);
+  }
+};
+
+window.renderDowntime = function() {
+  var tbody = document.getElementById('dt-tbody'); if (!tbody) return;
+
+  ['dt-wo-filter'].forEach(function(id) {
+    var wf = document.getElementById(id);
+    if (wf && wf.options.length <= 1) {
+      (window.WO||[]).forEach(function(o){ var opt=document.createElement('option');opt.value=o.id;opt.textContent=o.id;wf.appendChild(opt); });
+    }
+  });
+
+  var woF   = (document.getElementById('dt-wo-filter')||{}).value   || '';
+  var dateF = (document.getElementById('dt-date-filter')||{}).value || '';
+  var items = window.DOWNTIME_LOG.filter(function(d){
+    if (woF   && d.wo   !== woF)   return false;
+    if (dateF && d.date !== dateF) return false;
+    return true;
+  });
+
+  // Metrics
+  var mEl = document.getElementById('dt-metrics');
+  if (mEl) {
+    var totalHrsLost = items.reduce(function(s,d){return s+Number(d.hrs||0);},0);
+    var events  = items.length;
+    var codes   = {};
+    items.forEach(function(d){ codes[d.code]=(codes[d.code]||0)+1; });
+    var topCode = Object.keys(codes).sort(function(a,b){return codes[b]-codes[a];})[0] || '—';
+    mEl.innerHTML =
+      '<div class="mc" style="background:var(--rlt)"><div class="ml">Hours lost</div><div class="mv" style="color:var(--red)">'+totalHrsLost.toFixed(1)+'</div><div class="ms">Total downtime</div></div>' +
+      '<div class="mc" style="background:var(--g0)"><div class="ml">Events</div><div class="mv">'+events+'</div><div class="ms">Logged incidents</div></div>' +
+      '<div class="mc" style="background:var(--alt)"><div class="ml">Top reason</div><div class="mv" style="font-size:12px;line-height:1.3">'+topCode+'</div><div class="ms">Most frequent</div></div>';
+  }
+
+  if (!items.length) {
+    tbody.innerHTML = '<tr><td colspan="10" style="text-align:center;padding:20px;color:var(--g4)">No downtime events logged. Click <b>+ Log downtime</b> to record an event.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = '';
+  items.forEach(function(d, di) {
+    var tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td>'+d.date+'</td><td>'+d.wo+'</td>' +
+      '<td style="font-weight:600;color:var(--red)">'+d.code+'</td>' +
+      '<td>'+d.equip+'</td>' +
+      '<td>'+d.start+'</td><td>'+d.end+'</td>' +
+      '<td style="font-weight:700;color:var(--red)">'+d.hrs+' hrs</td>' +
+      '<td style="font-size:10px">'+d.action+'</td>' +
+      '<td style="font-size:10px">'+d.reported+'</td>';
+    var tdDel=document.createElement('td');
+    var db=document.createElement('button'); db.className='btn btn-xs btn-r'; db.textContent='✕';
+    (function(idx){ db.onclick=function(){ window.DOWNTIME_LOG.splice(idx,1); saveDowntimeLog(); renderDowntime(); }; })(di);
+    tdDel.appendChild(db); tr.appendChild(tdDel); tbody.appendChild(tr);
+  });
+};
+
+// Also include downtime + equipment in prolog sheet
+var _origBuildPrologSheet = window.buildPrologSheet;
+window.buildPrologSheet = function() {
+  if (typeof _origBuildPrologSheet === 'function') _origBuildPrologSheet();
+  // Append notes + downtime + equipment to prolog if present
+  var date  = (document.getElementById('prolog-date-sel')||{}).value || new Date().toISOString().slice(0,10);
+  var woId  = (document.getElementById('prolog-wo-sel')||{}).value   || '';
+  var body  = document.getElementById('prolog-sheet-body');
+  if (!body) return;
+
+  // Daily Notes section
+  var dayNotes = (window.DAILY_NOTES||[]).filter(function(n){ return n.date===date && (!woId||n.wo===woId); });
+  if (dayNotes.length) {
+    var ns = document.createElement('div');
+    ns.innerHTML = '<div class="prolog-section-hd">📋 Daily Notes & Observations</div>';
+    var nl = document.createElement('div'); nl.style.cssText = 'padding:10px 20px';
+    dayNotes.forEach(function(n){
+      nl.innerHTML += '<div style="margin-bottom:6px;padding:6px 10px;background:#f8fafc;border-left:3px solid #3b82f6;border-radius:0 6px 6px 0"><div style="font-size:10px;color:#64748b;margin-bottom:2px">'+n.cat+'</div><div style="font-size:11px;color:#334155">'+n.text+'</div></div>';
+    });
+    ns.appendChild(nl); body.appendChild(ns);
+  }
+
+  // Downtime section
+  var dayDT = (window.DOWNTIME_LOG||[]).filter(function(d){ return d.date===date && (!woId||d.wo===woId); });
+  if (dayDT.length) {
+    var ds = document.createElement('div');
+    ds.innerHTML = '<div class="prolog-section-hd" style="color:#dc2626">⏸ Downtime Events</div>';
+    var totalDT = dayDT.reduce(function(s,d){return s+Number(d.hrs||0);},0);
+    var dtTbl = '<table class="prolog-pipe-table"><thead><tr><th>Code / Reason</th><th>Equipment</th><th>Start</th><th>End</th><th>Hrs lost</th><th>Resolution</th></tr></thead><tbody>';
+    dayDT.forEach(function(d){
+      dtTbl += '<tr><td style="color:#dc2626;font-weight:600">'+d.code+'</td><td>'+d.equip+'</td><td>'+d.start+'</td><td>'+d.end+'</td><td style="font-weight:700;color:#dc2626">'+d.hrs+'</td><td style="font-size:10px">'+d.action+'</td></tr>';
+    });
+    dtTbl += '<tr class="prolog-totals-row"><td colspan="4">TOTAL DOWNTIME</td><td>'+totalDT.toFixed(1)+' hrs</td><td></td></tr></tbody></table>';
+    ds.innerHTML += dtTbl; body.appendChild(ds);
+  }
+
+  // Equipment section
+  var dayEQ = (window.EQUIP_USAGE||[]).filter(function(e){ return e.date===date && (!woId||e.wo===woId); });
+  if (dayEQ.length) {
+    var es = document.createElement('div');
+    es.innerHTML = '<div class="prolog-section-hd">⚙️ Equipment Usage</div>';
+    var eqTbl = '<table class="prolog-pipe-table"><thead><tr><th>Equipment</th><th>Type</th><th>Operator</th><th>Start</th><th>End</th><th>Hours</th><th>Miles</th></tr></thead><tbody>';
+    dayEQ.forEach(function(e){
+      eqTbl += '<tr><td style="font-weight:600">'+e.truck+'</td><td style="font-size:10px">'+e.type+'</td><td>'+e.op+'</td><td>'+e.start+'</td><td>'+e.end+'</td><td style="font-weight:700">'+e.hrs+'</td><td>'+e.miles+'</td></tr>';
+    });
+    eqTbl += '</tbody></table>';
+    es.innerHTML += eqTbl; body.appendChild(es);
+  }
+};
+
+
+
+// ── DISPATCH: service type custom handler ──────────────────────────────────
+window.handleDispServiceType = function(sel) {
+  var inp = document.getElementById('disp-service-custom');
+  if (!inp) return;
+  if (sel.value === 'Other (specify)') {
+    inp.style.display = ''; sel.style.flex = '0 0 160px'; inp.focus();
+  } else {
+    inp.style.display = 'none'; sel.style.flex = '1';
+  }
+};
+
+// ── DISPATCH: quick-create WO inline ───────────────────────────────────────
+window.toggleDispNewWO = function() {
+  var form = document.getElementById('disp-new-wo-form');
+  if (!form) return;
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+  // Pre-fill project number from selected project
+  var projNum = (document.getElementById('disp-proj-sel')||{}).value || '';
+  var nwoProjInp = document.getElementById('nwo-projnum');
+  if (nwoProjInp && projNum) nwoProjInp.value = projNum;
+};
+
+window.saveDispNewWO = function() {
+  var woId     = (document.getElementById('nwo-id')||{}).value.trim();
+  var projnum  = (document.getElementById('nwo-projnum')||{}).value.trim();
+  var contract = (document.getElementById('nwo-contract')||{}).value || '';
+  var type     = (document.getElementById('nwo-type')||{}).value || '';
+  if (!woId) { showToast('Enter a WO number','red'); return; }
+  // Add to WO array
+  var newWO = {
+    id:       woId,
+    projnum:  projnum,
+    contract: contract,
+    type:     type,
+    status:   'Dispatch Needed',
+    priority: 'Routine',
+    location: '',
+    address:  '',
+    notes:    ''
+  };
+  if (!window.WO) window.WO = [];
+  window.WO.unshift(newWO);
+  saveWOs();
+  // Refresh WO dropdown and select new WO
+  handleDispProjSel(document.getElementById('disp-proj-sel')||{value:''});
+  setTimeout(function() {
+    var sel = document.getElementById('disp-wo-sel');
+    if (sel) { sel.value = woId; fillDispatchFromWO(); }
+  }, 100);
+  toggleDispNewWO();
+  showToast('Work order ' + woId + ' created');
+};
+
+// ── Override fillDispatchFromWO to also fill new fields ────────────────────
+var _origFillDispatch = window.fillDispatchFromWO;
+window.fillDispatchFromWO = function() {
+  var sel = document.getElementById('disp-wo-sel');
+  if (!sel) return;
+  var wo = (window.WO||[]).find(function(o){ return o.id === sel.value; });
+  if (!wo) { if (typeof _origFillDispatch==='function') _origFillDispatch(); return; }
+
+  // Fill location
+  var locEl = document.getElementById('disp-location');
+  if (locEl && (wo.address||wo.location)) locEl.value = wo.address||wo.location;
+
+  // Fill service type
+  var stSel = document.getElementById('disp-service-type');
+  if (stSel && wo.type) {
+    var found = false;
+    for (var i=0;i<stSel.options.length;i++) {
+      if (stSel.options[i].value === wo.type) { stSel.value = wo.type; found=true; break; }
+    }
+    if (!found) { stSel.value='Other (specify)'; var ci=document.getElementById('disp-service-custom'); if(ci){ci.style.display='';ci.value=wo.type;} }
+  }
+
+  // Fill foreman, date, trucks
+  var foremEl = document.getElementById('disp-foreman');
+  if (foremEl && wo.foreman) foremEl.value = wo.foreman;
+  var dateEl = document.getElementById('disp-date');
+  if (dateEl && wo.schedDate) dateEl.value = wo.schedDate;
+  if (wo.trucks && wo.trucks.length) { _dispatchTrucks = wo.trucks.slice(); renderDispatchTrucks(); }
+};
+
+// ── Override scheduleWO to capture new fields ──────────────────────────────
+var _origScheduleWOEnhanced = window.scheduleWO;
+window.scheduleWO = function() {
+  var sel = document.getElementById('disp-wo-sel');
+  if (!sel || !sel.value) { showToast('Select a work order first','red'); return; }
+  var woIdx = (window.WO||[]).findIndex(function(o){ return o.id===sel.value; });
+  if (woIdx < 0) { showToast('Work order not found','red'); return; }
+
+  var serviceTypeSel = document.getElementById('disp-service-type');
+  var serviceCustom  = document.getElementById('disp-service-custom');
+  var serviceType    = serviceTypeSel ? ((serviceTypeSel.value==='Other (specify)' && serviceCustom) ? serviceCustom.value : serviceTypeSel.value) : '';
+  var location       = (document.getElementById('disp-location')||{}).value || '';
+  var timeStart      = (document.getElementById('disp-time-start')||{}).value || '';
+  var timeEnd        = (document.getElementById('disp-time-end')||{}).value || '';
+  var priority       = (document.getElementById('disp-priority')||{}).value || 'Routine';
+
+  window.WO[woIdx].crew      = (document.getElementById('disp-foreman')||{}).value || window.WO[woIdx].crew;
+  window.WO[woIdx].truck     = _dispatchTrucks.join(', ') || window.WO[woIdx].truck;
+  window.WO[woIdx].trucks    = _dispatchTrucks.slice();
+  window.WO[woIdx].schedDate = (document.getElementById('disp-date')||{}).value;
+  window.WO[woIdx].schedTime = timeStart;
+  window.WO[woIdx].timeEnd   = timeEnd;
+  window.WO[woIdx].schedHrs  = (document.getElementById('disp-hrs')||{}).value;
+  window.WO[woIdx].foreman   = (document.getElementById('disp-foreman')||{}).value || window.WO[woIdx].foreman;
+  window.WO[woIdx].dispNotes = (document.getElementById('disp-notes')||{}).value;
+  window.WO[woIdx].address   = location || window.WO[woIdx].address;
+  window.WO[woIdx].type      = serviceType || window.WO[woIdx].type;
+  window.WO[woIdx].priority  = priority;
+
+  if (window.WO[woIdx].status === 'Intake Received' || window.WO[woIdx].status === 'Dispatch Needed') {
+    window.WO[woIdx].status = 'Scheduled';
+  }
+  saveWOs();
+  if (typeof scheduleSave === 'function') scheduleSave();
+  renderDispatch();
+  _dispatchTrucks = []; renderDispatchTrucks();
+  showToast('Dispatched — notifying Spaces…');
+  setTimeout(function(){ sendToSpaces('dispatch-alert'); }, 500);
+};
+
+// ── Override renderDispatch to show new columns ────────────────────────────
+var _origRenderDispatch3 = window.renderDispatch;
+window.renderDispatch = function() {
+  populateDispatchTruckDD();
+  renderDispatchTrucks();
+  populateDispProjSel();
+  renderDispProjectsList();
+  var projSel = document.getElementById('disp-proj-sel');
+  if (projSel) handleDispProjSel(projSel);
+
+  var tbody = document.getElementById('dispatch-tbody');
+  if (!tbody) return;
+  var dispatched = (window.WO||[]).filter(function(o){ return o.schedDate || o.status==='Scheduled' || o.status==='In Progress'; });
+  if (!dispatched.length) {
+    tbody.innerHTML = '<tr><td colspan="11" style="text-align:center;color:var(--g4);padding:20px">No dispatched work orders yet.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = '';
+  dispatched.forEach(function(o) {
+    var tr = document.createElement('tr');
+    var proj = (window.DISP_PROJECTS||[]).find(function(p){ return p.num===o.projnum; });
+    var projLabel = o.projnum ? (proj ? o.projnum : o.projnum) : '—';
+    var truckList = (o.trucks&&o.trucks.length) ? o.trucks.join(', ') : (o.truck||'—');
+    tr.innerHTML =
+      '<td><b>'+o.id+'</b></td>' +
+      '<td style="font-size:10px">'+projLabel+'</td>' +
+      '<td style="font-size:10px">'+( o.type||'—')+'</td>' +
+      '<td style="font-size:10px">'+(o.address||o.location||'—')+'</td>' +
+      '<td>'+(o.foreman||o.crew||'—')+'</td>' +
+      '<td style="font-size:10px">'+truckList+'</td>' +
+      '<td>'+(o.schedDate||'—')+'</td>' +
+      '<td>'+(o.schedTime||'—')+'</td>' +
+      '<td>'+(o.timeEnd||'—')+'</td>' +
+      '<td>'+(o.status||'—')+'</td>';
+    var tdRpt = document.createElement('td');
+    var rptBtn = document.createElement('button');
+    rptBtn.className='btn btn-xs'; rptBtn.textContent='📄';
+    rptBtn.title='View service report';
+    (function(wo){ rptBtn.onclick=function(){openDispatchReport(wo);}; })(o);
+    var compBtn = document.createElement('button');
+    compBtn.className='btn btn-xs btn-c';
+    compBtn.style.cssText='margin-left:4px';
+    compBtn.textContent='✓ Complete';
+    compBtn.title='Mark complete & generate full production report';
+    (function(wo){ compBtn.onclick=function(){ markWOComplete(wo); }; })(o);
+    tdRpt.appendChild(rptBtn); tdRpt.appendChild(compBtn); tr.appendChild(tdRpt);
+    tbody.appendChild(tr);
+  });
+};
+
+// ══════════════════════════════════════════════════════════════════════════
+// DISPATCH CLIENT REPORT
+// ══════════════════════════════════════════════════════════════════════════
+window.openDispatchReport = function(wo) {
+  // Populate WO selector
+  var drSel = document.getElementById('dr-wo-sel');
+  if (drSel && drSel.options.length <= 1) {
+    (window.WO||[]).forEach(function(o){
+      var opt=document.createElement('option'); opt.value=o.id; opt.textContent=o.id+' — '+o.type; drSel.appendChild(opt);
+    });
+  }
+  if (wo && drSel) drSel.value = wo.id;
+
+  var drDate = document.getElementById('dr-date');
+  if (drDate && wo && wo.schedDate) drDate.value = wo.schedDate;
+  else if (drDate && !drDate.value) drDate.value = new Date().toISOString().slice(0,10);
+
+  if (typeof openModal === 'function') openModal('dispatch-report');
+  buildDispatchReport(wo);
+};
+
+window.buildDispatchReport = function(woObj) {
+  var el = document.getElementById('dispatch-report-content');
+  if (!el) return;
+
+  var drSel = document.getElementById('dr-wo-sel');
+  var woId  = (drSel && drSel.value) ? drSel.value : (woObj ? woObj.id : '');
+  var wo    = woObj || (window.WO||[]).find(function(o){ return o.id===woId; });
+  var date  = (document.getElementById('dr-date')||{}).value || (wo ? wo.schedDate : '') || new Date().toISOString().slice(0,10);
+
+  if (!wo) {
+    el.innerHTML = '<div style="text-align:center;padding:30px;color:#94a3b8">Select a work order to build the report.</div>';
+    return;
+  }
+
+  var dateObj = new Date(date + 'T12:00:00');
+  var dateStr = dateObj.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+
+  var serviceType = wo.type || '—';
+  var location    = wo.address || wo.location || '—';
+  var trucks      = (wo.trucks&&wo.trucks.length) ? wo.trucks.join(', ') : (wo.truck||'—');
+  var crew        = wo.foreman || wo.crew || '—';
+  var proj        = (window.DISP_PROJECTS||[]).find(function(p){ return p.num===wo.projnum; });
+  var clientName  = proj ? (proj.client||'SWBNO') : 'SWBNO';
+  var timeStart   = wo.schedTime || '—';
+  var timeEnd     = wo.timeEnd || '—';
+
+  // Get production for this WO+date
+  var prodEntries = (window.PROD||[]).filter(function(p){ return p.woId===wo.id && p.date===date; });
+  var totalLF     = prodEntries.reduce(function(s,p){return s+Number(p.lf||0);},0);
+  var totalDeb    = prodEntries.reduce(function(s,p){return s+Number(p.deb||0);},0);
+  var totalHrs    = prodEntries.reduce(function(s,p){return s+Number(p.hrs||0);},0);
+
+  // Get downtime for this WO+date
+  var dtEntries = (window.DOWNTIME_LOG||[]).filter(function(d){ return d.wo===wo.id && d.date===date; });
+  var dtHrs     = dtEntries.reduce(function(s,d){return s+Number(d.hrs||0);},0);
+
+  // Get daily notes
+  var dayNotes = (window.DAILY_NOTES||[]).filter(function(n){ return n.wo===wo.id && n.date===date; });
+
+  var reportNo = 'DSR-' + wo.id + '-' + date.replace(/-/g,'');
+
+  el.innerHTML = '';
+  var rpt = document.createElement('div');
+  rpt.id = 'dispatch-report-printable';
+  rpt.style.cssText = 'font-family:Arial,sans-serif;color:#1e293b;background:white';
+
+  // Header
+  rpt.innerHTML =
+    '<div style="background:#0f172a;padding:18px 24px;display:flex;align-items:center;justify-content:space-between">' +
+      '<div>' +
+        '<div style="font-size:22px;font-weight:900;color:#22d3ee;letter-spacing:-1px">MOR</div>' +
+        '<div style="font-size:11px;color:#94a3b8">MOR Logistics Environmental Services LLC · DBE Certified · Houma, Louisiana</div>' +
+      '</div>' +
+      '<div style="text-align:right">' +
+        '<div style="font-size:13px;font-weight:700;color:#f1f5f9">DISPATCH SERVICE REPORT</div>' +
+        '<div style="font-size:11px;color:#94a3b8;margin-top:2px">Report #: '+reportNo+'</div>' +
+      '</div>' +
+    '</div>' +
+
+    // Info grid
+    '<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid #e2e8f0">' +
+      mkInfoCell('Work order #', wo.id) +
+      mkInfoCell('Project #', wo.projnum||'—') +
+      mkInfoCell('Contract', wo.contract||'—') +
+      mkInfoCell('Service date', dateStr) +
+      mkInfoCell('Type of service', serviceType) +
+      mkInfoCell('Service location', location) +
+      mkInfoCell('Priority', wo.priority||'Routine') +
+      mkInfoCell('Report generated', new Date().toLocaleString()) +
+    '</div>' +
+
+    // Client + Crew
+    '<div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #e2e8f0">' +
+      '<div style="padding:14px 18px;border-right:1px solid #e2e8f0">' +
+        '<div style="font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;font-weight:700">Client / Owner</div>' +
+        '<div style="font-size:15px;font-weight:700;color:#1e293b">'+clientName+'</div>' +
+        (proj&&proj.pm?'<div style="font-size:11px;color:#64748b;margin-top:2px">Project Manager: '+proj.pm+'</div>':'') +
+        (wo.contract?'<div style="font-size:11px;color:#64748b">Contract: '+wo.contract+'</div>':'') +
+      '</div>' +
+      '<div style="padding:14px 18px">' +
+        '<div style="font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;font-weight:700">MOR Field Crew</div>' +
+        '<div style="font-size:13px;font-weight:700;color:#1e293b">'+crew+'</div>' +
+        '<div style="font-size:11px;color:#64748b">Equipment: '+trucks+'</div>' +
+        '<div style="font-size:11px;color:#64748b">Start: '+timeStart+' &nbsp;·&nbsp; End: '+timeEnd+'</div>' +
+      '</div>' +
+    '</div>';
+
+  // Service summary
+  rpt.innerHTML +=
+    '<div style="padding:8px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:10px;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:1px">Service summary</div>' +
+    '<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid #e2e8f0">' +
+      mkSummCell(totalLF.toLocaleString()+' LF','Pipe cleaned') +
+      mkSummCell(prodEntries.length,'Segments worked') +
+      mkSummCell(totalDeb,'Debris tickets') +
+      mkSummCell(totalHrs+' hrs','Crew hours') +
+    '</div>';
+
+  // Pipe log table
+  if (prodEntries.length) {
+    var ptbl = '<div style="padding:8px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:10px;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:1px">Pipe production log</div>';
+    ptbl += '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="background:#1e293b">';
+    ['Pipe ID','Size','Location','LF','Debris','Hours','CCTV','Notes'].forEach(function(h2){
+      ptbl += '<th style="padding:8px 12px;text-align:left;color:#f1f5f9;font-size:10px;text-transform:uppercase;letter-spacing:.5px">'+h2+'</th>';
+    });
+    ptbl += '</tr></thead><tbody>';
+    prodEntries.forEach(function(p,pi){
+      var bg = pi%2===0?'white':'#f8fafc';
+      ptbl += '<tr style="background:'+bg+'"><td style="padding:7px 12px;font-weight:600">'+(p.pipe||'—')+'</td><td style="padding:7px 12px">'+(p.pipeSize||'—')+'"</td><td style="padding:7px 12px;font-size:10px;color:#64748b">'+(p.street||'—')+'</td><td style="padding:7px 12px;font-weight:700">'+(p.lf||0)+'</td><td style="padding:7px 12px">'+(p.deb||0)+'</td><td style="padding:7px 12px">'+(p.hrs||0)+'</td><td style="padding:7px 12px">'+(p.cctv||0)+'</td><td style="padding:7px 12px;font-size:10px;color:#64748b">'+(p.notes||'')+'</td></tr>';
+    });
+    ptbl += '<tr style="background:#0f172a"><td colspan="3" style="padding:8px 12px;color:#f1f5f9;font-weight:700">TOTALS</td><td style="padding:8px 12px;color:#22d3ee;font-weight:700">'+totalLF+'</td><td style="padding:8px 12px;color:#f1f5f9;font-weight:700">'+totalDeb+'</td><td style="padding:8px 12px;color:#f1f5f9;font-weight:700">'+totalHrs+'</td><td colspan="2" style="padding:8px 12px"></td></tr>';
+    ptbl += '</tbody></table>';
+    rpt.innerHTML += ptbl;
+  }
+
+  // Downtime section
+  if (dtEntries.length) {
+    var dtBlock = '<div style="padding:8px 18px;background:#fef2f2;border-bottom:1px solid #fecaca;font-size:10px;font-weight:800;color:#dc2626;text-transform:uppercase;letter-spacing:1px">Downtime events ('+dtHrs.toFixed(1)+' hrs lost)</div>';
+    dtBlock += '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="background:#fee2e2"><th style="padding:7px 12px;text-align:left;font-size:10px">Reason</th><th style="padding:7px 12px;text-align:left;font-size:10px">Equipment</th><th style="padding:7px 12px;text-align:left;font-size:10px">Start</th><th style="padding:7px 12px;text-align:left;font-size:10px">End</th><th style="padding:7px 12px;text-align:left;font-size:10px">Hrs</th><th style="padding:7px 12px;text-align:left;font-size:10px">Resolution</th></tr></thead><tbody>';
+    dtEntries.forEach(function(d){
+      dtBlock += '<tr style="border-bottom:1px solid #fee2e2"><td style="padding:7px 12px;font-weight:600;color:#dc2626">'+d.code+'</td><td style="padding:7px 12px">'+d.equip+'</td><td style="padding:7px 12px">'+d.start+'</td><td style="padding:7px 12px">'+d.end+'</td><td style="padding:7px 12px;font-weight:700;color:#dc2626">'+d.hrs+'</td><td style="padding:7px 12px;font-size:10px;color:#64748b">'+d.action+'</td></tr>';
+    });
+    dtBlock += '</tbody></table>'; rpt.innerHTML += dtBlock;
+  }
+
+  // Daily notes
+  if (dayNotes.length) {
+    var notesBlock = '<div style="padding:8px 18px;background:#f8fafc;border-top:1px solid #e2e8f0;font-size:10px;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:1px">Daily notes & observations</div>';
+    notesBlock += '<div style="padding:10px 18px">';
+    dayNotes.forEach(function(n){
+      notesBlock += '<div style="margin-bottom:6px;padding:6px 10px;background:white;border-left:3px solid #3b82f6;border:1px solid #e2e8f0;border-radius:4px"><div style="font-size:9px;color:#64748b;margin-bottom:2px">'+n.cat+'</div><div style="font-size:11px;color:#334155">'+n.text+'</div></div>';
+    });
+    notesBlock += '</div>'; rpt.innerHTML += notesBlock;
+  }
+
+  // Special instructions
+  if (wo.dispNotes || wo.notes) {
+    rpt.innerHTML += '<div style="padding:8px 18px;background:#f8fafc;border-top:1px solid #e2e8f0;font-size:10px;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:1px">Site notes / special instructions</div>' +
+      '<div style="padding:12px 18px;font-size:11px;color:#334155;border-bottom:1px solid #e2e8f0">'+(wo.dispNotes||wo.notes||'')+'</div>';
+  }
+
+  // Signature section
+  rpt.innerHTML +=
+    '<div style="padding:8px 18px;background:#f8fafc;border-top:1px solid #e2e8f0;font-size:10px;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:1px">Sign-off & acceptance</div>' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr 1fr">' +
+      mkSigCell('MOR Crew Lead / Supervisor') +
+      mkSigCell('Field Inspector / QC') +
+      mkSigCell('Client Acceptance Signature') +
+    '</div>' +
+    '<div style="padding:10px 18px;background:#f8fafc;border-top:1px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center">' +
+      '<div style="font-size:10px;color:#94a3b8">MOR Logistics Environmental Services LLC · SWBNO ' + (wo.contract||'Contract') + ' · Report ' + reportNo + '</div>' +
+      '<div style="font-size:10px;color:#94a3b8">Generated: ' + new Date().toLocaleString() + '</div>' +
+    '</div>';
+
+  el.appendChild(rpt);
+};
+
+function mkInfoCell(lbl, val) {
+  return '<div style="padding:11px 14px;border-right:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0"><div style="font-size:9px;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px">'+lbl+'</div><div style="font-size:12px;font-weight:700;color:#1e293b">'+val+'</div></div>';
+}
+function mkSummCell(num, lbl) {
+  return '<div style="padding:14px 18px;border-right:1px solid #e2e8f0"><div style="font-size:20px;font-weight:900;color:#1e293b;line-height:1">'+num+'</div><div style="font-size:10px;color:#94a3b8;margin-top:4px">'+lbl+'</div></div>';
+}
+function mkSigCell(lbl) {
+  return '<div style="padding:16px 18px;border-right:1px solid #e2e8f0"><div style="font-size:9px;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px">'+lbl+'</div><div style="border-bottom:1px solid #334155;height:36px;margin:8px 0 4px"></div><div style="font-size:9px;color:#94a3b8">Print name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div></div>';
+}
+
+window.printDispatchReport = function() { window.print(); };
+
+window.copyDispatchReport = function() {
+  var el = document.getElementById('dispatch-report-printable');
+  if (!el) return;
+  var text = el.innerText || el.textContent || '';
+  try { navigator.clipboard.writeText(text).then(function(){ showToast('Report copied to clipboard'); }); }
+  catch(e) { alert(text); }
+};
+
+
+
+// ══════════════════════════════════════════════════════════════════════════
+// WO COMPLETION — FULL PRODUCTION REPORT
+// ══════════════════════════════════════════════════════════════════════════
+
+window.markWOComplete = function(wo) {
+  if (!wo) return;
+  var woIdx = (window.WO||[]).findIndex(function(o){ return o.id===wo.id; });
+  if (woIdx >= 0) {
+    window.WO[woIdx].status = 'Complete';
+    window.WO[woIdx].completedDate = window.WO[woIdx].completedDate || new Date().toISOString().slice(0,10);
+    saveWOs();
+    showToast('WO ' + wo.id + ' marked Complete');
+    renderDispatch();
+  }
+  // Open the full production report
+  openWOProductionReport(wo);
+};
+
+window.openWOProductionReport = function(wo) {
+  if (!wo && arguments.length === 0) {
+    showToast('Select a work order first','red'); return;
+  }
+  window._rptWO = wo;
+  if (typeof openModal === 'function') openModal('wo-prod-report');
+  setTimeout(function(){ buildWOProductionReport(wo); }, 50);
+};
+
+window.buildWOProductionReport = function(wo) {
+  var el = document.getElementById('wo-prod-report-content');
+  if (!el) return;
+  if (!wo) { el.innerHTML = '<div style="padding:20px;text-align:center;color:var(--g4)">No work order selected.</div>'; return; }
+
+  // Pull ALL production data for this WO (all dates)
+  var allProd = (window.PROD||[]).filter(function(p){ return p.woId===wo.id; });
+  // Sort by date ascending
+  allProd.sort(function(a,b){ return (a.date||'').localeCompare(b.date||''); });
+
+  // Group by date
+  var byDate = {};
+  allProd.forEach(function(p) {
+    var d = p.date || 'Unknown';
+    if (!byDate[d]) byDate[d] = [];
+    byDate[d].push(p);
+  });
+  var dates = Object.keys(byDate).sort();
+
+  // Get pipe photos
+  var pipePhotos = {};
+  if (window.PROD_PHOTOS && window.PROD_PHOTOS[wo.id]) {
+    (window.PROD_PHOTOS[wo.id].pipes||[]).forEach(function(p){ pipePhotos[p.id]=p; });
+  }
+  // Also check WO pipe photo sections
+  if (wo.pipePhotoSections) {
+    wo.pipePhotoSections.forEach(function(p){ if(!pipePhotos[p.id]) pipePhotos[p.id]=p; });
+  }
+
+  // Totals
+  var grandLF   = allProd.reduce(function(s,p){return s+Number(p.lf||0);},0);
+  var grandDeb  = allProd.reduce(function(s,p){return s+Number(p.deb||0);},0);
+  var grandHrs  = allProd.reduce(function(s,p){return s+Number(p.hrs||0);},0);
+  var grandCCTV = allProd.reduce(function(s,p){return s+Number(p.cctv||0);},0);
+  var grandSegs = allProd.length;
+
+  // Downtime for this WO
+  var dtAll = (window.DOWNTIME_LOG||[]).filter(function(d){ return d.wo===wo.id; });
+  var dtHrs = dtAll.reduce(function(s,d){return s+Number(d.hrs||0);},0);
+
+  // Equipment usage
+  var eqAll = (window.EQUIP_USAGE||[]).filter(function(e){ return e.wo===wo.id; });
+  var eqHrs = eqAll.reduce(function(s,e){return s+Number(e.hrs||0);},0);
+
+  // All daily notes
+  var allNotes = (window.DAILY_NOTES||[]).filter(function(n){ return n.wo===wo.id; });
+
+  // Workers
+  var workers = wo.workers || [];
+
+  var proj = (window.DISP_PROJECTS||[]).find(function(p){ return p.num===wo.projnum; });
+  var clientName = proj ? (proj.client||'SWBNO') : 'SWBNO';
+  var trucks = (wo.trucks&&wo.trucks.length) ? wo.trucks.join(', ') : (wo.truck||'—');
+  var reportNo = 'WOCR-' + wo.id + '-' + new Date().toISOString().slice(0,10).replace(/-/g,'');
+  var startDate = dates.length ? dates[0] : (wo.schedDate||'—');
+  var endDate   = dates.length ? dates[dates.length-1] : (wo.completedDate||'—');
+
+  el.innerHTML = '';
+  var rpt = document.createElement('div');
+  rpt.id = 'wo-prod-report-printable';
+  rpt.style.cssText = 'font-family:Arial,sans-serif;color:#1e293b;background:white;font-size:11px';
+
+  // ── COVER HEADER ────────────────────────────────────────────────────────
+  rpt.innerHTML =
+    '<div style="background:#0f172a;padding:20px 24px;display:flex;align-items:center;justify-content:space-between">' +
+      '<div>' +
+        '<div style="font-size:26px;font-weight:900;color:#22d3ee;letter-spacing:-1px">MOR</div>' +
+        '<div style="font-size:11px;color:#94a3b8;margin-top:2px">MOR Logistics Environmental Services LLC · DBE Certified · Houma, Louisiana</div>' +
+      '</div>' +
+      '<div style="text-align:right">' +
+        '<div style="font-size:15px;font-weight:700;color:#f1f5f9">WORK ORDER COMPLETION REPORT</div>' +
+        '<div style="font-size:11px;color:#94a3b8;margin-top:2px">Report #: '+reportNo+'</div>' +
+        '<div style="font-size:11px;color:#22d3ee;margin-top:2px;font-weight:700">'+wo.id+'</div>' +
+      '</div>' +
+    '</div>';
+
+  // ── PROJECT / WO INFO ────────────────────────────────────────────────────
+  rpt.innerHTML +=
+    '<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid #22d3ee">' +
+      ic('Work Order #', wo.id) +
+      ic('Project #', wo.projnum||'—') +
+      ic('Contract', wo.contract||'—') +
+      ic('Client', clientName) +
+      ic('Service type', wo.type||'—') +
+      ic('Location', wo.address||wo.location||'—') +
+      ic('Start date', startDate) +
+      ic('Completion date', endDate) +
+    '</div>';
+
+  // ── GRAND TOTALS BANNER ──────────────────────────────────────────────────
+  rpt.innerHTML +=
+    '<div style="background:#0f172a;display:grid;grid-template-columns:repeat(5,1fr);margin:0">' +
+      gb(grandLF.toLocaleString()+' LF','Total pipe cleaned') +
+      gb(grandSegs,'Total segments') +
+      gb(grandDeb,'Debris tickets') +
+      gb(grandHrs+' hrs','Total crew hours') +
+      gb(dates.length,'Days worked') +
+    '</div>';
+
+  // ── CREW & EQUIPMENT ────────────────────────────────────────────────────
+  rpt.innerHTML +=
+    '<div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #e2e8f0">' +
+    '<div style="padding:12px 18px;border-right:1px solid #e2e8f0">' +
+      '<div style="font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:6px">Crew members</div>' +
+      (workers.length
+        ? '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="border-bottom:1px solid #e2e8f0"><th style="text-align:left;padding:3px 0;color:#64748b;font-size:10px">Name</th><th style="text-align:left;padding:3px 0;color:#64748b;font-size:10px">Role</th><th style="text-align:left;padding:3px 0;color:#64748b;font-size:10px">Hours</th></tr></thead><tbody>' +
+          workers.map(function(w){ return '<tr style="border-bottom:1px solid #f8fafc"><td style="padding:4px 0">'+w.name+'</td><td style="padding:4px 0;color:#64748b">'+(w.role||'—')+'</td><td style="padding:4px 0">'+(w.hours||'—')+'</td></tr>'; }).join('') +
+          '</tbody></table>'
+        + (wo.completedBy?'<div style="margin-top:6px;font-size:10px;color:#64748b">Sign-off: <b>'+wo.completedBy+'</b>'+(wo.completedDate?' · '+wo.completedDate:'')+'</div>':'')
+        : '<div style="font-size:11px;color:#94a3b8">No crew recorded</div>') +
+    '</div>' +
+    '<div style="padding:12px 18px">' +
+      '<div style="font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:6px">Equipment used</div>' +
+      (eqAll.length
+        ? '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="border-bottom:1px solid #e2e8f0"><th style="text-align:left;padding:3px 0;color:#64748b;font-size:10px">Equipment</th><th style="text-align:left;padding:3px 0;color:#64748b;font-size:10px">Date</th><th style="text-align:left;padding:3px 0;color:#64748b;font-size:10px">Hrs</th></tr></thead><tbody>' +
+          eqAll.map(function(e){ return '<tr style="border-bottom:1px solid #f8fafc"><td style="padding:4px 0;font-weight:600">'+e.truck+'</td><td style="padding:4px 0;color:#64748b">'+e.date+'</td><td style="padding:4px 0">'+e.hrs+'</td></tr>'; }).join('') +
+          '<tr style="border-top:1px solid #e2e8f0"><td colspan="2" style="padding:4px 0;font-weight:700">Total equip. hours</td><td style="padding:4px 0;font-weight:700">'+eqHrs+'</td></tr>' +
+          '</tbody></table>'
+        : '<div style="font-size:11px;color:#94a3b8">'+trucks+'</div>') +
+    '</div></div>';
+
+  // ── DAILY PRODUCTION BREAKDOWN ──────────────────────────────────────────
+  rpt.innerHTML += '<div style="padding:8px 18px;background:#f8fafc;border-top:2px solid #22d3ee;font-size:10px;font-weight:800;color:#0f172a;text-transform:uppercase;letter-spacing:1px">Daily production breakdown</div>';
+
+  dates.forEach(function(date2) {
+    var dayEntries = byDate[date2];
+    var dayLF  = dayEntries.reduce(function(s,p){return s+Number(p.lf||0);},0);
+    var dayDeb = dayEntries.reduce(function(s,p){return s+Number(p.deb||0);},0);
+    var dayHrs = dayEntries.reduce(function(s,p){return s+Number(p.hrs||0);},0);
+    var d2 = new Date(date2+'T12:00:00');
+    var dateLabel = d2.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
+
+    // Day header
+    rpt.innerHTML +=
+      '<div style="display:flex;align-items:center;gap:12px;padding:7px 18px;background:#1e293b;border-top:1px solid #334155">' +
+        '<div style="font-size:12px;font-weight:700;color:#f1f5f9">'+dateLabel+'</div>' +
+        '<div style="font-size:10px;color:#94a3b8">'+dayEntries.length+' segments &nbsp;·&nbsp; '+dayLF+' LF &nbsp;·&nbsp; '+dayDeb+' debris &nbsp;·&nbsp; '+dayHrs+' hrs</div>' +
+      '</div>';
+
+    // Pipe rows for this day
+    rpt.innerHTML +=
+      '<table style="width:100%;border-collapse:collapse;font-size:10px"><thead><tr style="background:#f1f5f9">' +
+        ['Pipe ID','Size (in)','Location','LF cleaned','Debris','Hours','CCTV','Notes'].map(function(h2){
+          return '<th style="padding:5px 10px;text-align:left;color:#64748b;font-size:9px;text-transform:uppercase;letter-spacing:.5px;font-weight:700">'+h2+'</th>';
+        }).join('') +
+      '</tr></thead><tbody>';
+    dayEntries.forEach(function(p, pi) {
+      var bg = pi%2===0?'white':'#f8fafc';
+      var pipeKey = p.pipe || p.pipeId || '';
+      var photoCount = 0;
+      if (pipePhotos[pipeKey]) photoCount = ((pipePhotos[pipeKey].before||[]).length)+((pipePhotos[pipeKey].after||[]).length);
+      rpt.innerHTML +=
+        '<tr style="background:'+bg+';border-bottom:1px solid #f1f5f9">' +
+        '<td style="padding:5px 10px;font-weight:600">'+(pipeKey||'—')+(photoCount?'&nbsp;<span style="font-size:9px;color:#3b82f6">📷'+photoCount+'</span>':'')+'</td>' +
+        '<td style="padding:5px 10px">'+(p.pipeSize||p.pipe_size||'—')+'"</td>' +
+        '<td style="padding:5px 10px;color:#64748b;font-size:10px">'+(p.street||p.location||'—')+'</td>' +
+        '<td style="padding:5px 10px;font-weight:700;color:#0f172a">'+(p.lf||0)+'</td>' +
+        '<td style="padding:5px 10px">'+(p.deb||0)+'</td>' +
+        '<td style="padding:5px 10px">'+(p.hrs||0)+'</td>' +
+        '<td style="padding:5px 10px">'+(p.cctv||0)+'</td>' +
+        '<td style="padding:5px 10px;color:#64748b;font-size:10px">'+(p.notes||'')+'</td>' +
+        '</tr>';
+    });
+    // Day totals
+    rpt.innerHTML +=
+      '<tr style="background:#0f172a;border-top:1px solid #334155">' +
+        '<td colspan="3" style="padding:5px 10px;color:#94a3b8;font-size:9px;font-weight:700">DAY TOTAL</td>' +
+        '<td style="padding:5px 10px;color:#22d3ee;font-weight:700">'+dayLF+' LF</td>' +
+        '<td style="padding:5px 10px;color:#f1f5f9;font-weight:700">'+dayDeb+'</td>' +
+        '<td style="padding:5px 10px;color:#f1f5f9;font-weight:700">'+dayHrs+'</td>' +
+        '<td colspan="2" style="padding:5px 10px"></td>' +
+      '</tr></tbody></table>';
+  });
+
+  // ── GRAND SUMMARY TABLE ──────────────────────────────────────────────────
+  rpt.innerHTML +=
+    '<div style="padding:8px 18px;background:#f8fafc;border-top:2px solid #22d3ee;font-size:10px;font-weight:800;color:#0f172a;text-transform:uppercase;letter-spacing:1px">Project totals</div>' +
+    '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="background:#1e293b">' +
+      ['Date','Segments','Total LF','Debris Tix','Crew Hrs','CCTV Runs'].map(function(h2){
+        return '<th style="padding:8px 12px;text-align:left;color:#f1f5f9;font-size:10px;text-transform:uppercase;letter-spacing:.5px">'+h2+'</th>';
+      }).join('')+
+    '</tr></thead><tbody>';
+  dates.forEach(function(date2, di) {
+    var de = byDate[date2];
+    var bg = di%2===0?'white':'#f8fafc';
+    rpt.innerHTML += '<tr style="background:'+bg+';border-bottom:1px solid #f1f5f9">' +
+      '<td style="padding:6px 12px">'+date2+'</td>' +
+      '<td style="padding:6px 12px">'+de.length+'</td>' +
+      '<td style="padding:6px 12px;font-weight:700">'+de.reduce(function(s,p){return s+Number(p.lf||0);},0)+'</td>' +
+      '<td style="padding:6px 12px">'+de.reduce(function(s,p){return s+Number(p.deb||0);},0)+'</td>' +
+      '<td style="padding:6px 12px">'+de.reduce(function(s,p){return s+Number(p.hrs||0);},0)+'</td>' +
+      '<td style="padding:6px 12px">'+de.reduce(function(s,p){return s+Number(p.cctv||0);},0)+'</td>' +
+      '</tr>';
+  });
+  rpt.innerHTML +=
+    '<tr style="background:#0f172a;border-top:2px solid #22d3ee">' +
+      '<td style="padding:8px 12px;color:#94a3b8;font-weight:700;font-size:10px">GRAND TOTAL</td>' +
+      '<td style="padding:8px 12px;color:#f1f5f9;font-weight:700">'+grandSegs+'</td>' +
+      '<td style="padding:8px 12px;color:#22d3ee;font-weight:900;font-size:13px">'+grandLF.toLocaleString()+' LF</td>' +
+      '<td style="padding:8px 12px;color:#f1f5f9;font-weight:700">'+grandDeb+'</td>' +
+      '<td style="padding:8px 12px;color:#f1f5f9;font-weight:700">'+grandHrs+'</td>' +
+      '<td style="padding:8px 12px;color:#f1f5f9;font-weight:700">'+grandCCTV+'</td>' +
+    '</tr></tbody></table>';
+
+  // ── PIPE PHOTOS SECTION ──────────────────────────────────────────────────
+  var photoPipeKeys = Object.keys(pipePhotos).filter(function(k){ return pipePhotos[k]&&((pipePhotos[k].before||[]).length||(pipePhotos[k].after||[]).length); });
+  if (photoPipeKeys.length) {
+    rpt.innerHTML += '<div style="padding:8px 18px;background:#f8fafc;border-top:2px solid #22d3ee;font-size:10px;font-weight:800;color:#0f172a;text-transform:uppercase;letter-spacing:1px">Pipe photo documentation</div>';
+    photoPipeKeys.forEach(function(pipeId) {
+      var pp = pipePhotos[pipeId];
+      var bef = pp.before||[]; var aft = pp.after||[];
+      rpt.innerHTML += '<div style="padding:8px 18px 4px;border-bottom:1px solid #f1f5f9"><div style="font-size:11px;font-weight:700;color:#1e293b;margin-bottom:6px">'+pipeId+(pp.size?' · '+pp.size+'"':'')+(pp.location?' · '+pp.location:'')+'</div>';
+      if (bef.length) {
+        rpt.innerHTML += '<div style="font-size:9px;color:#dc2626;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">🔴 Before work ('+bef.length+' photos)</div>';
+        rpt.innerHTML += '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">';
+        bef.slice(0,6).forEach(function(src){ rpt.innerHTML += '<img src="'+src+'" style="width:80px;height:80px;object-fit:cover;border-radius:6px;cursor:pointer" onclick="window.open(this.src,\'_blank\')">'; });
+        if(bef.length>6) rpt.innerHTML += '<div style="width:80px;height:80px;border-radius:6px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#64748b">+' + (bef.length-6) + ' more</div>';
+        rpt.innerHTML += '</div>';
+      }
+      if (aft.length) {
+        rpt.innerHTML += '<div style="font-size:9px;color:#16a34a;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">🟢 After work / completed ('+aft.length+' photos)</div>';
+        rpt.innerHTML += '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">';
+        aft.slice(0,6).forEach(function(src){ rpt.innerHTML += '<img src="'+src+'" style="width:80px;height:80px;object-fit:cover;border-radius:6px;cursor:pointer" onclick="window.open(this.src,\'_blank\')">'; });
+        if(aft.length>6) rpt.innerHTML += '<div style="width:80px;height:80px;border-radius:6px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#64748b">+' + (aft.length-6) + ' more</div>';
+        rpt.innerHTML += '</div>';
+      }
+      rpt.innerHTML += '</div>';
+    });
+  }
+
+  // ── DOWNTIME SECTION ─────────────────────────────────────────────────────
+  if (dtAll.length) {
+    rpt.innerHTML += '<div style="padding:8px 18px;background:#fef2f2;border-top:2px solid #fca5a5;font-size:10px;font-weight:800;color:#dc2626;text-transform:uppercase;letter-spacing:1px">Downtime log ('+dtHrs.toFixed(1)+' hrs lost)</div>';
+    rpt.innerHTML += '<table style="width:100%;border-collapse:collapse;font-size:10px"><thead><tr style="background:#fee2e2"><th style="padding:6px 12px;text-align:left;font-size:9px">Date</th><th style="padding:6px 12px;text-align:left;font-size:9px">Reason</th><th style="padding:6px 12px;text-align:left;font-size:9px">Equipment</th><th style="padding:6px 12px;text-align:left;font-size:9px">Hrs</th><th style="padding:6px 12px;text-align:left;font-size:9px">Resolution</th></tr></thead><tbody>';
+    dtAll.forEach(function(d){ rpt.innerHTML += '<tr style="border-bottom:1px solid #fee2e2"><td style="padding:5px 12px">'+d.date+'</td><td style="padding:5px 12px;font-weight:600;color:#dc2626">'+d.code+'</td><td style="padding:5px 12px">'+d.equip+'</td><td style="padding:5px 12px;font-weight:700;color:#dc2626">'+d.hrs+'</td><td style="padding:5px 12px;font-size:10px;color:#64748b">'+d.action+'</td></tr>'; });
+    rpt.innerHTML += '</tbody></table>';
+  }
+
+  // ── NOTES ────────────────────────────────────────────────────────────────
+  if (allNotes.length) {
+    rpt.innerHTML += '<div style="padding:8px 18px;background:#f8fafc;border-top:1px solid #e2e8f0;font-size:10px;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:1px">Field notes & observations</div>';
+    rpt.innerHTML += '<div style="padding:10px 18px">';
+    allNotes.forEach(function(n){ rpt.innerHTML += '<div style="margin-bottom:5px;padding:5px 10px;background:white;border-left:3px solid #3b82f6;border:1px solid #e2e8f0;border-radius:4px"><div style="font-size:9px;color:#64748b;margin-bottom:1px">'+n.date+' — '+n.cat+'</div><div style="font-size:10px;color:#334155">'+n.text+'</div></div>'; });
+    rpt.innerHTML += '</div>';
+  }
+
+  // ── SIGN-OFF ──────────────────────────────────────────────────────────────
+  rpt.innerHTML +=
+    '<div style="padding:8px 18px;background:#f8fafc;border-top:2px solid #22d3ee;font-size:10px;font-weight:800;color:#0f172a;text-transform:uppercase;letter-spacing:1px">Sign-off & project certification</div>' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr 1fr">' +
+      ms('MOR Crew Lead / Operator') +
+      ms('MOR Project Manager') +
+      ms('Client Acceptance / SWBNO Rep') +
+    '</div>' +
+    '<div style="padding:10px 18px;background:#0f172a;display:flex;justify-content:space-between;align-items:center">' +
+      '<div style="font-size:10px;color:#94a3b8">MOR Logistics Environmental Services LLC · ' + (wo.contract||'Contract') + ' · WO: ' + wo.id + ' · Report: ' + reportNo + '</div>' +
+      '<div style="font-size:10px;color:#94a3b8">Generated: ' + new Date().toLocaleString() + ' · CONFIDENTIAL</div>' +
+    '</div>';
+
+  el.appendChild(rpt);
+};
+
+// Helper builders
+function ic(lbl, val) {
+  return '<div style="padding:10px 14px;border-right:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">' +
+    '<div style="font-size:9px;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px">'+lbl+'</div>' +
+    '<div style="font-size:12px;font-weight:700;color:#1e293b">'+val+'</div></div>';
+}
+function gb(num, lbl) {
+  return '<div style="padding:14px 18px;border-right:1px solid #1e293b">' +
+    '<div style="font-size:22px;font-weight:900;color:#22d3ee;line-height:1">'+num+'</div>' +
+    '<div style="font-size:10px;color:#94a3b8;margin-top:4px">'+lbl+'</div></div>';
+}
+function ms(lbl) {
+  return '<div style="padding:16px 18px;border-right:1px solid #e2e8f0">' +
+    '<div style="font-size:9px;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px">'+lbl+'</div>' +
+    '<div style="border-bottom:1px solid #334155;height:36px;margin:8px 0 4px"></div>' +
+    '<div style="font-size:9px;color:#94a3b8">Print name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div></div>';
+}
+
+window.printWOProductionReport = function() { window.print(); };
+window.copyWOProductionReport = function() {
+  var el = document.getElementById('wo-prod-report-printable');
+  if (!el) return;
+  try { navigator.clipboard.writeText(el.innerText||el.textContent||'').then(function(){ showToast('Report copied'); }); }
+  catch(e) { showToast('Use print dialog to save as PDF','amber'); }
 };
 
 </script>
